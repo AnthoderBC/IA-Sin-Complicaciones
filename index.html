@@ -3,635 +3,334 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IA Sin Complicaciones – Guía Estratégica</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&display=swap" rel="stylesheet">
+<title>IA Sin Complicaciones – Transforma tu Vida con Inteligencia Artificial</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <script type="text/javascript">
-function importHotmart(){ 
-    var imported = document.createElement('script'); 
-    imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
-    document.head.appendChild(imported); 
-    var link = document.createElement('link'); 
-    link.rel = 'stylesheet'; link.type = 'text/css'; 
-    link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
-    document.head.appendChild(link);    
-} 
+function importHotmart(){
+  var imported = document.createElement('script');
+  imported.src = 'https://static.hotmart.com/checkout/widget.min.js';
+  document.head.appendChild(imported);
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css';
+  document.head.appendChild(link);
+}
 importHotmart();
 </script>
 
 <style>
 :root {
-  --navy:   #0A1F44;
-  --navy2:  #163B7A;
-  --green:  #00B37E;
-  --green2: #2ECC71;
-  --bg:     #F4F7FB;
-  --white:  #ffffff;
-  --text:   #0e1e36;
-  --muted:  #5a7899;
-  --border: #d6e4f0;
+  --navy:    #0A1F44;
+  --navy2:   #163B7A;
+  --green:   #00B37E;
+  --green2:  #2ECC71;
+  --bg:      #F4F7FB;
+  --white:   #ffffff;
+  --text:    #1a2e4a;
+  --muted:   #5c7a9b;
+  --border:  #dce7f3;
+  --shadow:  0 4px 24px rgba(10,31,68,.10);
+  --shadow-lg: 0 12px 48px rgba(10,31,68,.16);
 }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.65}
+a{text-decoration:none;color:inherit}
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Sora', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  overflow-x: hidden;
-  line-height: 1.65;
-}
-a { text-decoration: none; color: inherit; }
-.wrap { max-width: 980px; margin: 0 auto; padding: 0 22px; }
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.section{padding:88px 0}
+@media(max-width:768px){.section{padding:60px 0}}
 
-/* ═══════════════════════════
-   HERO
-═══════════════════════════ */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background: var(--navy);
-  display: flex; align-items: center;
-  overflow: hidden;
-  padding: 88px 0 72px;
-}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(0,179,126,.1);border:1px solid rgba(0,179,126,.3);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:20px}
+.tag-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
-.hero-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(0,179,126,.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,179,126,.07) 1px, transparent 1px);
-  background-size: 52px 52px;
-  animation: gridScroll 20s linear infinite;
-  mask-image: radial-gradient(ellipse 110% 80% at 50% 40%, black 10%, transparent 72%);
-}
-@keyframes gridScroll {
-  from { background-position: 0 0; }
-  to   { background-position: 52px 52px; }
-}
+.headline{font-family:'Playfair Display',serif;font-weight:900;line-height:1.08;letter-spacing:-.02em}
+.hl-md{font-size:clamp(32px,5vw,52px)}
+.hl-lg{font-size:clamp(40px,7vw,72px)}
 
-.orb {
-  position: absolute; border-radius: 50%;
-  filter: blur(100px); pointer-events: none;
-}
-.o1 { width: 480px; height: 480px; background: rgba(0,179,126,.15);  top:-130px; right:-80px;  animation: f1 11s ease-in-out infinite; }
-.o2 { width: 340px; height: 340px; background: rgba(22,59,122,.5);   bottom:-80px; left:-60px; animation: f2 9s ease-in-out infinite; }
-.o3 { width: 220px; height: 220px; background: rgba(46,204,113,.1);  top:55%; left:44%;       animation: f1 7s ease-in-out infinite reverse; }
-@keyframes f1 { 0%,100%{ transform:translate(0,0) } 50%{ transform:translate(26px,-34px) } }
-@keyframes f2 { 0%,100%{ transform:translate(0,0) } 50%{ transform:translate(-20px,26px) } }
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;padding:15px 32px;border-radius:12px;border:none;cursor:pointer;transition:all .22s ease;text-decoration:none!important;white-space:nowrap}
+.btn-green{background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;box-shadow:0 4px 20px rgba(0,179,126,.35)}
+.btn-green:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,179,126,.5)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35)}
+.btn-outline:hover{background:rgba(255,255,255,.08);border-color:#fff}
 
-.pts { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
-.pt  { position:absolute; bottom:-6px; border-radius:50%; background:var(--green); opacity:0; animation:rise linear infinite; }
-.pt:nth-child(1){width:3px;height:3px;left:8%; animation-duration:11s;animation-delay:.5s}
-.pt:nth-child(2){width:4px;height:4px;left:22%;animation-duration:8s; animation-delay:2s}
-.pt:nth-child(3){width:2px;height:2px;left:41%;animation-duration:13s;animation-delay:3.8s}
-.pt:nth-child(4){width:4px;height:4px;left:60%;animation-duration:9s; animation-delay:1.2s}
-.pt:nth-child(5){width:3px;height:3px;left:77%;animation-duration:12s;animation-delay:4s}
-.pt:nth-child(6){width:2px;height:2px;left:90%;animation-duration:10s;animation-delay:.9s}
-@keyframes rise {
-  0%  { transform:translateY(0);      opacity:0;  }
-  8%  { opacity:.85; }
-  90% { opacity:.3;  }
-  100%{ transform:translateY(-108vh); opacity:0; }
-}
+/* Hotmart buttons */
+.hotmart-fb.hotmart__button-checkout{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;font-family:'Plus Jakarta Sans',sans-serif!important;font-weight:700!important;font-size:15px!important;padding:15px 24px!important;border-radius:12px!important;border:none!important;cursor:pointer!important;transition:all .22s ease!important;text-decoration:none!important}
+.hm-green .hotmart-fb{background:linear-gradient(135deg,var(--green),var(--green2))!important;color:#fff!important;box-shadow:0 4px 20px rgba(0,179,126,.35)!important}
+.hm-green .hotmart-fb:hover{transform:translateY(-2px)!important;box-shadow:0 8px 32px rgba(0,179,126,.5)!important}
+.hm-navy .hotmart-fb{background:linear-gradient(135deg,var(--navy),var(--navy2))!important;color:#fff!important;box-shadow:0 4px 20px rgba(10,31,68,.3)!important}
+.hm-navy .hotmart-fb:hover{transform:translateY(-2px)!important;box-shadow:0 8px 28px rgba(10,31,68,.45)!important}
+.hm-gold .hotmart-fb{background:linear-gradient(135deg,#e67e22,#f39c12)!important;color:#fff!important;box-shadow:0 4px 20px rgba(230,126,34,.35)!important}
+.hm-gold .hotmart-fb:hover{transform:translateY(-2px)!important;box-shadow:0 8px 32px rgba(230,126,34,.5)!important}
 
-.hero-inner {
-  position:relative; z-index:2;
-  display:grid; grid-template-columns:1fr 390px;
-  gap:54px; align-items:center;
-}
-@media(max-width:900px){
-  .hero-inner { grid-template-columns:1fr; text-align:center; gap:44px; }
-  .hero-ctas, .trust-row { justify-content:center !important; }
-  .hero-visual { display:flex; justify-content:center; }
-  .hero-sub { max-width:100% !important; }
-}
+/* ── HERO ── */
+.hero{background:linear-gradient(145deg,var(--navy) 0%,var(--navy2) 60%,#1a4f8a 100%);min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;padding:100px 0 80px}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,179,126,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,179,126,.07) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black,transparent)}
 
-/* Eyebrow tag */
-.eyebrow {
-  display:inline-flex; align-items:center; gap:8px;
-  background:rgba(0,179,126,.12);
-  border:1px solid rgba(0,179,126,.32);
-  border-radius:100px; padding:5px 16px;
-  font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
-  color:#4fffc8; margin-bottom:22px;
-}
-.edot { width:6px; height:6px; background:#4fffc8; border-radius:50%; animation:blink 2s infinite; }
-@keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(1.6)} }
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.2;animation:float 9s ease-in-out infinite}
+.b1{width:480px;height:480px;background:var(--green);top:-120px;right:-100px;animation-delay:0s}
+.b2{width:320px;height:320px;background:#2980b9;bottom:-60px;left:-80px;animation-delay:3.5s}
+.b3{width:200px;height:200px;background:var(--green2);top:55%;left:48%;animation-delay:1.8s}
+@keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-28px) scale(1.04)}}
 
-.hero-h1 {
-  font-family:'Fraunces',Georgia,serif;
-  font-size:clamp(36px, 6vw, 66px);
-  font-weight:900; line-height:1.05;
-  letter-spacing:-.025em; color:#fff;
-  margin-bottom:18px;
-}
-.hero-h1 em {
-  font-style:italic;
-  background:linear-gradient(120deg, var(--green) 0%, var(--green2) 100%);
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-}
+.particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.p{position:absolute;border-radius:50%;background:rgba(0,179,126,.7);animation:rise linear infinite}
+.p:nth-child(1){width:4px;height:4px;left:10%;animation-duration:12s;animation-delay:0s}
+.p:nth-child(2){width:3px;height:3px;left:25%;animation-duration:9s;animation-delay:2s}
+.p:nth-child(3){width:5px;height:5px;left:52%;animation-duration:14s;animation-delay:4s}
+.p:nth-child(4){width:3px;height:3px;left:70%;animation-duration:10s;animation-delay:1s}
+.p:nth-child(5){width:4px;height:4px;left:85%;animation-duration:13s;animation-delay:3s}
+.p:nth-child(6){width:2px;height:2px;left:38%;animation-duration:11s;animation-delay:5s}
+@keyframes rise{from{transform:translateY(100vh);opacity:0}10%{opacity:.8}90%{opacity:.4}to{transform:translateY(-10vh);opacity:0}}
 
-.hero-sub {
-  font-size:clamp(15px,1.8vw,17px);
-  color:rgba(255,255,255,.68); font-weight:300;
-  max-width:490px; line-height:1.76;
-  margin-bottom:30px;
-}
-.hero-sub strong { color:#fff; font-weight:600; }
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media(max-width:860px){.hero-inner{grid-template-columns:1fr;text-align:center;gap:44px}.hero-ctas{justify-content:center!important}.hero-trust{justify-content:center!important}}
 
-/* Price pill inline */
-.price-pill {
-  display:inline-flex; align-items:center; gap:14px; flex-wrap:wrap;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:16px; padding:13px 22px;
-  margin-bottom:28px;
-}
-.pp-was { font-size:13px; color:rgba(255,255,255,.38); text-decoration:line-through; }
-.pp-now {
-  font-family:'Fraunces',serif;
-  font-size:46px; font-weight:900; color:var(--green); line-height:1;
-}
-.pp-usd { font-size:13px; color:rgba(255,255,255,.45); align-self:flex-end; padding-bottom:4px; }
-.pp-tag {
-  background:linear-gradient(135deg, var(--green), var(--green2));
-  color:#fff; font-size:11px; font-weight:800; letter-spacing:.08em;
-  padding:4px 12px; border-radius:100px;
-}
+.hero-content .tag{background:rgba(0,179,126,.15);border-color:rgba(0,179,126,.4);color:#4fffcb}
+.hero-content .tag-dot{background:#4fffcb}
 
-/* Buttons */
-.hero-ctas { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:28px; }
-@media(max-width:480px){ .hero-ctas { flex-direction:column; } }
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(38px,6vw,68px);font-weight:900;line-height:1.06;letter-spacing:-.025em;color:#fff;margin-bottom:22px}
+.hero-title span{background:linear-gradient(90deg,var(--green),var(--green2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-.btn {
-  display:inline-flex; align-items:center; gap:8px;
-  font-family:'Sora',sans-serif; font-weight:700; font-size:15px;
-  padding:14px 28px; border-radius:12px; border:none;
-  cursor:pointer; transition:transform .2s, box-shadow .2s;
-  text-decoration:none !important; white-space:nowrap;
-}
-.btn.green {
-  background:linear-gradient(135deg, var(--green), var(--green2));
-  color:#fff; box-shadow:0 4px 22px rgba(0,179,126,.4);
-}
-.btn.green:hover { transform:translateY(-2px); box-shadow:0 8px 34px rgba(0,179,126,.55); }
-.btn.ghost {
-  background:rgba(255,255,255,.06);
-  border:1.5px solid rgba(255,255,255,.2); color:#fff;
-}
-.btn.ghost:hover { background:rgba(255,255,255,.11); border-color:rgba(255,255,255,.42); }
+.hero-sub{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,.75);font-weight:300;max-width:510px;margin-bottom:36px;line-height:1.72}
+.hero-sub strong{color:#fff;font-weight:600}
+@media(max-width:860px){.hero-sub{max-width:100%}}
 
-/* Trust row */
-.trust-row {
-  display:flex; flex-wrap:wrap; gap:16px;
-  font-size:12px; color:rgba(255,255,255,.46); font-weight:500;
-}
-.trust-row span { display:flex; align-items:center; gap:5px; }
-.trust-row span::before { content:'✓'; color:var(--green); font-weight:800; }
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.hero-trust{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:13px;color:rgba(255,255,255,.6);font-weight:500}
 
-/* ── Hero card ── */
-.hero-card {
-  background:rgba(255,255,255,.06);
-  backdrop-filter:blur(20px);
-  border:1px solid rgba(255,255,255,.11);
-  border-radius:24px; padding:26px;
-  animation:bob 6s ease-in-out infinite;
-  max-width:370px; width:100%;
-}
-@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-13px)} }
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.visual-card{background:rgba(255,255,255,.07);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.13);border-radius:28px;padding:32px 28px;width:100%;max-width:360px;animation:cardFloat 6s ease-in-out infinite}
+@keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
-.hc-top {
-  display:flex; align-items:center; gap:11px;
-  padding-bottom:16px;
-  border-bottom:1px solid rgba(255,255,255,.08);
-  margin-bottom:16px;
-}
-.hc-icon {
-  width:44px; height:44px;
-  background:linear-gradient(135deg, var(--green), var(--green2));
-  border-radius:12px; flex-shrink:0;
-  display:flex; align-items:center; justify-content:center; font-size:20px;
-}
-.hc-name { font-family:'Fraunces',serif; font-size:15px; font-weight:700; color:#fff; }
-.hc-sub  { font-size:11px; color:rgba(255,255,255,.4); margin-top:3px; }
+.vc-top{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.vc-brain{width:46px;height:46px;background:linear-gradient(135deg,var(--green),var(--green2));border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.vc-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff}
+.vc-sub{font-size:11px;color:rgba(255,255,255,.5)}
 
-.hc-list { list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:17px; }
-.hc-li {
-  display:flex; align-items:center; gap:9px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.07);
-  border-radius:9px; padding:8px 11px;
-}
-.hc-num {
-  width:22px; height:22px; flex-shrink:0;
-  background:var(--green); border-radius:6px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:9px; font-weight:800; color:#fff;
-}
-.hc-txt { font-size:12px; color:rgba(255,255,255,.8); }
+.prompt-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
+.prompt-item{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:9px;padding:9px 13px}
+.prompt-num{width:24px;height:24px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0}
+.prompt-text{font-size:13px;color:rgba(255,255,255,.8)}
 
-.hc-stat {
-  display:flex; align-items:center; justify-content:space-between;
-  background:linear-gradient(135deg, rgba(0,179,126,.14), rgba(46,204,113,.06));
-  border:1px solid rgba(0,179,126,.22);
-  border-radius:10px; padding:10px 13px;
-}
-.hc-stat-lbl { font-size:11px; color:rgba(255,255,255,.48); }
-.hc-stat-val { font-family:'Fraunces',serif; font-size:18px; font-weight:700; color:var(--green); }
+.vc-badge{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,rgba(0,179,126,.2),rgba(46,204,113,.1));border:1px solid rgba(0,179,126,.3);border-radius:11px;padding:11px 15px}
+.vc-badge-label{font-size:12px;color:rgba(255,255,255,.6)}
+.vc-badge-value{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--green)}
 
-/* Floating mini-badges */
-.fb {
-  position:absolute; background:var(--white);
-  border-radius:10px; padding:8px 12px;
-  box-shadow:0 8px 28px rgba(10,31,68,.2);
-  display:flex; align-items:center; gap:7px;
-  font-size:11.5px; font-weight:600; color:var(--navy);
-  animation:fly 5s ease-in-out infinite;
-}
-.fb-a { top:-15px;   right:-8px;   animation-delay:0s; }
-.fb-b { bottom:-11px; left:-10px;  animation-delay:2.4s; }
-.fb-val { font-family:'Fraunces',serif; font-size:14px; font-weight:700; color:var(--green); }
-@keyframes fly { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
-@media(max-width:500px){ .fb { display:none; } }
+.float-badge{position:absolute;background:#fff;border-radius:11px;padding:9px 13px;box-shadow:var(--shadow-lg);font-size:12px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:7px;animation:badgeFloat 5s ease-in-out infinite}
+.fb1{top:-18px;right:-16px;animation-delay:0s}
+.fb2{bottom:-14px;left:-16px;animation-delay:2s}
+.fb-icon{font-size:18px}
+.fb-val{font-family:'Playfair Display',serif;font-size:15px;color:var(--green)}
+@keyframes badgeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:480px){.float-badge{display:none}}
 
-/* ═══════════════════════════
-   PROMISE STRIP
-═══════════════════════════ */
-.strip {
-  background:var(--white);
-  border-bottom:1px solid var(--border);
-  padding:44px 0;
-}
-.strip-grid {
-  display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
-}
-@media(max-width:680px){ .strip-grid { grid-template-columns:1fr; } }
+/* ── PROMISE STRIP ── */
+.promise-strip{background:var(--white);border-bottom:1px solid var(--border);padding:48px 0}
+.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+@media(max-width:720px){.promise-grid{grid-template-columns:1fr;gap:22px}}
+.promise-item{display:flex;align-items:flex-start;gap:16px}
+.promise-icon{width:50px;height:50px;flex-shrink:0;background:linear-gradient(135deg,rgba(0,179,126,.12),rgba(46,204,113,.06));border:1px solid rgba(0,179,126,.2);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.promise-text h4{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;margin-bottom:5px;color:var(--navy)}
+.promise-text p{font-size:14px;color:var(--muted);line-height:1.55}
 
-.si {
-  display:flex; align-items:flex-start; gap:13px;
-  padding:16px 18px; border-radius:14px;
-  border:1px solid var(--border);
-  transition:border-color .22s, box-shadow .22s;
-}
-.si:hover { border-color:rgba(0,179,126,.3); box-shadow:0 4px 18px rgba(0,179,126,.07); }
-.si-icon {
-  width:42px; height:42px; flex-shrink:0;
-  background:linear-gradient(135deg, rgba(0,179,126,.1), rgba(46,204,113,.04));
-  border:1px solid rgba(0,179,126,.18);
-  border-radius:12px;
-  display:flex; align-items:center; justify-content:center; font-size:19px;
-}
-.si h4 { font-family:'Fraunces',serif; font-size:15px; font-weight:700; color:var(--navy); margin-bottom:4px; }
-.si p  { font-size:13px; color:var(--muted); line-height:1.55; }
+/* ── ABOUT ── */
+.about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
 
-/* ═══════════════════════════
-   WHAT YOU GET
-═══════════════════════════ */
-.features { padding:88px 0; background:var(--bg); }
+.about-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.about-list li{display:flex;align-items:flex-start;gap:13px;padding:15px 18px;background:var(--white);border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow);font-size:15px;transition:transform .2s}
+.about-list li:hover{transform:translateX(4px)}
+.al-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.al-text strong{display:block;color:var(--navy);font-weight:600;font-size:14px;margin-bottom:2px}
+.al-text span{color:var(--muted);font-size:13px}
 
-.sec-tag {
-  font-size:11px; font-weight:700; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--green); margin-bottom:10px;
-}
-.sec-h {
-  font-family:'Fraunces',serif;
-  font-size:clamp(28px,4.2vw,46px);
-  font-weight:900; line-height:1.1;
-  letter-spacing:-.02em; color:var(--navy); margin-bottom:12px;
-}
-.sec-h em { font-style:italic; color:var(--green); }
-.sec-p { font-size:15.5px; color:var(--muted); max-width:520px; line-height:1.65; }
+.av-card{background:var(--white);border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:var(--shadow-lg)}
+.av-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+.av-stat{background:var(--bg);border-radius:13px;padding:18px 14px;text-align:center}
+.av-stat-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--green);line-height:1;margin-bottom:4px}
+.av-stat-label{font-size:12px;color:var(--muted);font-weight:500}
 
-.feat-grid {
-  display:grid; grid-template-columns:1fr 1fr;
-  gap:18px; margin-top:48px;
-}
-@media(max-width:640px){ .feat-grid { grid-template-columns:1fr; } }
+.progress-list{display:flex;flex-direction:column;gap:14px}
+.pl-item{font-size:14px}
+.pl-label{display:flex;justify-content:space-between;margin-bottom:6px}
+.pl-label span:last-child{font-weight:700;color:var(--green)}
+.pl-bar{height:8px;background:#e8eef6;border-radius:100px;overflow:hidden}
+.pl-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--green),var(--green2));width:0;transition:width 1.4s ease}
 
-.fc {
-  background:var(--white);
-  border:1.5px solid var(--border);
-  border-radius:18px; padding:26px 24px;
-  position:relative; overflow:hidden;
-  transition:transform .25s, box-shadow .25s, border-color .25s;
-}
-.fc:hover { transform:translateY(-4px); box-shadow:0 14px 44px rgba(10,31,68,.1); border-color:rgba(0,179,126,.28); }
-.fc::after {
-  content:''; position:absolute;
-  top:0; left:0; right:0; height:2px;
-  background:linear-gradient(90deg, var(--green), var(--green2));
-  transform:scaleX(0); transform-origin:left;
-  transition:transform .3s ease;
-}
-.fc:hover::after { transform:scaleX(1); }
-.fc-icon {
-  width:46px; height:46px;
-  background:linear-gradient(135deg, rgba(0,179,126,.1), rgba(46,204,113,.04));
-  border:1px solid rgba(0,179,126,.18);
-  border-radius:13px;
-  display:flex; align-items:center; justify-content:center; font-size:21px;
-  margin-bottom:14px;
-}
-.fc h3 { font-family:'Fraunces',serif; font-size:17px; font-weight:700; color:var(--navy); margin-bottom:7px; }
-.fc p  { font-size:13.5px; color:var(--muted); line-height:1.65; }
+/* ── TESTIMONIALS ── */
+.testimonials{background:var(--white)}
+.t-intro{max-width:620px;margin-bottom:56px}
+.t-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:720px){.t-grid{grid-template-columns:1fr}}
 
-/* ═══════════════════════════
-   STATS ROW
-═══════════════════════════ */
-.stats {
-  background:linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
-  padding:52px 0;
-}
-.stats-grid {
-  display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center;
-}
-@media(max-width:680px){ .stats-grid { grid-template-columns:1fr 1fr; } }
+.tcard{background:var(--bg);border:1px solid var(--border);border-radius:22px;padding:26px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s}
+.tcard:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(10,31,68,.13);border-color:rgba(0,179,126,.3)}
+.tcard-bar{position:absolute;top:0;left:0;right:0;height:3px;border-radius:22px 22px 0 0}
+.tcard-header{display:flex;align-items:center;gap:13px;margin-bottom:18px}
+.tcard-avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:#fff;flex-shrink:0}
+.tcard-name{font-family:'Playfair Display',serif;font-weight:700;font-size:17px;color:var(--navy);line-height:1.2}
+.tcard-role{font-size:12px;color:var(--muted);margin-top:2px}
 
-.stat-num {
-  font-family:'Fraunces',serif;
-  font-size:clamp(30px,4vw,46px); font-weight:900; line-height:1;
-  background:linear-gradient(135deg, var(--green), var(--green2));
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-  margin-bottom:6px;
-}
-.stat-lbl { font-size:12.5px; color:rgba(255,255,255,.5); font-weight:500; }
+.pill-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.pill{padding:3px 10px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.04em}
+.pill-p{background:#fff3e0;color:#e67e22;border:1px solid rgba(230,126,34,.25)}
+.pill-s{background:rgba(0,179,126,.1);color:var(--green);border:1px solid rgba(0,179,126,.25)}
+.pill-t{background:rgba(22,59,122,.08);color:var(--navy2);border:1px solid rgba(22,59,122,.15)}
 
-/* ═══════════════════════════
-   PRICING (solo producto)
-═══════════════════════════ */
-.pricing { padding:88px 0; background:var(--bg); }
+.tcard-text{font-size:14px;color:#3d5a7a;line-height:1.62;margin-bottom:16px}
 
-.price-card {
-  max-width:560px; margin:48px auto 0;
-  background:var(--white);
-  border:2px solid var(--border);
-  border-radius:24px; padding:38px 36px;
-  position:relative; overflow:hidden;
-  box-shadow:0 8px 40px rgba(10,31,68,.08);
-}
-@media(max-width:600px){ .price-card { padding:28px 22px; } }
+.tcard-metrics{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding-top:14px;border-top:1px solid var(--border)}
+.metric{background:var(--white);border-radius:9px;padding:10px 11px;border:1px solid var(--border)}
+.metric-val{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--green);line-height:1;margin-bottom:2px}
+.metric-lbl{font-size:11px;color:var(--muted);font-weight:500}
+.metric.inv .metric-val{color:#27ae60;font-size:15px}
+.metric.inv{background:rgba(39,174,96,.06);border-color:rgba(39,174,96,.2)}
 
-/* Top gradient bar */
-.price-card::before {
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg, var(--green), var(--green2));
-}
+.tcard.featured{grid-column:1/-1}
+.tcard.featured .tcard-metrics{grid-template-columns:repeat(4,1fr)}
+@media(max-width:600px){.tcard.featured{grid-column:1}.tcard.featured .tcard-metrics{grid-template-columns:1fr 1fr}}
 
-.pc-header {
-  display:flex; align-items:center; gap:14px; margin-bottom:22px;
-}
-.pc-emoji {
-  width:52px; height:52px;
-  background:linear-gradient(135deg, rgba(0,179,126,.12), rgba(46,204,113,.05));
-  border:1px solid rgba(0,179,126,.2);
-  border-radius:14px;
-  display:flex; align-items:center; justify-content:center; font-size:24px; flex-shrink:0;
-}
-.pc-title { font-family:'Fraunces',serif; font-size:22px; font-weight:900; color:var(--navy); }
-.pc-subtitle { font-size:13px; color:var(--muted); margin-top:3px; }
+.featured-badge{position:absolute;top:15px;right:15px;background:linear-gradient(135deg,#e67e22,#f39c12);color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;padding:4px 10px;border-radius:100px;text-transform:uppercase}
 
-/* Savings bar */
-.savings-block {
-  background:rgba(0,179,126,.06);
-  border:1px solid rgba(0,179,126,.18);
-  border-radius:12px; padding:16px 18px; margin-bottom:22px;
-}
-.sv-row {
-  display:flex; justify-content:space-between; align-items:center;
-  font-size:13px; margin-bottom:8px;
-}
-.sv-row:last-of-type { margin-bottom:10px; }
-.sv-lbl { color:var(--muted); }
-.sv-val { font-weight:800; font-size:14px; color:var(--green); }
-.sv-bar-wrap { height:6px; background:#e6eff8; border-radius:100px; overflow:hidden; }
-.sv-bar {
-  height:100%; border-radius:100px;
-  background:linear-gradient(90deg, var(--green), var(--green2));
-  width:0; transition:width 1.5s ease;
-}
+/* ── PRICING ── */
+.pricing{background:linear-gradient(180deg,var(--bg) 0%,#e8f0fa 100%)}
+.pricing-intro{max-width:620px;margin-bottom:60px}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr 1.08fr;gap:20px;align-items:start}
+@media(max-width:900px){.pricing-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
 
-/* Price display */
-.price-display {
-  display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
-  margin-bottom:22px;
-}
-.pd-was { font-size:15px; color:var(--muted); text-decoration:line-through; }
-.pd-now {
-  font-family:'Fraunces',serif;
-  font-size:64px; font-weight:900; line-height:1;
-  color:var(--green);
-}
-.pd-right { display:flex; flex-direction:column; gap:4px; padding-bottom:6px; }
-.pd-usd  { font-size:13px; color:var(--muted); font-weight:600; }
-.pd-note { font-size:12px; color:var(--muted); }
+.pcard{background:var(--white);border:2px solid var(--border);border-radius:24px;padding:30px 26px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.pcard.best{border-color:var(--green);box-shadow:0 0 0 2px rgba(0,179,126,.2),0 16px 48px rgba(0,179,126,.15);background:linear-gradient(180deg,#f0fff8 0%,#fff 100%)}
 
-/* Features checklist */
-.pc-feats { list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:26px; }
-.pc-feats li {
-  display:flex; align-items:flex-start; gap:9px;
-  font-size:14px; color:#3c5874;
-  padding-bottom:10px;
-  border-bottom:1px solid #edf2f8;
-}
-.pc-feats li:last-child { border:none; padding-bottom:0; }
-.ck { color:var(--green); font-weight:800; flex-shrink:0; margin-top:1px; }
+.best-tab{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 22px;border-radius:0 0 13px 13px;white-space:nowrap}
 
-/* Hotmart button override */
-.hotmart-fb.hotmart__button-checkout {
-  display:flex !important; align-items:center !important; justify-content:center !important;
-  width:100% !important;
-  font-family:'Sora',sans-serif !important; font-weight:700 !important; font-size:16px !important;
-  padding:16px 24px !important; border-radius:12px !important;
-  border:none !important; cursor:pointer !important;
-  background:linear-gradient(135deg, var(--green), var(--green2)) !important;
-  color:#fff !important;
-  box-shadow:0 4px 22px rgba(0,179,126,.38) !important;
-  transition:all .22s ease !important;
-  text-decoration:none !important;
-}
-.hotmart-fb.hotmart__button-checkout:hover {
-  transform:translateY(-2px) !important;
-  box-shadow:0 8px 34px rgba(0,179,126,.55) !important;
-}
+.pcard-emoji{font-size:34px;margin-bottom:13px}
+.pcard-name{font-family:'Playfair Display',serif;font-weight:700;font-size:19px;color:var(--navy);margin-bottom:7px}
+.pcard-desc{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:22px}
 
-.pc-secure {
-  text-align:center; margin-top:14px;
-  font-size:12px; color:var(--muted);
-}
+.price-was{font-size:13px;color:var(--muted);text-decoration:line-through;margin-bottom:3px}
+.price-now{font-family:'Playfair Display',serif;font-size:50px;font-weight:900;line-height:1;margin-bottom:3px}
+.price-now.green{color:var(--green)}
+.price-now.navy{color:var(--navy2)}
+.price-now.gold{color:#e67e22}
+.price-cur{font-size:13px;color:var(--muted);margin-bottom:18px}
 
-/* ── UPSELL NUDGE ── */
-.upsell {
-  max-width:560px; margin:18px auto 0;
-  background:linear-gradient(135deg, rgba(10,31,68,.04), rgba(22,59,122,.06));
-  border:1.5px dashed rgba(10,31,68,.18);
-  border-radius:16px; padding:16px 20px;
-  display:flex; align-items:center; gap:14px;
-  transition:border-color .22s, background .22s;
-}
-.upsell:hover {
-  border-color:rgba(0,179,126,.4);
-  background:linear-gradient(135deg, rgba(0,179,126,.05), rgba(46,204,113,.03));
-}
-.upsell-icon { font-size:26px; flex-shrink:0; }
-.upsell-body { flex:1; }
-.upsell-body strong {
-  display:block; font-size:13.5px; font-weight:700; color:var(--navy); margin-bottom:2px;
-}
-.upsell-body span { font-size:12px; color:var(--muted); }
-.upsell-link {
-  display:inline-flex; align-items:center; gap:5px;
-  background:linear-gradient(135deg, var(--navy), var(--navy2));
-  color:#fff; font-size:12px; font-weight:700;
-  padding:8px 16px; border-radius:9px; flex-shrink:0;
-  transition:transform .2s, box-shadow .2s;
-  white-space:nowrap;
-}
-.upsell-link:hover { transform:translateY(-1px); box-shadow:0 4px 16px rgba(10,31,68,.3); }
-@media(max-width:500px){
-  .upsell { flex-wrap:wrap; }
-  .upsell-link { width:100%; justify-content:center; }
-}
+.s-bar{background:rgba(0,179,126,.07);border:1px solid rgba(0,179,126,.2);border-radius:11px;padding:13px 14px;margin-bottom:18px}
+.s-bar.gold{background:rgba(230,126,34,.07);border-color:rgba(230,126,34,.2)}
+.s-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;font-size:13px}
+.s-row:last-of-type{margin-bottom:9px}
+.s-lbl{color:var(--muted)}
+.s-val{font-weight:700;font-size:14px}
+.s-val.green{color:var(--green)}
+.s-val.gold{color:#e67e22}
+.s-prog{height:6px;background:#e8eef6;border-radius:100px;overflow:hidden}
+.s-fill{height:100%;border-radius:100px;width:0;transition:width 1.6s ease}
+.s-fill.green{background:linear-gradient(90deg,var(--green),var(--green2))}
+.s-fill.gold{background:linear-gradient(90deg,#e67e22,#f39c12)}
 
-/* ═══════════════════════════
-   FINAL CTA
-═══════════════════════════ */
-.final {
-  background:linear-gradient(145deg, var(--navy) 0%, var(--navy2) 100%);
-  padding:88px 0; text-align:center;
-  position:relative; overflow:hidden;
-}
-.final::before {
-  content:''; position:absolute; inset:0;
-  background-image:
-    linear-gradient(rgba(0,179,126,.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,179,126,.055) 1px, transparent 1px);
-  background-size:46px 46px;
-}
-.final-inner { position:relative; z-index:1; }
-.final-inner h2 {
-  font-family:'Fraunces',serif;
-  font-size:clamp(28px,5vw,52px); font-weight:900;
-  letter-spacing:-.02em; color:#fff; margin-bottom:14px;
-}
-.final-inner h2 em {
-  font-style:italic;
-  background:linear-gradient(120deg, var(--green), var(--green2));
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-}
-.final-inner p {
-  font-size:17px; color:rgba(255,255,255,.6);
-  font-weight:300; max-width:480px; margin:0 auto 36px; line-height:1.72;
-}
-.final-inner p strong { color:#fff; font-weight:600; }
-.final-note { margin-top:16px; font-size:12px; color:rgba(255,255,255,.32); }
+.pcard-features{list-style:none;margin-bottom:24px;display:flex;flex-direction:column;gap:8px}
+.pcard-features li{display:flex;align-items:flex-start;gap:9px;font-size:14px;color:#3d5a7a;padding-bottom:8px;border-bottom:1px solid #f0f4fb}
+.pcard-features li:last-child{border-bottom:none;padding-bottom:0}
+.check{color:var(--green);font-weight:700;flex-shrink:0;margin-top:2px}
 
-/* Final hotmart button wrapper */
-.final-btn-wrap { display:flex; justify-content:center; }
-.final-btn-wrap .hotmart-fb.hotmart__button-checkout {
-  max-width:360px !important; font-size:16px !important; padding:17px 32px !important;
-}
+.most-chosen{display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(0,179,126,.08);border:1px solid rgba(0,179,126,.2);border-radius:8px;padding:8px;font-size:12px;font-weight:600;color:var(--green);margin-top:12px}
 
-/* ═══════════════════════════
-   FOOTER
-═══════════════════════════ */
-footer {
-  background:var(--navy);
-  border-top:1px solid rgba(255,255,255,.06);
-  padding:32px 0; text-align:center;
-}
-footer p { font-size:13px; color:rgba(255,255,255,.32); line-height:1.7; }
-footer a { color:rgba(255,255,255,.52); }
-footer a:hover { color:var(--green); }
+/* ── CTA FINAL ── */
+.cta-final{background:linear-gradient(145deg,var(--navy) 0%,var(--navy2) 100%);text-align:center;overflow:hidden;position:relative}
+.cta-final::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,179,126,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,179,126,.06) 1px,transparent 1px);background-size:48px 48px}
+.cta-inner{position:relative;z-index:1}
+.cta-inner .headline{color:#fff;margin-bottom:18px}
+.cta-inner .headline span{background:linear-gradient(90deg,var(--green),var(--green2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cta-inner p{color:rgba(255,255,255,.65);font-size:18px;font-weight:300;max-width:540px;margin:0 auto 36px;line-height:1.65}
+.cta-inner p strong{color:#fff;font-weight:600}
 
-/* ── SCROLL REVEAL ── */
-.reveal { opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
-.reveal.on { opacity:1; transform:none; }
+/* ── FOOTER ── */
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:36px 0;text-align:center}
+footer p{color:rgba(255,255,255,.4);font-size:13px;line-height:1.6}
+footer a{color:rgba(255,255,255,.6)}
+footer a:hover{color:var(--green)}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── MOBILE ── */
+@media(max-width:480px){
+  .hero-ctas{flex-direction:column}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .price-now{font-size:42px}
+}
 </style>
 </head>
 <body>
 
 <!-- ═══ HERO ═══ -->
 <section class="hero">
-  <div class="hero-grid"></div>
-  <div class="orb o1"></div>
-  <div class="orb o2"></div>
-  <div class="orb o3"></div>
-  <div class="pts">
-    <div class="pt"></div><div class="pt"></div><div class="pt"></div>
-    <div class="pt"></div><div class="pt"></div><div class="pt"></div>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="particles">
+    <div class="p"></div><div class="p"></div><div class="p"></div>
+    <div class="p"></div><div class="p"></div><div class="p"></div>
   </div>
 
-  <div class="wrap">
+  <div class="container">
     <div class="hero-inner">
 
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="edot"></span>Guía Estratégica · Precio de Lanzamiento</div>
-        <h1 class="hero-h1">
-          Cómo ahorrar tiempo<br>
-          y dinero sin ser<br>
-          <em>experto en tecnología</em>
+      <div class="hero-content">
+        <div class="tag"><span class="tag-dot"></span>Guía Estratégica + 25 Prompts Prácticos</div>
+        <h1 class="hero-title">
+          La IA que va a<br>
+          <span>cambiar el curso</span><br>
+          de tu vida
         </h1>
         <p class="hero-sub">
-          Aprende a usar la IA para recuperar horas cada semana, eliminar gastos ocultos y <strong>generar ingresos extra</strong> — sin conocimientos técnicos ni inversión en herramientas.
+          Sigue paso a paso la <strong>Guía Estratégica</strong> y el <strong>Pack de 25 Prompts</strong> del Ebook <em>IA Sin Complicaciones</em>. Sin tecnicismos. Sin inversión. Solo resultados reales desde el primer día.
         </p>
-
-        <div class="price-pill">
-          <span class="pp-was">$19.00 USD</span>
-          <span class="pp-now">$9.99</span>
-          <span class="pp-usd">USD</span>
-          <span class="pp-tag">🔥 48% OFF</span>
-        </div>
-
         <div class="hero-ctas">
-          <a href="#pricing" class="btn green">🚀 Quiero empezar ahora</a>
-          <a href="#logros" class="btn ghost">Ver qué incluye →</a>
+          <a href="#pricing" class="btn btn-green">🚀 Quiero empezar ahora</a>
+          <a href="#testimonios" class="btn btn-outline">Ver resultados reales</a>
         </div>
-
-        <div class="trust-row">
-          <span>Precio de lanzamiento</span>
-          <span>$0 en herramientas</span>
-          <span>Acceso inmediato</span>
-          <span>Pago seguro Hotmart</span>
+        <div class="hero-trust">
+          <div class="trust-item">✅ $0 en herramientas</div>
+          <div class="trust-item">⚡ Resultados desde el día 1</div>
+          <div class="trust-item">🔒 Pago seguro Hotmart</div>
         </div>
       </div>
 
       <div class="hero-visual">
-        <div style="position:relative">
-          <div class="hero-card">
-            <div class="hc-top">
-              <div class="hc-icon">📘</div>
-              <div>
-                <div class="hc-name">IA Sin Complicaciones</div>
-                <div class="hc-sub">Guía Estratégica Completa</div>
-              </div>
-            </div>
-            <ul class="hc-list">
-              <li class="hc-li"><div class="hc-num">01</div><span class="hc-txt">Plan de implementación en 7 días</span></li>
-              <li class="hc-li"><div class="hc-num">02</div><span class="hc-txt">Estrategia sin tecnicismos</span></li>
-              <li class="hc-li"><div class="hc-num">03</div><span class="hc-txt">Casos reales accionables</span></li>
-              <li class="hc-li"><div class="hc-num">04</div><span class="hc-txt">Solo herramientas gratuitas</span></li>
-            </ul>
-            <div class="hc-stat">
-              <div class="hc-stat-lbl">Valor real del contenido</div>
-              <div class="hc-stat-val">+$47 USD</div>
-            </div>
-          </div>
-
-          <div class="fb fb-a">
-            <span style="font-size:16px">💸</span>
+        <div class="visual-card">
+          <div class="vc-top">
+            <div class="vc-brain">🧠</div>
             <div>
-              <div class="fb-val">79%</div>
-              <div style="font-size:10px;color:#5a7899">vs valor real</div>
+              <div class="vc-title">IA Sin Complicaciones</div>
+              <div class="vc-sub">25 Prompts listos para usar</div>
             </div>
           </div>
-          <div class="fb fb-b">
-            <span style="font-size:16px">⏱️</span>
-            <div>
-              <div class="fb-val">5–7h</div>
-              <div style="font-size:10px;color:#5a7899">ahorradas/semana</div>
-            </div>
+          <ul class="prompt-list">
+            <li class="prompt-item"><div class="prompt-num">#3</div><span class="prompt-text">Calendario de Contenido Mensual</span></li>
+            <li class="prompt-item"><div class="prompt-num">#9</div><span class="prompt-text">Comparador Inteligente de Compras</span></li>
+            <li class="prompt-item"><div class="prompt-num">#17</div><span class="prompt-text">Artículos SEO en minutos</span></li>
+            <li class="prompt-item"><div class="prompt-num">#18</div><span class="prompt-text">Guiones para Videos y Reels</span></li>
+          </ul>
+          <div class="vc-badge">
+            <div class="vc-badge-label">Ahorro promedio documentado</div>
+            <div class="vc-badge-value">$1,872/año</div>
           </div>
+        </div>
+        <div class="float-badge fb1">
+          <span class="fb-icon">📈</span>
+          <div><div class="fb-val">+340%</div><div style="font-size:10px;color:#5c7a9b">Leads LinkedIn</div></div>
+        </div>
+        <div class="float-badge fb2">
+          <span class="fb-icon">💚</span>
+          <div><div class="fb-val">$0</div><div style="font-size:10px;color:#5c7a9b">Inversión en tools</div></div>
         </div>
       </div>
 
@@ -639,208 +338,382 @@ footer a:hover { color:var(--green); }
   </div>
 </section>
 
-<!-- ═══ STRIP ═══ -->
-<div class="strip">
-  <div class="wrap">
-    <div class="strip-grid">
-      <div class="si reveal">
-        <div class="si-icon">⚡</div>
-        <div>
-          <h4>Ahorra 5–7 horas/semana</h4>
-          <p>Automatiza tareas repetitivas desde el primer día.</p>
+<!-- ═══ PROMISE STRIP ═══ -->
+<div class="promise-strip">
+  <div class="container">
+    <div class="promise-grid">
+      <div class="promise-item reveal">
+        <div class="promise-icon">🎯</div>
+        <div class="promise-text">
+          <h4>Estrategia Clara</h4>
+          <p>Un mapa paso a paso que cualquier persona puede seguir, sin importar su nivel técnico.</p>
         </div>
       </div>
-      <div class="si reveal" style="transition-delay:.1s">
-        <div class="si-icon">💰</div>
-        <div>
-          <h4>Reduce $100–$300 al mes</h4>
-          <p>Detecta gastos hormiga invisibles y suscripciones que no usas.</p>
+      <div class="promise-item reveal" style="transition-delay:.1s">
+        <div class="promise-icon">⚙️</div>
+        <div class="promise-text">
+          <h4>25 Prompts Probados</h4>
+          <p>Copias exactas que han generado resultados documentados en personas reales.</p>
         </div>
       </div>
-      <div class="si reveal" style="transition-delay:.2s">
-        <div class="si-icon">🚀</div>
-        <div>
-          <h4>Multiplica tus ingresos</h4>
-          <p>Crea más, produce más y escala sin invertir más tiempo.</p>
+      <div class="promise-item reveal" style="transition-delay:.2s">
+        <div class="promise-icon">💸</div>
+        <div class="promise-text">
+          <h4>Solo Herramientas Gratis</h4>
+          <p>ChatGPT · Canva · Perplexity · Buffer · Grammarly · Google Sheets. Todo $0.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══ FEATURES ═══ -->
-<section class="features" id="logros">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="sec-tag">¿Qué incluye?</div>
-      <h2 class="sec-h">Todo lo que necesitas para<br><em>aplicar la IA hoy mismo</em></h2>
-      <p class="sec-p">Sin tecnicismos. Sin inversión. Lenguaje humano con resultados reales.</p>
-    </div>
-    <div class="feat-grid">
-      <div class="fc reveal" style="transition-delay:.05s">
-        <div class="fc-icon">🗺️</div>
-        <h3>Mapa Estratégico Completo</h3>
-        <p>Entiende cómo funciona la IA y dónde aplicarla en tu vida o negocio para obtener el máximo impacto.</p>
-      </div>
-      <div class="fc reveal" style="transition-delay:.1s">
-        <div class="fc-icon">📅</div>
-        <h3>Plan de 7 Días Paso a Paso</h3>
-        <p>Implementación guiada desde el día 1. Sin perderte, sin frustrarte, con hitos claros cada día.</p>
-      </div>
-      <div class="fc reveal" style="transition-delay:.15s">
-        <div class="fc-icon">🛠️</div>
-        <h3>Solo Herramientas Gratuitas</h3>
-        <p>ChatGPT · Canva · Perplexity · Buffer · Grammarly · Google Sheets. Todo a costo $0.</p>
-      </div>
-      <div class="fc reveal" style="transition-delay:.2s">
-        <div class="fc-icon">📊</div>
-        <h3>Casos Reales Accionables</h3>
-        <p>Ejemplos documentados de personas que recuperaron tiempo y dinero siguiendo esta misma guía.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ STATS ═══ -->
-<div class="stats">
-  <div class="wrap">
-    <div class="stats-grid">
+<!-- ═══ ABOUT ═══ -->
+<section class="about section">
+  <div class="container">
+    <div class="about-grid">
       <div class="reveal">
-        <div class="stat-num">5–7h</div>
-        <div class="stat-lbl">Ahorradas por semana</div>
+        <div class="tag"><span class="tag-dot"></span>¿Qué incluye?</div>
+        <h2 class="headline hl-md" style="color:var(--navy)">Tu kit completo para <span style="color:var(--green)">dominar la IA</span> desde hoy</h2>
+        <p style="color:var(--muted);margin:14px 0 24px;font-size:15px">No necesitas ser programador ni tener experiencia previa. Todo está explicado en lenguaje humano, con ejemplos reales y resultados verificables.</p>
+        <ul class="about-list">
+          <li>
+            <span class="al-icon">📘</span>
+            <div class="al-text">
+              <strong>Guía Estratégica – IA Sin Complicaciones</strong>
+              <span>El mapa mental para entender, planificar y aplicar la IA en tu vida y negocio.</span>
+            </div>
+          </li>
+          <li>
+            <span class="al-icon">⚡</span>
+            <div class="al-text">
+              <strong>Pack de 25 Prompts – Guía Práctica</strong>
+              <span>Los prompts exactos para ahorrar tiempo, generar ingresos y controlar tus finanzas.</span>
+            </div>
+          </li>
+          <li>
+            <span class="al-icon">🛠️</span>
+            <div class="al-text">
+              <strong>Solo herramientas 100% gratuitas</strong>
+              <span>ChatGPT · Canva · Perplexity · Buffer · Grammarly · Google Sheets</span>
+            </div>
+          </li>
+          <li>
+            <span class="al-icon">🏆</span>
+            <div class="al-text">
+              <strong>Resultados desde el primer uso</strong>
+              <span>Contenido, finanzas, productividad y crecimiento de seguidores desde el día 1.</span>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="reveal" style="transition-delay:.1s">
-        <div class="stat-num">$300</div>
-        <div class="stat-lbl">Reducción mensual posible</div>
-      </div>
-      <div class="reveal" style="transition-delay:.2s">
-        <div class="stat-num">7 días</div>
-        <div class="stat-lbl">Para ver primeros resultados</div>
-      </div>
-      <div class="reveal" style="transition-delay:.3s">
-        <div class="stat-num">$0</div>
-        <div class="stat-lbl">Inversión en herramientas</div>
+
+      <div class="reveal" style="transition-delay:.15s">
+        <div class="av-card">
+          <div class="av-stat-row">
+            <div class="av-stat">
+              <div class="av-stat-num">25</div>
+              <div class="av-stat-label">Prompts listos</div>
+            </div>
+            <div class="av-stat">
+              <div class="av-stat-num">$0</div>
+              <div class="av-stat-label">En herramientas</div>
+            </div>
+          </div>
+          <div class="progress-list">
+            <div class="pl-item">
+              <div class="pl-label"><span>Productividad</span><span>+300%</span></div>
+              <div class="pl-bar"><div class="pl-fill" data-w="90%"></div></div>
+            </div>
+            <div class="pl-item">
+              <div class="pl-label"><span>Ahorro de tiempo</span><span>80%</span></div>
+              <div class="pl-bar"><div class="pl-fill" data-w="80%"></div></div>
+            </div>
+            <div class="pl-item">
+              <div class="pl-label"><span>Leads / Seguidores</span><span>+340%</span></div>
+              <div class="pl-bar"><div class="pl-fill" data-w="95%"></div></div>
+            </div>
+            <div class="pl-item">
+              <div class="pl-label"><span>Ahorro económico</span><span>+$1,800/año</span></div>
+              <div class="pl-bar"><div class="pl-fill" data-w="75%"></div></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="testimonials section" id="testimonios">
+  <div class="container">
+    <div class="t-intro reveal">
+      <div class="tag"><span class="tag-dot"></span>Casos de Éxito Reales</div>
+      <h2 class="headline hl-md" style="color:var(--navy)">Ellos ya <span style="color:var(--green)">transformaron</span> su vida con IA</h2>
+      <p style="color:var(--muted);margin-top:12px;font-size:16px">Sin inversión en herramientas. Sin conocimientos técnicos. Solo siguiendo los prompts exactos de la guía.</p>
+    </div>
+
+    <div class="t-grid">
+
+      <!-- CARLOS -->
+      <div class="tcard reveal">
+        <div class="tcard-bar" style="background:linear-gradient(90deg,var(--navy),var(--navy2))"></div>
+        <div class="tcard-header">
+          <div class="tcard-avatar" style="background:linear-gradient(135deg,var(--navy),var(--navy2))">C</div>
+          <div><div class="tcard-name">Carlos</div><div class="tcard-role">Asesor Financiero</div></div>
+        </div>
+        <div class="pill-row">
+          <span class="pill pill-p">🚫 1 post/semana</span>
+          <span class="pill pill-s">✅ Prompt #3</span>
+          <span class="pill pill-t">ChatGPT</span>
+          <span class="pill pill-t">Canva</span>
+          <span class="pill pill-t">Buffer</span>
+        </div>
+        <p class="tcard-text">Se bloqueaba y no podía publicar. Con el <strong>Calendario de Contenido Mensual</strong> pasó de 4 a <strong>22 publicaciones/mes</strong> sin estrés.</p>
+        <div class="tcard-metrics">
+          <div class="metric"><div class="metric-val">+340%</div><div class="metric-lbl">Leads LinkedIn</div></div>
+          <div class="metric"><div class="metric-val">22/mes</div><div class="metric-lbl">Publicaciones</div></div>
+          <div class="metric inv"><div class="metric-val">$0</div><div class="metric-lbl">Inversión</div></div>
+          <div class="metric"><div class="metric-val">4h/mes</div><div class="metric-lbl">vs 20h antes</div></div>
+        </div>
+      </div>
+
+      <!-- ANDREA -->
+      <div class="tcard reveal" style="transition-delay:.1s">
+        <div class="tcard-bar" style="background:linear-gradient(90deg,#8e44ad,#9b59b6)"></div>
+        <div class="tcard-header">
+          <div class="tcard-avatar" style="background:linear-gradient(135deg,#8e44ad,#9b59b6)">A</div>
+          <div><div class="tcard-name">Andrea</div><div class="tcard-role">Compradora Inteligente</div></div>
+        </div>
+        <div class="pill-row">
+          <span class="pill pill-p">🚫 Compras impulsivas</span>
+          <span class="pill pill-s">✅ Prompt #9</span>
+          <span class="pill pill-t">ChatGPT</span>
+          <span class="pill pill-t">CamelCamelCamel</span>
+        </div>
+        <p class="tcard-text">Antes vaciaba su cuenta con compras innecesarias. Con el <strong>Comparador Inteligente</strong> ahorró más de $1,340 documentados en un año.</p>
+        <div class="tcard-metrics">
+          <div class="metric"><div class="metric-val">$1,340</div><div class="metric-lbl">Ahorro en 1 año</div></div>
+          <div class="metric"><div class="metric-val">7</div><div class="metric-lbl">Compras analizadas</div></div>
+          <div class="metric inv"><div class="metric-val">$0</div><div class="metric-lbl">Inversión</div></div>
+          <div class="metric"><div class="metric-val">15min</div><div class="metric-lbl">Por compra</div></div>
+        </div>
+      </div>
+
+      <!-- LUIS — FEATURED -->
+      <div class="tcard featured reveal" style="transition-delay:.05s">
+        <div class="tcard-bar" style="background:linear-gradient(90deg,var(--green),var(--green2))"></div>
+        <div class="featured-badge">⭐ Caso Destacado</div>
+        <div class="tcard-header">
+          <div class="tcard-avatar" style="background:linear-gradient(135deg,var(--green),var(--green2))">L</div>
+          <div><div class="tcard-name">Luis</div><div class="tcard-role">Redactor Freelance</div></div>
+        </div>
+        <div class="pill-row">
+          <span class="pill pill-p">🚫 2 artículos/semana</span>
+          <span class="pill pill-s">✅ Prompts #17 + #6</span>
+          <span class="pill pill-t">ChatGPT</span>
+          <span class="pill pill-t">Perplexity</span>
+          <span class="pill pill-t">Grammarly</span>
+        </div>
+        <p class="tcard-text">Solo podía escribir 2 artículos/semana en 8 horas. Con los prompts de <strong>Artículos SEO + Investigación Rápida</strong> triplicó su producción <strong>en las mismas 8 horas</strong>. Su ingreso pasó de $400 a <strong>$1,200/mes</strong>.</p>
+        <div class="tcard-metrics">
+          <div class="metric"><div class="metric-val">$1,200</div><div class="metric-lbl">Ingreso/mes actual</div></div>
+          <div class="metric"><div class="metric-val">3x</div><div class="metric-lbl">Más producción</div></div>
+          <div class="metric"><div class="metric-val">6/sem</div><div class="metric-lbl">Artículos (antes 2)</div></div>
+          <div class="metric inv"><div class="metric-val">$0</div><div class="metric-lbl">Inversión extra</div></div>
+        </div>
+      </div>
+
+      <!-- NATALIA -->
+      <div class="tcard reveal" style="transition-delay:.1s">
+        <div class="tcard-bar" style="background:linear-gradient(90deg,#e91e8c,#f06292)"></div>
+        <div class="tcard-header">
+          <div class="tcard-avatar" style="background:linear-gradient(135deg,#e91e8c,#f06292)">N</div>
+          <div><div class="tcard-name">Natalia</div><div class="tcard-role">Nutricionista de Instagram</div></div>
+        </div>
+        <div class="pill-row">
+          <span class="pill pill-p">🚫 800 seguidores</span>
+          <span class="pill pill-s">✅ Prompt #18</span>
+          <span class="pill pill-t">ChatGPT</span>
+          <span class="pill pill-t">CapCut</span>
+          <span class="pill pill-t">Canva</span>
+        </div>
+        <p class="tcard-text">Se congelaba frente a la cámara. Con <strong>Guiones para Videos/Reels</strong> pasó de 800 a <strong>12,000 seguidores en 3 meses</strong> y consiguió 8 nuevos pacientes/mes.</p>
+        <div class="tcard-metrics">
+          <div class="metric"><div class="metric-val">12,000</div><div class="metric-lbl">Seguidores (3 meses)</div></div>
+          <div class="metric"><div class="metric-val">$480</div><div class="metric-lbl">Ingresos/mes extra</div></div>
+          <div class="metric inv"><div class="metric-val">$0</div><div class="metric-lbl">Inversión</div></div>
+          <div class="metric"><div class="metric-val">50min</div><div class="metric-lbl">Por reel completo</div></div>
+        </div>
+      </div>
+
+      <!-- DANIEL -->
+      <div class="tcard reveal" style="transition-delay:.15s">
+        <div class="tcard-bar" style="background:linear-gradient(90deg,#e67e22,#f39c12)"></div>
+        <div class="tcard-header">
+          <div class="tcard-avatar" style="background:linear-gradient(135deg,#e67e22,#f39c12)">D</div>
+          <div><div class="tcard-name">Daniel</div><div class="tcard-role">El Auditor de Suscripciones</div></div>
+        </div>
+        <div class="pill-row">
+          <span class="pill pill-p">🚫 $273/mes en subs</span>
+          <span class="pill pill-s">✅ Prompt #10</span>
+          <span class="pill pill-t">ChatGPT</span>
+          <span class="pill pill-t">Google Sheets</span>
+        </div>
+        <p class="tcard-text">Pagaba $273/mes en suscripciones que no notaba. Con el <strong>Auditor de Suscripciones</strong> canceló 5 de 9 servicios en solo 30 minutos.</p>
+        <div class="tcard-metrics">
+          <div class="metric"><div class="metric-val">$1,872</div><div class="metric-lbl">Ahorro anual</div></div>
+          <div class="metric"><div class="metric-val">$156</div><div class="metric-lbl">Ahorro/mes</div></div>
+          <div class="metric inv"><div class="metric-val">$0</div><div class="metric-lbl">Inversión</div></div>
+          <div class="metric"><div class="metric-val">30min</div><div class="metric-lbl">Una sola vez</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- ═══ PRICING ═══ -->
-<section class="pricing" id="pricing">
-  <div class="wrap">
-    <div class="reveal" style="text-align:center">
-      <div class="sec-tag">Oferta de Lanzamiento</div>
-      <h2 class="sec-h">Empieza hoy por<br><em>solo $9.99</em></h2>
-      <p class="sec-p" style="margin:10px auto 0">Precio especial de lanzamiento por tiempo limitado.</p>
+<section class="pricing section" id="pricing">
+  <div class="container">
+    <div class="pricing-intro reveal">
+      <div class="tag"><span class="tag-dot"></span>Oferta de Lanzamiento</div>
+      <h2 class="headline hl-md" style="color:var(--navy)">Elige tu <span style="color:var(--green)">kit de transformación</span></h2>
+      <p style="color:var(--muted);margin-top:14px;font-size:15px">
+        Los dos productos separados suman <strong style="color:var(--navy)">$33.99 USD</strong>. Por lanzamiento los ofrecemos juntos por <strong style="color:var(--green)">$20.00 USD</strong>. El valor real del contenido es de <strong style="color:var(--navy)">$87 USD</strong>.
+      </p>
     </div>
 
-    <div class="price-card reveal">
-      <div class="pc-header">
-        <div class="pc-emoji">📘</div>
-        <div>
-          <div class="pc-title">IA Sin Complicaciones</div>
-          <div class="pc-subtitle">Guía Estratégica Completa</div>
+    <div class="pricing-grid">
+
+      <!-- 1er PRODUCTO -->
+      <div class="pcard reveal">
+        <div class="pcard-emoji">📘</div>
+        <div class="pcard-name">IA Sin Complicaciones</div>
+        <p style="font-size:13px;color:var(--green);font-weight:600;margin-bottom:6px">Guía Estratégica</p>
+        <p class="pcard-desc">El mapa completo para entender y aplicar la IA en tu negocio o vida personal. Estrategia clara, lenguaje humano.</p>
+        <div class="price-was">Precio original: $19.00 USD</div>
+        <div class="price-now navy">$9.99</div>
+        <div class="price-cur">USD · Precio de lanzamiento</div>
+        <div class="s-bar">
+          <div class="s-row"><span class="s-lbl">Ahorro vs precio original</span><span class="s-val green">48% OFF</span></div>
+          <div class="s-row"><span class="s-lbl">Ahorro vs valor real ($47)</span><span class="s-val green">79% OFF</span></div>
+          <div class="s-prog"><div class="s-fill green" data-w="79%"></div></div>
+        </div>
+        <ul class="pcard-features">
+          <li><span class="check">✓</span>Guía estratégica completa en PDF</li>
+          <li><span class="check">✓</span>Aplicable desde el día 1</li>
+          <li><span class="check">✓</span>Lenguaje 100% humano, sin tecnicismos</li>
+          <li><span class="check">✓</span>Casos de uso reales incluidos</li>
+        </ul>
+        <div class="hm-navy">
+          <a onclick="return false;" href="https://pay.hotmart.com/F104691921G?checkoutMode=2&off=kisl142w" class="hotmart-fb hotmart__button-checkout">Comprar Guía Estratégica →</a>
         </div>
       </div>
 
-      <div class="savings-block">
-        <div class="sv-row">
-          <span class="sv-lbl">Ahorro vs precio original ($19)</span>
-          <span class="sv-val">48% OFF</span>
+      <!-- 2do PRODUCTO -->
+      <div class="pcard reveal" style="transition-delay:.1s">
+        <div class="pcard-emoji">⚡</div>
+        <div class="pcard-name">Pack de 25 Prompts</div>
+        <p style="font-size:13px;color:var(--green);font-weight:600;margin-bottom:6px">Guía Práctica</p>
+        <p class="pcard-desc">Los 25 prompts exactos que usan Carlos, Andrea, Luis, Natalia y Daniel. Copia, pega y transforma.</p>
+        <div class="price-was">Precio original: $14.99 USD</div>
+        <div class="price-now navy">$9.99</div>
+        <div class="price-cur">USD · Precio de lanzamiento</div>
+        <div class="s-bar">
+          <div class="s-row"><span class="s-lbl">Ahorro vs precio original</span><span class="s-val green">33% OFF</span></div>
+          <div class="s-row"><span class="s-lbl">Ahorro vs valor real ($39)</span><span class="s-val green">74% OFF</span></div>
+          <div class="s-prog"><div class="s-fill green" data-w="74%"></div></div>
         </div>
-        <div class="sv-bar-wrap"><div class="sv-bar" data-w="48"></div></div>
-        <div class="sv-row" style="margin-top:10px">
-          <span class="sv-lbl">Ahorro vs valor real ($47)</span>
-          <span class="sv-val">79% OFF</span>
+        <ul class="pcard-features">
+          <li><span class="check">✓</span>25 prompts listos para copiar y pegar</li>
+          <li><span class="check">✓</span>Solo herramientas gratuitas</li>
+          <li><span class="check">✓</span>Resultados documentados por personas reales</li>
+          <li><span class="check">✓</span>Acceso inmediato en PDF</li>
+        </ul>
+        <div class="hm-navy">
+          <a onclick="return false;" href="https://pay.hotmart.com/L104788404U?checkoutMode=2&off=kiopt2fa" class="hotmart-fb hotmart__button-checkout">Comprar Pack de Prompts →</a>
         </div>
-        <div class="sv-bar-wrap"><div class="sv-bar" data-w="79"></div></div>
       </div>
 
-      <div class="price-display">
-        <span class="pd-was">$19.00 USD</span>
-        <span class="pd-now">$9.99</span>
-        <div class="pd-right">
-          <span class="pd-usd">USD</span>
-          <span class="pd-note">Precio de lanzamiento</span>
+      <!-- 3er PRODUCTO — BEST -->
+      <div class="pcard best reveal" style="transition-delay:.2s">
+        <div class="best-tab">🏆 La mayoría elige este</div>
+        <div class="pcard-emoji" style="margin-top:20px">🚀</div>
+        <div class="pcard-name">IA Sin Complicaciones – Total</div>
+        <p style="font-size:13px;color:var(--green);font-weight:600;margin-bottom:6px">Guía Estratégica + Guía Práctica</p>
+        <p class="pcard-desc">El kit completo: estrategia clara + 25 prompts probados. Todo lo que necesitas para transformar tu productividad, ingresos y finanzas.</p>
+        <div class="price-was">Valor combinado: $33.99 · Valor real: $87 USD</div>
+        <div class="price-now gold">$20.00</div>
+        <div class="price-cur">USD · Precio especial de lanzamiento</div>
+        <div class="s-bar gold">
+          <div class="s-row"><span class="s-lbl">Ahorro vs comprar por separado</span><span class="s-val gold">41% OFF</span></div>
+          <div class="s-row"><span class="s-lbl">Ahorro vs valor real ($87)</span><span class="s-val gold">77% OFF</span></div>
+          <div class="s-prog"><div class="s-fill gold" data-w="77%"></div></div>
         </div>
+        <ul class="pcard-features">
+          <li><span class="check">✓</span>Guía Estratégica completa en PDF</li>
+          <li><span class="check">✓</span>Pack de 25 Prompts probados</li>
+          <li><span class="check">✓</span>Solo herramientas 100% gratuitas</li>
+          <li><span class="check">✓</span>Acceso inmediato a ambos productos</li>
+          <li><span class="check">✓</span>Mejor relación precio / transformación</li>
+          <li><span class="check">✓</span>Lo que el 80% de compradores elige</li>
+        </ul>
+        <div class="hm-gold">
+          <a onclick="return false;" href="https://pay.hotmart.com/A104789123J?checkoutMode=2&off=uzygs8w1" class="hotmart-fb hotmart__button-checkout">🚀 Quiero el Pack Total →</a>
+        </div>
+        <div class="most-chosen">🔥 La opción favorita de nuestros compradores</div>
       </div>
 
-      <ul class="pc-feats">
-        <li><span class="ck">✓</span>Guía estratégica completa en PDF</li>
-        <li><span class="ck">✓</span>Plan de implementación en 7 días</li>
-        <li><span class="ck">✓</span>Lenguaje 100% humano, sin tecnicismos</li>
-        <li><span class="ck">✓</span>Casos de uso reales documentados</li>
-        <li><span class="ck">✓</span>Solo herramientas 100% gratuitas</li>
-        <li><span class="ck">✓</span>Acceso inmediato al comprar</li>
-      </ul>
-
-      <a onclick="return false;" href="https://pay.hotmart.com/F104691921G?checkoutMode=2&off=kisl142w" class="hotmart-fb hotmart__button-checkout">
-        🚀 Comprar Guía Estratégica por $9.99
-      </a>
-
-      <p class="pc-secure">🔒 Pago seguro vía Hotmart · Acceso inmediato · Soporte incluido</p>
     </div>
 
-    <!-- UPSELL NUDGE -->
-    <div class="upsell reveal">
-      <div class="upsell-icon">🚀</div>
-      <div class="upsell-body">
-        <strong>¿Quieres el kit completo?</strong>
-        <span>Guía Estratégica + Pack de 25 Prompts por solo $20.00 — el pack completo vale más de $90 en valor real.</span>
-      </div>
-      <a href="https://ia-sin-complicaciones.vercel.app/" target="_blank" class="upsell-link">
-        Ver Pack Total →
-      </a>
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <p style="color:var(--muted);font-size:14px">🔒 Pago 100% seguro vía Hotmart &nbsp;·&nbsp; Acceso inmediato al comprar &nbsp;·&nbsp; Soporte incluido</p>
     </div>
-
   </div>
 </section>
 
 <!-- ═══ FINAL CTA ═══ -->
-<section class="final">
-  <div class="wrap">
-    <div class="final-inner reveal">
-      <h2>Tu transformación<br><em>empieza hoy</em></h2>
-      <p>Dentro de 6 meses agradecerás haber tomado acción. <strong>Tiempo y dinero</strong> te están esperando.</p>
-      <div class="final-btn-wrap">
-        <a onclick="return false;" href="https://pay.hotmart.com/F104691921G?checkoutMode=2&off=kisl142w" class="hotmart-fb hotmart__button-checkout">
-          Acceder ahora por $9.99 →
-        </a>
+<section class="cta-final section">
+  <div class="container">
+    <div class="cta-inner reveal" style="max-width:680px;margin:0 auto">
+      <h2 class="headline hl-md">¿Sigues esperando el <span>momento perfecto</span>?</h2>
+      <p>El mejor momento fue ayer. El segundo mejor es <strong>ahora mismo</strong>. Las personas de esta página no tenían ventajas especiales; solo siguieron los pasos.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="#pricing" class="btn btn-green" style="font-size:16px;padding:16px 40px">🚀 Empezar mi transformación</a>
       </div>
-      <p class="final-note">Precio de lanzamiento por tiempo limitado · Pago seguro Hotmart</p>
+      <p style="margin-top:20px;font-size:13px;color:rgba(255,255,255,.4)">Precio de lanzamiento disponible por tiempo limitado</p>
     </div>
   </div>
 </section>
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <div class="wrap">
-    <p style="font-family:'Fraunces',serif;font-size:17px;color:rgba(255,255,255,.75);margin-bottom:7px">IA Sin Complicaciones</p>
-    <p>Guía Estratégica · Herramientas 100% gratuitas · Resultados desde el día 1</p>
-    <p style="margin-top:7px">© 2026 IA Sin Complicaciones · Pagos procesados por <a href="https://hotmart.com" target="_blank">Hotmart</a></p>
+  <div class="container">
+    <p style="font-family:'Playfair Display',serif;font-size:20px;color:#fff;margin-bottom:8px">IA Sin Complicaciones</p>
+    <p>Guía Estratégica · Pack de 25 Prompts · Transformación real con herramientas gratuitas</p>
+    <p style="margin-top:10px">Pagos procesados de forma segura por <a href="https://hotmart.com" target="_blank">Hotmart</a></p>
   </div>
 </footer>
 
 <script>
 // Scroll reveal
-const els = document.querySelectorAll('.reveal');
-const obs = new IntersectionObserver(e => {
-  e.forEach(i => { if(i.isIntersecting) i.target.classList.add('on'); });
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
-els.forEach(el => obs.observe(el));
+reveals.forEach(r => observer.observe(r));
 
-// Savings bars
-const bars = document.querySelectorAll('.sv-bar');
-const bObs = new IntersectionObserver(e => {
-  e.forEach(i => {
-    if(i.isIntersecting){
-      const w = i.target.getAttribute('data-w');
-      if(w) i.target.style.width = w + '%';
+// Animate bars
+const bars = document.querySelectorAll('.pl-fill, .s-fill');
+const barObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const w = e.target.getAttribute('data-w');
+      if(w) e.target.style.width = w;
     }
   });
-}, { threshold: 0.4 });
-bars.forEach(b => bObs.observe(b));
+}, { threshold: 0.3 });
+bars.forEach(b => barObs.observe(b));
 </script>
-
 </body>
 </html>
