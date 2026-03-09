@@ -137,9 +137,10 @@ nav.scrolled{background:rgba(4,12,24,.92);backdrop-filter:blur(20px);border-bott
 /* ══ PRODUCTS GRID ═══════════════════════════════════════════ */
 .products-intro{text-align:center;max-width:600px;margin:0 auto 64px}
 .products-intro p{margin-top:16px;color:var(--mist);font-size:17px}
+@media(max-width:480px){.products-intro{margin-bottom:40px}.products-intro p{font-size:15px}}
 
 .products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-@media(max-width:900px){.products-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.products-grid{grid-template-columns:1fr;gap:16px}}
 
 .pcard{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px;position:relative;transition:all .3s ease;display:flex;flex-direction:column}
 .pcard:hover{background:rgba(255,255,255,.06);border-color:rgba(0,179,126,.3);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.4),var(--glow)}
@@ -149,6 +150,12 @@ nav.scrolled{background:rgba(4,12,24,.92);backdrop-filter:blur(20px);border-bott
 .pcard-icon{font-size:36px;margin-bottom:16px}
 .pcard-title{font-family:var(--ff-head);font-weight:700;font-size:20px;margin-bottom:8px}
 .pcard-desc{font-size:14px;color:var(--mist);opacity:.75;margin-bottom:20px;flex:1;line-height:1.6}
+@media(max-width:480px){
+  .pcard{padding:24px 20px;border-radius:16px}
+  .pcard-icon{font-size:28px;margin-bottom:12px}
+  .pcard-title{font-size:18px}
+  .pcard-desc{font-size:13px;margin-bottom:16px}
+}
 
 .price-block{margin-bottom:24px}
 .price-real{font-family:var(--ff-mono);font-size:11px;color:var(--mist);opacity:.5;text-decoration:line-through;margin-bottom:4px}
@@ -160,6 +167,11 @@ nav.scrolled{background:rgba(4,12,24,.92);backdrop-filter:blur(20px);border-bott
 .price-currency{font-family:var(--ff-head);font-size:18px;color:var(--mist);margin-top:8px}
 .price-period{font-size:13px;color:var(--mist);opacity:.6}
 .price-launch.gold .price-amount{color:var(--gold)}
+@media(max-width:480px){
+  .price-amount{font-size:36px}
+  .price-period{font-size:12px}
+  .price-block{margin-bottom:18px}
+}
 
 .pcard-features{list-style:none;margin-bottom:28px;display:flex;flex-direction:column;gap:8px}
 .pcard-features li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--mist)}
@@ -174,11 +186,40 @@ nav.scrolled{background:rgba(4,12,24,.92);backdrop-filter:blur(20px);border-bott
 .funnel-wrap::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(201,168,76,.12),transparent 70%);pointer-events:none}
 .funnel-header{text-align:center;margin-bottom:40px}
 .funnel-header .tag{margin-bottom:16px}
-.funnel-title{font-family:var(--ff-head);font-weight:800;font-size:clamp(26px,4vw,40px);margin-bottom:12px}
+.funnel-title{font-family:var(--ff-head);font-weight:800;font-size:clamp(22px,4vw,40px);margin-bottom:12px}
 .funnel-subtitle{color:var(--mist);font-size:16px}
 
 .funnel-options{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
-@media(max-width:768px){.funnel-options{grid-template-columns:1fr}}
+@media(max-width:768px){.funnel-options{grid-template-columns:1fr;gap:10px}}
+
+.fo{border:2px solid rgba(255,255,255,.08);border-radius:14px;padding:20px;cursor:pointer;transition:all .2s;position:relative;background:rgba(255,255,255,.02)}
+.fo:hover{border-color:rgba(0,179,126,.4);background:rgba(0,179,126,.05)}
+.fo.active{border-color:var(--green);background:rgba(0,179,126,.08)}
+.fo.active-gold{border-color:var(--gold);background:rgba(201,168,76,.06)}
+.fo-check{width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;margin-bottom:12px;transition:all .2s;flex-shrink:0}
+.fo.active .fo-check{background:var(--green);border-color:var(--green)}
+.fo.active-gold .fo-check{background:var(--gold);border-color:var(--gold)}
+.fo-check svg{width:10px;height:10px;stroke:#fff;stroke-width:3;fill:none;display:none}
+.fo.active .fo-check svg,.fo.active-gold .fo-check svg{display:block}
+.fo-title{font-family:var(--ff-head);font-weight:700;font-size:15px;margin-bottom:6px}
+.fo-price{font-family:var(--ff-mono);font-size:13px;color:var(--green);font-weight:500}
+.fo-price.gold{color:var(--gold)}
+.fo-save{font-family:var(--ff-mono);font-size:10px;color:var(--mist);opacity:.6;margin-top:2px}
+@media(max-width:768px){
+  .fo{display:flex;align-items:center;gap:14px;padding:14px 16px}
+  .fo-check{margin-bottom:0;flex-shrink:0}
+  .fo-body{flex:1;min-width:0}
+  .fo-title{font-size:14px;margin-bottom:2px}
+}
+@media(max-width:480px){
+  .funnel-wrap{padding:24px 16px;border-radius:16px;margin-top:32px}
+  .funnel-header{margin-bottom:24px}
+  .funnel-subtitle{font-size:14px}
+  .fs-label{font-size:13px}
+  .fs-val{font-size:13px}
+  .fs-total-val{font-size:22px}
+  .fs-savings{font-size:10px}
+}
 
 .fo{border:2px solid rgba(255,255,255,.08);border-radius:14px;padding:20px;cursor:pointer;transition:all .2s;position:relative;background:rgba(255,255,255,.02)}
 .fo:hover{border-color:rgba(0,179,126,.4);background:rgba(0,179,126,.05)}
@@ -241,18 +282,24 @@ nav.scrolled{background:rgba(4,12,24,.92);backdrop-filter:blur(20px);border-bott
 .vol2{background:linear-gradient(135deg,rgba(10,31,68,.9),rgba(4,12,24,.95));border:1px solid rgba(201,168,76,.2);border-radius:24px;padding:60px 48px;position:relative;overflow:hidden}
 .vol2::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 80% 50%,rgba(201,168,76,.08),transparent);pointer-events:none}
 .vol2-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-@media(max-width:768px){.vol2-layout{grid-template-columns:1fr;gap:32px}}
-@media(max-width:768px){.vol2{padding:40px 24px;border-radius:16px}}
+@media(max-width:768px){
+  .vol2-layout{grid-template-columns:1fr;gap:24px}
+  .vol2{padding:36px 24px;border-radius:16px}
+}
 @media(max-width:480px){
-  .vol2{padding:32px 18px}
-  .vol2-title{font-size:26px}
-  .vol2-desc{font-size:14px;margin-bottom:20px}
-  .vol2-ch{padding:10px 12px}
+  .vol2{padding:28px 16px;border-radius:14px}
+  .vol2-badge{font-size:10px;padding:4px 12px}
+  .vol2-title{font-size:24px!important;margin-bottom:10px}
+  .vol2-desc{font-size:13px;margin-bottom:16px;line-height:1.6}
+  .vol2-chapters{gap:8px;margin-bottom:20px}
+  .vol2-ch{padding:10px 12px;gap:8px}
+  .vol2-ch-icon{font-size:16px}
   .vol2-ch-text{font-size:12px}
   .vol2-book{display:none}
+  .vol2-layout > div:first-child .btn{width:100%;justify-content:center}
 }
 .vol2-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);border-radius:100px;padding:5px 14px;font-family:var(--ff-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.vol2-title{font-family:var(--ff-head);font-weight:800;font-size:clamp(28px,4vw,48px);margin-bottom:16px;line-height:1.05}
+.vol2-title{font-family:var(--ff-head);font-weight:800;font-size:clamp(22px,4vw,48px);margin-bottom:16px;line-height:1.05}
 .vol2-desc{font-size:16px;color:var(--mist);margin-bottom:32px;line-height:1.7}
 .vol2-chapters{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
 .vol2-ch{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px 16px}
@@ -366,12 +413,24 @@ footer{padding:48px 0 32px;border-top:1px solid rgba(255,255,255,.05)}
   <div class="wrap">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <!-- mini atom -->
-        <svg width="34" height="34" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="30" cy="30" rx="28" ry="11" stroke="#00B37E" stroke-width="1.5" fill="none" opacity=".5"/>
-          <ellipse cx="30" cy="30" rx="28" ry="11" stroke="#00B37E" stroke-width="1.5" fill="none" opacity=".5" transform="rotate(60 30 30)"/>
-          <ellipse cx="30" cy="30" rx="28" ry="11" stroke="#00B37E" stroke-width="1.5" fill="none" opacity=".5" transform="rotate(-60 30 30)"/>
-          <circle cx="30" cy="30" r="5" fill="#00B37E"/>
+        <!-- TI clock logo -->
+        <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="nav-cg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1565FF"/><stop offset="100%" stop-color="#0D3B8E"/>
+            </linearGradient>
+            <filter id="nav-gf"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <circle cx="50" cy="50" r="46" fill="url(#nav-cg)" stroke="#1565FF" stroke-width="1"/>
+          <circle cx="50" cy="6"  r="2.5" fill="#00D4FF" filter="url(#nav-gf)"/>
+          <circle cx="50" cy="94" r="2.5" fill="#00D4FF" filter="url(#nav-gf)"/>
+          <circle cx="6"  cy="50" r="2.5" fill="#00D4FF" filter="url(#nav-gf)"/>
+          <circle cx="94" cy="50" r="2.5" fill="#00D4FF" filter="url(#nav-gf)"/>
+          <path d="M50,50 L50,20 A30,30 0 0,1 80,50 Z" fill="#39E75F"/>
+          <circle cx="50" cy="50" r="6" fill="white"/>
+          <line x1="50" y1="50" x2="50" y2="24" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="50" y1="50" x2="68" y2="50" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="50" cy="50" r="3" fill="white"/>
         </svg>
         <div>
           <div class="nav-logo-text">IA Sin<br>Complicaciones</div>
@@ -617,40 +676,36 @@ footer{padding:48px 0 32px;border-top:1px solid rgba(255,255,255,.05)}
 
       <div class="funnel-options">
         <div class="fo" id="fo-guia" onclick="toggleFO('guia')">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-            <div class="fo-check">
-              <svg viewBox="0 0 12 12"><polyline points="1,6 4,9 11,2"/></svg>
-            </div>
-            <span style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mist);opacity:.6">Producto 01</span>
+          <div class="fo-check">
+            <svg viewBox="0 0 12 12"><polyline points="1,6 4,9 11,2"/></svg>
           </div>
-          <div class="fo-title">📘 Guía Vol. 1</div>
-          <div class="fo-price">$9.99 USD</div>
-          <div class="fo-save">Precio normal: $19.99</div>
+          <div class="fo-body">
+            <div class="fo-title">📘 Guía Vol. 1</div>
+            <div class="fo-price">$9.99 USD</div>
+            <div class="fo-save">Normal: $19.99 · Ahorra 50%</div>
+          </div>
         </div>
         <div class="fo" id="fo-pack" onclick="toggleFO('pack')">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-            <div class="fo-check">
-              <svg viewBox="0 0 12 12"><polyline points="1,6 4,9 11,2"/></svg>
-            </div>
-            <span style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mist);opacity:.6">Producto 02</span>
+          <div class="fo-check">
+            <svg viewBox="0 0 12 12"><polyline points="1,6 4,9 11,2"/></svg>
           </div>
-          <div class="fo-title">⚡ Pack 25 Prompts</div>
-          <div class="fo-price">$12.99 USD</div>
-          <div class="fo-save">Precio normal: $25.00</div>
+          <div class="fo-body">
+            <div class="fo-title">⚡ Pack 25 Prompts</div>
+            <div class="fo-price">$12.99 USD</div>
+            <div class="fo-save">Normal: $25.00 · Ahorra 48%</div>
+          </div>
         </div>
         <div class="fo active-gold" id="fo-combo" onclick="selectCombo()">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-            <div class="fo-check">
-              <svg viewBox="0 0 12 12"><polyline points="1,6 4,9 11,2"/></svg>
-            </div>
-            <span style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);opacity:.8">⭐ Mejor valor</span>
+          <div class="fo-check">
+            <svg viewBox="0 0 12 12"><polyline points="1,6 4,9 11,2"/></svg>
           </div>
-          <div class="fo-title">🎯 Pack Total</div>
-          <div class="fo-price gold">$20.00 USD</div>
-          <div class="fo-save">Ahorras $94 vs precio real</div>
+          <div class="fo-body">
+            <div class="fo-title">🎯 Pack Total <span style="font-family:var(--ff-mono);font-size:9px;color:var(--gold);letter-spacing:.06em;text-transform:uppercase;margin-left:4px">⭐ Mejor valor</span></div>
+            <div class="fo-price gold">$20.00 USD</div>
+            <div class="fo-save">Ahorras $94 vs precio real</div>
+          </div>
         </div>
       </div>
-
       <div class="funnel-summary" id="funnel-summary">
         <div class="fs-row">
           <span class="fs-label" id="fs-items">Pack Total (Guía + Prompts)</span>
@@ -836,16 +891,23 @@ footer{padding:48px 0 32px;border-top:1px solid rgba(255,255,255,.05)}
 <div class="submarca-bar">
   <div class="submarca-inner">
     <div class="submarca-logo">
-      <svg width="20" height="20" viewBox="0 0 60 60" fill="none">
-        <circle cx="30" cy="30" r="8" fill="#6B7280" opacity=".5"/>
-        <circle cx="30" cy="10" r="4" fill="#6B7280" opacity=".3"/>
-        <circle cx="30" cy="50" r="4" fill="#6B7280" opacity=".3"/>
-        <circle cx="10" cy="30" r="4" fill="#6B7280" opacity=".3"/>
-        <circle cx="50" cy="30" r="4" fill="#6B7280" opacity=".3"/>
-        <line x1="30" y1="14" x2="30" y2="22" stroke="#6B7280" stroke-width="1.5" opacity=".3"/>
-        <line x1="30" y1="38" x2="30" y2="46" stroke="#6B7280" stroke-width="1.5" opacity=".3"/>
-        <line x1="14" y1="30" x2="22" y2="30" stroke="#6B7280" stroke-width="1.5" opacity=".3"/>
-        <line x1="38" y1="30" x2="46" y2="30" stroke="#6B7280" stroke-width="1.5" opacity=".3"/>
+      <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sb-cg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1565FF"/><stop offset="100%" stop-color="#0D3B8E"/>
+          </linearGradient>
+          <filter id="sb-gf"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <circle cx="50" cy="50" r="46" fill="url(#sb-cg)" opacity=".6"/>
+        <circle cx="50" cy="6"  r="2" fill="#00D4FF" filter="url(#sb-gf)"/>
+        <circle cx="50" cy="94" r="2" fill="#00D4FF" filter="url(#sb-gf)"/>
+        <circle cx="6"  cy="50" r="2" fill="#00D4FF" filter="url(#sb-gf)"/>
+        <circle cx="94" cy="50" r="2" fill="#00D4FF" filter="url(#sb-gf)"/>
+        <path d="M50,50 L50,20 A30,30 0 0,1 80,50 Z" fill="#39E75F" opacity=".7"/>
+        <circle cx="50" cy="50" r="6" fill="white" opacity=".8"/>
+        <line x1="50" y1="50" x2="50" y2="24" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity=".8"/>
+        <line x1="50" y1="50" x2="68" y2="50" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+        <circle cx="50" cy="50" r="3" fill="white" opacity=".8"/>
       </svg>
       <span class="submarca-ti">Tiempo Inteligente</span>
     </div>
@@ -924,11 +986,23 @@ footer{padding:48px 0 32px;border-top:1px solid rgba(255,255,255,.05)}
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="nav-logo">
-          <svg width="30" height="30" viewBox="0 0 60 60" fill="none">
-            <ellipse cx="30" cy="30" rx="26" ry="9" stroke="#00B37E" stroke-width="1.5" fill="none" opacity=".6"/>
-            <ellipse cx="30" cy="30" rx="26" ry="9" stroke="#00B37E" stroke-width="1.5" fill="none" opacity=".6" transform="rotate(60 30 30)"/>
-            <ellipse cx="30" cy="30" rx="26" ry="9" stroke="#00B37E" stroke-width="1.5" fill="none" opacity=".6" transform="rotate(-60 30 30)"/>
-            <circle cx="30" cy="30" r="5" fill="#00B37E"/>
+          <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ft-cg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1565FF"/><stop offset="100%" stop-color="#0D3B8E"/>
+              </linearGradient>
+              <filter id="ft-gf"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <circle cx="50" cy="50" r="46" fill="url(#ft-cg)" stroke="#1565FF" stroke-width="1"/>
+            <circle cx="50" cy="6"  r="2.5" fill="#00D4FF" filter="url(#ft-gf)"/>
+            <circle cx="50" cy="94" r="2.5" fill="#00D4FF" filter="url(#ft-gf)"/>
+            <circle cx="6"  cy="50" r="2.5" fill="#00D4FF" filter="url(#ft-gf)"/>
+            <circle cx="94" cy="50" r="2.5" fill="#00D4FF" filter="url(#ft-gf)"/>
+            <path d="M50,50 L50,20 A30,30 0 0,1 80,50 Z" fill="#39E75F"/>
+            <circle cx="50" cy="50" r="6" fill="white"/>
+            <line x1="50" y1="50" x2="50" y2="24" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="50" y1="50" x2="68" y2="50" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="50" cy="50" r="3" fill="white"/>
           </svg>
           <div>
             <div class="nav-logo-text" style="font-size:16px">IA Sin Complicaciones</div>
