@@ -3,1150 +3,677 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IA Sin Complicaciones — Transforma tu vida con inteligencia artificial</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script>
+<title>IA Sin Complicaciones — Arsenal Completo · Bundles de Lanzamiento</title>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700;900&family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#00B37E;--g2:#2ECC71;--gold:#f5c842;
+  --cyan:#00D4FF;--blue:#1565FF;--purple:#a78bfa;
+  --silver:#8BA7C7;--dark:#060810;
+  --fh:'Syne',sans-serif;--fm:'JetBrains Mono',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--dark);color:#f0f4ff;overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--green),var(--cyan),var(--gold))}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,.01) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.01) 1px,transparent 1px);background-size:54px 54px;pointer-events:none;z-index:0}
+
+.wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
+@media(min-width:768px){.wrap{padding:0 28px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.sec-eye{display:inline-flex;align-items:center;gap:10px;font-family:var(--fm);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
+.sec-eye::before,.sec-eye::after{content:'';width:24px;height:1px;background:rgba(0,212,255,.4)}
+.sec-title{font-family:var(--fh);font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;margin-bottom:14px}
+.sec-sub{font-size:15px;color:var(--silver);max-width:560px;margin:0 auto;line-height:1.7}
+.sec-hdr{text-align:center;margin-bottom:48px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,8,16,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1100px;margin:0 auto;gap:12px}
+.nav-logo{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.nav-cta-btn{background:linear-gradient(135deg,var(--gold),#c8972a);color:#060810;font-family:var(--fh);font-weight:700;font-size:13px;padding:9px 18px;border-radius:5px;border:none;white-space:nowrap;flex-shrink:0}
+.nav-links{display:none}
+@media(min-width:900px){
+  .nav-links{display:flex;align-items:center;gap:20px}
+  .nav-links a{font-family:var(--fm);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--silver);transition:color .2s}
+  .nav-links a:hover{color:var(--cyan)}
+}
+
+/* HERO */
+#hero{min-height:100svh;display:flex;align-items:center;padding:90px 0 60px;position:relative;overflow:hidden;text-align:center}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 90% 50% at 50% 0%,rgba(0,50,90,.2),transparent 60%)}
+.hero-glow-l{position:absolute;width:500px;height:500px;top:-100px;left:-150px;background:radial-gradient(circle,rgba(0,179,126,.07),transparent 70%);filter:blur(60px);pointer-events:none}
+.hero-glow-r{position:absolute;width:500px;height:500px;bottom:0;right:-100px;background:radial-gradient(circle,rgba(0,212,255,.06),transparent 70%);filter:blur(60px);pointer-events:none}
+.hero-super{font-family:var(--fm);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}
+.hero-super::before,.hero-super::after{content:'';width:32px;height:1px;background:var(--gold);opacity:.4}
+.hero-title{font-family:var(--fh);font-weight:800;font-size:clamp(38px,8vw,78px);line-height:.88;margin-bottom:22px}
+.hero-title .l1{color:rgba(255,255,255,.45)}
+.hero-title .l2{background:linear-gradient(90deg,var(--green),var(--cyan),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:clamp(15px,3vw,19px);font-weight:300;color:var(--silver);max-width:600px;margin:0 auto 40px;line-height:1.65}
+
+/* Weapons showcase */
+.weapons-row{display:flex;justify-content:center;align-items:flex-end;gap:clamp(16px,4vw,48px);margin:0 auto 44px;flex-wrap:wrap;padding:0 10px}
+.w-item{display:flex;flex-direction:column;align-items:center;gap:8px;transition:transform .3s;cursor:default}
+.w-item:hover{transform:translateY(-6px)}
+.w-float-g{animation:wfg 4s ease-in-out infinite}
+.w-float-c{animation:wfg 4s ease-in-out infinite .5s}
+.w-float-gold{animation:wfg 4s ease-in-out infinite 1s}
+@keyframes wfg{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.w-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;text-align:center}
+.w-name{font-family:var(--fh);font-size:12px;font-weight:700;text-align:center;line-height:1.3}
+.w-price{font-family:var(--fm);font-size:9px;color:var(--silver);letter-spacing:.1em}
+
+/* Center warrior */
+.warrior-center{display:flex;flex-direction:column;align-items:center;position:relative}
+.warrior-center svg{position:relative;z-index:1}
+.warrior-halo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:160px;height:160px;background:radial-gradient(circle,rgba(245,200,66,.12),transparent 70%);filter:blur(20px)}
+
+/* Hero CTA buttons */
+.hero-btns{display:flex;flex-direction:column;gap:12px;align-items:center;max-width:420px;margin:0 auto}
+@media(min-width:500px){.hero-btns{flex-direction:row;justify-content:center}}
+.btn-hero-main{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,var(--gold),#c8972a);color:#060810;font-family:var(--fh);font-weight:800;font-size:clamp(14px,3.5vw,16px);padding:15px 28px;border-radius:6px;border:none;transition:all .3s;-webkit-tap-highlight-color:transparent}
+.btn-hero-main:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(245,200,66,.4)}
+.btn-hero-sec{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--silver);font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:13px 22px;border-radius:6px;border:1px solid rgba(255,255,255,.12);transition:all .3s;-webkit-tap-highlight-color:transparent}
+.btn-hero-sec:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* PRODUCTS INDIVIDUAL */
+#products{padding:80px 0;background:rgba(0,0,0,.22)}
+.prod-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:40px}
+@media(min-width:600px){.prod-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.prod-grid{grid-template-columns:1fr 1fr 1fr}}
+.prod-card{background:rgba(10,15,30,.88);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:26px;transition:all .3s;display:flex;flex-direction:column}
+.prod-card:hover{transform:translateY(-3px)}
+.prod-icon-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.prod-icon{font-size:28px;flex-shrink:0}
+.prod-vol{font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
+.prod-ttl{font-family:var(--fh);font-size:16px;font-weight:700}
+.prod-desc{font-size:13px;color:var(--silver);line-height:1.6;flex:1;margin-bottom:16px}
+.prod-price{font-family:var(--fh);font-size:28px;font-weight:800;display:block;margin-bottom:2px}
+.prod-real{font-size:12px;color:#3d4e66;text-decoration:line-through;font-family:var(--fm)}
+.prod-badges{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px}
+.pbadge{font-family:var(--fm);font-size:9px;padding:3px 9px;border-radius:3px}
+.pbg{color:var(--green);background:rgba(0,179,126,.1);border:1px solid rgba(0,179,126,.2)}
+.pbc{color:var(--cyan);background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2)}
+.pbgold{color:var(--gold);background:rgba(245,200,66,.08);border:1px solid rgba(245,200,66,.2)}
+.reward-row{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:6px;margin-bottom:14px}
+.btn-prod{display:block;width:100%;text-align:center;font-family:var(--fh);font-weight:700;font-size:14px;padding:13px;border-radius:6px;border:none;cursor:pointer;transition:all .25s;-webkit-tap-highlight-color:transparent}
+.btn-prod:hover{transform:scale(1.01)}
+.link-prod{display:block;text-align:center;margin-top:8px;font-family:var(--fm);font-size:10px;letter-spacing:.1em;opacity:.6;transition:opacity .2s}
+.link-prod:hover{opacity:1}
+
+/* BUNDLES */
+#bundles{padding:80px 0}
+.big-bundles{display:flex;flex-direction:column;gap:24px;max-width:860px;margin:0 auto}
+.bb{border-radius:14px;overflow:hidden;transition:all .3s;position:relative}
+.bb:hover{transform:translateY(-3px)}
+/* Fundador */
+.bb.fundador{background:linear-gradient(145deg,rgba(10,18,12,.97),rgba(5,18,10,.97));border:2px solid rgba(0,179,126,.3);box-shadow:0 0 50px rgba(0,179,126,.07)}
+.bb.fundador::before{content:'🔥 TODO INCLUIDO · MEJOR VALOR';position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--green),var(--g2));color:#040C18;font-family:var(--fm);font-size:9px;letter-spacing:.14em;padding:5px 18px;border-radius:0 0 8px 8px;white-space:nowrap;font-weight:700}
+.bb.arquitecto{background:linear-gradient(145deg,rgba(6,12,22,.97),rgba(5,8,18,.97));border:1px solid rgba(0,212,255,.2)}
+.bb.esencial{background:linear-gradient(145deg,rgba(12,10,4,.97),rgba(8,7,3,.97));border:1px solid rgba(245,200,66,.18)}
+.bb-top{padding:clamp(20px,4vw,28px);padding-top:clamp(28px,5vw,40px);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.bb-badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:10px}
+.bb-name{font-family:var(--fh);font-size:clamp(20px,4vw,26px);font-weight:800;line-height:1.1;margin-bottom:6px}
+.bb-phrase{font-size:14px;color:var(--silver);font-style:italic;line-height:1.6;margin-top:8px;max-width:420px}
+.bb-price-block{text-align:right;flex-shrink:0}
+.bb-price{font-family:var(--fh);font-size:clamp(40px,8vw,52px);font-weight:800;line-height:1;display:block}
+.bb-real{font-size:13px;color:#3d4e66;text-decoration:line-through;font-family:var(--fm)}
+.bb-save{font-family:var(--fm);font-size:11px;padding:3px 12px;border-radius:20px;display:inline-block;margin-top:5px;font-weight:700}
+.bb-weapons{display:flex;gap:12px;margin-top:8px;justify-content:flex-end}
+.bb-w{text-align:center}
+.bb-w-icon{font-size:18px;display:block}
+.bb-w-name{font-family:var(--fm);font-size:7px;letter-spacing:.09em;text-transform:uppercase}
+.bb-body{padding:0 clamp(20px,4vw,28px) clamp(20px,4vw,28px);display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.bb-body{grid-template-columns:1fr 1fr}}
+.bb-includes{display:flex;flex-direction:column;gap:8px}
+.bb-inc-item{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:6px;padding:11px 14px}
+.bb-inc-icon{font-size:18px;flex-shrink:0}
+.bb-inc-name{font-size:14px;font-weight:500;margin-bottom:1px}
+.bb-inc-detail{font-family:var(--fm);font-size:10px;color:var(--silver)}
+.bb-cta{display:flex;flex-direction:column;gap:10px;justify-content:center}
+.bb-btn{display:block;width:100%;text-align:center;font-family:var(--fh);font-weight:800;font-size:clamp(15px,3.5vw,18px);padding:18px;border-radius:8px;border:none;cursor:pointer;transition:all .3s;-webkit-tap-highlight-color:transparent}
+.bb-btn:hover{transform:scale(1.01)}
+.bb-guarantee{font-family:var(--fm);font-size:10px;color:#3d4e66;letter-spacing:.08em;text-align:center}
+
+/* COMPARE TABLE — scrollable on mobile */
+#compare{padding:80px 0;background:rgba(0,0,0,.2)}
+.compare-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:40px;border-radius:10px;border:1px solid rgba(255,255,255,.07)}
+table.ct{width:100%;min-width:520px;border-collapse:collapse}
+table.ct th{font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:16px 16px;text-align:center;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(10,15,30,.9)}
+table.ct th:first-child{text-align:left;color:var(--silver);min-width:180px}
+table.ct th.cf{color:var(--green);background:rgba(0,179,126,.05);border-left:1px solid rgba(0,179,126,.15);border-right:1px solid rgba(0,179,126,.15)}
+table.ct th.ca{color:var(--cyan)}
+table.ct th.ce{color:var(--gold)}
+table.ct td{padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.04);font-size:13px;text-align:center;background:rgba(6,8,16,.7)}
+table.ct td:first-child{text-align:left;color:var(--silver);font-size:12px}
+table.ct td.cf{background:rgba(0,179,126,.025);border-left:1px solid rgba(0,179,126,.1);border-right:1px solid rgba(0,179,126,.1)}
+table.ct tr:hover td{background:rgba(255,255,255,.02)}
+.cy{color:var(--green);font-size:17px}
+.cn{color:#2d3a52;font-size:17px}
+table.ct tfoot td{padding-top:18px;border-top:1px solid rgba(255,255,255,.08);border-bottom:none;background:rgba(10,15,30,.9)}
+.ct-btn{display:inline-block;font-family:var(--fh);font-weight:800;font-size:14px;padding:10px 20px;border-radius:6px;border:none;cursor:pointer;transition:all .25s;-webkit-tap-highlight-color:transparent;text-decoration:none}
+
+/* ARSENAL TRACKER */
+#arsenal{padding:80px 0}
+.arm-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:40px}
+@media(min-width:560px){.arm-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:860px){.arm-grid{grid-template-columns:1fr 1fr 1fr}}
+.arm-card{background:rgba(10,15,30,.85);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:26px;text-align:center;transition:all .3s}
+.arm-card:hover{transform:translateY(-3px)}
+.arm-icon{font-size:44px;margin-bottom:10px;display:block}
+.arm-name{font-family:var(--fh);font-size:15px;font-weight:700;margin-bottom:4px}
+.arm-req{font-size:13px;color:var(--silver);margin-bottom:14px}
+.arm-bar{height:8px;background:rgba(255,255,255,.05);border-radius:4px;overflow:hidden;margin-bottom:7px}
+.arm-bar-fill{height:100%;border-radius:4px;transition:width .8s ease}
+.arm-pct{font-family:var(--fm);font-size:10px;color:var(--silver);margin-bottom:14px}
+.arm-link{display:inline-flex;align-items:center;gap:5px;font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:5px;border:1px solid;transition:all .25s;-webkit-tap-highlight-color:transparent}
+.arm-link:hover{opacity:.85}
+
+/* VOL 3 */
+#vol3{padding:80px 0;position:relative;overflow:hidden;text-align:center}
+.vol3-bg{position:absolute;inset:0;background:radial-gradient(ellipse 50% 55% at 50% 50%,rgba(120,80,255,.05),transparent 70%)}
+.mi-row{display:flex;justify-content:center;gap:16px;margin:20px 0;flex-wrap:wrap}
+.mi{font-size:38px;display:inline-block;animation:mif 4s ease-in-out infinite}
+.mi:nth-child(2){animation-delay:.6s}.mi:nth-child(3){animation-delay:1.2s}.mi:nth-child(4){animation-delay:1.8s;opacity:.25;filter:grayscale(.9)}
+@keyframes mif{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.vol3-btn{display:inline-flex;align-items:center;gap:7px;background:transparent;border:1px solid rgba(120,80,255,.3);color:var(--purple);font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:11px 24px;border-radius:6px;cursor:pointer;transition:all .3s;-webkit-tap-highlight-color:transparent}
+.vol3-btn:hover{background:rgba(120,80,255,.1);border-color:var(--purple)}
+
+/* FOOTER */
+footer{padding:48px 0 30px;border-top:1px solid rgba(255,255,255,.06)}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:560px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+.foot-desc{font-size:13px;color:#3d4e66;line-height:1.7;margin-top:10px}
+.foot-h{font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--silver);margin-bottom:10px}
+.foot-links a{display:block;font-size:13px;color:#3d4e66;margin-bottom:6px;transition:color .2s}
+.foot-links a:hover{color:var(--cyan)}
+.foot-bottom{margin-top:30px;padding-top:16px;border-top:1px solid rgba(255,255,255,.04);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.foot-copy{font-family:var(--fm);font-size:9px;color:#2d3a52;letter-spacing:.08em}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-in">
+    <div class="nav-logo">
+      <svg viewBox="0 0 110 26" width="100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="13" r="10" fill="#1565FF"/>
+        <path d="M12,13 L12,5 A7,7 0 0,1 19,13 Z" fill="#39E75F"/>
+        <line x1="12" y1="13" x2="12" y2="6" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="12" y1="13" x2="18" y2="13" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+        <circle cx="12" cy="13" r="2" fill="white"/>
+        <text x="26" y="17" font-family="'Exo 2',sans-serif" font-weight="900" font-size="10" fill="white">Tiempo Inteligente</text>
+      </svg>
+      <div style="width:1px;height:18px;background:rgba(255,255,255,.1)"></div>
+      <svg viewBox="0 0 80 20" width="72" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="ni" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00B37E"/><stop offset="100%" stop-color="#2ECC71"/></linearGradient></defs>
+        <ellipse cx="9" cy="10" rx="8" ry="3" stroke="#00B37E" stroke-width=".9" fill="none" opacity=".7"/>
+        <ellipse cx="9" cy="10" rx="8" ry="3" stroke="#2ECC71" stroke-width=".7" fill="none" opacity=".3" transform="rotate(60 9 10)"/>
+        <circle cx="9" cy="10" r="3.5" fill="rgba(0,179,126,.15)" stroke="#00B37E" stroke-width=".8"/>
+        <circle cx="9" cy="10" r="2" fill="#00B37E"/>
+        <text x="20" y="13" font-family="Syne,sans-serif" font-weight="800" font-size="7.5" fill="white">IA Sin Complicaciones</text>
+      </svg>
+    </div>
+    <div class="nav-links">
+      <a href="#products">Productos</a>
+      <a href="#bundles">Bundles</a>
+      <a href="#compare">Comparar</a>
+      <a href="#arsenal">Arsenal</a>
+    </div>
+    <a href="#bundles" class="nav-cta-btn">🔥 Ver Bundles</a>
+  </div>
+</nav>
+
+<script type="text/javascript">
 function importHotmart(){
   var s=document.createElement('script');s.src='https://static.hotmart.com/checkout/widget.min.js';document.head.appendChild(s);
   var l=document.createElement('link');l.rel='stylesheet';l.type='text/css';l.href='https://static.hotmart.com/css/hotmart-fb.min.css';document.head.appendChild(l);
 }
 importHotmart();
 </script>
-<style>
-/* ══ TOKENS ══════════════════════════════════════════════════ */
-:root{
-  --navy:   #0A1F44;
-  --navy2:  #163B7A;
-  --green:  #00B37E;
-  --g2:     #2ECC71;
-  --gold:   #C9A84C;
-  --dark:   #040C18;
-  --ink:    #0D1B2A;
-  --mist:   #A8C5DA;
-  --bg:     #F4F7FB;
-  --white:  #FFFFFF;
-  --card:   rgba(255,255,255,0.04);
-  --border: rgba(0,179,126,0.18);
-  --glow:   0 0 60px rgba(0,179,126,0.22);
-  --ff-head: 'Syne', sans-serif;
-  --ff-body: 'DM Sans', sans-serif;
-  --ff-mono: 'JetBrains Mono', monospace;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:var(--ff-body);background:var(--dark);color:var(--white);overflow-x:hidden;line-height:1.65}
-a{text-decoration:none;color:inherit}
-img{max-width:100%}
 
-/* ══ SCROLLBAR ═══════════════════════════════════════════════ */
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--dark)}
-::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px}
-
-/* ══ UTILITIES ═══════════════════════════════════════════════ */
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.sec{padding:100px 0}
-@media(max-width:768px){.sec{padding:64px 0}}
-
-.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(0,179,126,.1);border:1px solid rgba(0,179,126,.3);border-radius:100px;padding:5px 14px;font-family:var(--ff-mono);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--green)}
-.dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-
-.hl{font-family:var(--ff-head);font-weight:800;line-height:1.05;letter-spacing:-.025em}
-.hl-xl{font-size:clamp(34px,7vw,82px)}
-@media(max-width:480px){.hl-xl{font-size:30px;letter-spacing:-.015em;line-height:1.1}}
-.hl-lg{font-size:clamp(32px,5vw,56px)}
-.hl-md{font-size:clamp(24px,4vw,40px)}
-.hl-sm{font-size:clamp(20px,3vw,28px)}
-
-.green{color:var(--green)}
-.gold{color:var(--gold)}
-.muted{color:var(--mist);opacity:.75}
-
-/* ══ BUTTONS ═════════════════════════════════════════════════ */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--ff-body);font-weight:600;font-size:15px;padding:14px 28px;border-radius:10px;border:none;cursor:pointer;transition:all .2s ease;white-space:nowrap;text-decoration:none!important}
-.btn-green{background:linear-gradient(135deg,var(--green),var(--g2));color:#fff;box-shadow:0 4px 24px rgba(0,179,126,.3)}
-.btn-green:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(0,179,126,.5)}
-.btn-gold{background:linear-gradient(135deg,var(--gold),#F0D060);color:var(--dark);box-shadow:0 4px 24px rgba(201,168,76,.3)}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(201,168,76,.5)}
-.btn-ghost{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.15)}
-.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3)}
-.btn-lg{font-size:17px;padding:17px 36px;border-radius:12px}
-.btn-full{width:100%}
-
-/* Hotmart overrides */
-.hotmart-fb.hotmart__button-checkout{display:flex!important;align-items:center!important;justify-content:center!important;gap:9px!important;width:100%!important;font-family:var(--ff-body)!important;font-weight:600!important;font-size:15px!important;padding:14px 28px!important;border-radius:10px!important;border:none!important;cursor:pointer!important;transition:all .2s ease!important;text-decoration:none!important}
-.hm-green .hotmart-fb{background:linear-gradient(135deg,var(--green),var(--g2))!important;color:#fff!important;box-shadow:0 4px 24px rgba(0,179,126,.3)!important}
-.hm-green .hotmart-fb:hover{transform:translateY(-2px)!important;box-shadow:0 8px 36px rgba(0,179,126,.5)!important}
-.hm-gold .hotmart-fb{background:linear-gradient(135deg,var(--gold),#F0D060)!important;color:var(--dark)!important;box-shadow:0 4px 24px rgba(201,168,76,.3)!important}
-.hm-gold .hotmart-fb:hover{transform:translateY(-2px)!important;box-shadow:0 8px 36px rgba(201,168,76,.5)!important}
-.hm-navy .hotmart-fb{background:linear-gradient(135deg,var(--navy),var(--navy2))!important;color:#fff!important;box-shadow:0 4px 20px rgba(10,31,68,.4)!important}
-.hm-navy .hotmart-fb:hover{transform:translateY(-2px)!important;box-shadow:0 8px 28px rgba(10,31,68,.6)!important}
-
-/* ══ NAV ══════════════════════════════════════════════════════ */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;transition:all .3s ease;border-bottom:1px solid transparent}
-nav.scrolled{background:rgba(4,12,24,.92);backdrop-filter:blur(20px);border-bottom-color:rgba(0,179,126,.12)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.nav-logo{display:flex;align-items:center;gap:8px}
-.nav-logo-text{font-family:var(--ff-head);font-weight:800;font-size:18px;line-height:1.1}
-.nav-logo-sub{font-family:var(--ff-mono);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);opacity:.6;margin-top:2px}
-.nav-links{display:flex;align-items:center;gap:8px}
-.nav-cta{font-size:13px;padding:9px 18px;border-radius:8px}
-@media(max-width:640px){.nav-links .nav-link-text{display:none}}
-@media(max-width:480px){
-  .nav-logo-text{font-size:14px}
-  .nav-logo-sub{display:none}
-  .nav-cta{font-size:11px;padding:7px 11px}
-  nav svg{width:26px;height:26px}
-}
-
-/* ══ HERO ════════════════════════════════════════════════════ */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 0 80px}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 40%, rgba(22,59,122,.6) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(0,179,126,.12) 0%, transparent 50%), var(--dark)}
-.grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(0,179,126,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,179,126,.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 100% 100% at 50% 50%,black 30%,transparent 80%)}
-
-/* ── ATOM SVG ── */
-.atom-wrap{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:min(600px,90vw);opacity:.55;pointer-events:none}
-@media(max-width:900px){.atom-wrap{right:-120px;opacity:.25;top:auto;bottom:0;transform:none;width:380px}}
-@media(max-width:600px){.atom-wrap{display:none}}
-
-.hero-content{position:relative;z-index:2;max-width:640px}
-.hero-submarca{font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);opacity:.8;margin-bottom:16px}
-.hero-title{margin-bottom:24px}
-.hero-title .line2{color:var(--green)}
-.hero-desc{font-size:18px;color:var(--mist);max-width:520px;margin-bottom:40px;line-height:1.7}
-@media(max-width:480px){
-  .hero-desc{font-size:15px;margin-bottom:28px}
-  .hero{padding:100px 0 60px}
-  .hero-submarca{font-size:10px}
-}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
-.hero-stats{display:flex;flex-wrap:wrap;gap:24px}
-.stat{display:flex;flex-direction:column}
-.stat-num{font-family:var(--ff-head);font-weight:800;font-size:28px;color:var(--green);line-height:1}
-.stat-label{font-size:12px;color:var(--mist);opacity:.7;margin-top:4px}
-
-/* ══ PRODUCTS STRIP ══════════════════════════════════════════ */
-.strip{background:linear-gradient(90deg,rgba(0,179,126,.08),rgba(22,59,122,.2),rgba(0,179,126,.08));border-top:1px solid rgba(0,179,126,.12);border-bottom:1px solid rgba(0,179,126,.12);padding:20px 0;overflow:hidden}
-.strip-inner{display:flex;gap:48px;animation:marquee 22s linear infinite;white-space:nowrap}
-.strip-inner:hover{animation-play-state:paused}
-.strip-item{display:flex;align-items:center;gap:10px;font-family:var(--ff-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mist);opacity:.7;flex-shrink:0}
-.strip-dot{width:5px;height:5px;background:var(--green);border-radius:50%;flex-shrink:0}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-/* ══ PRODUCTS GRID ═══════════════════════════════════════════ */
-.products-intro{text-align:center;max-width:600px;margin:0 auto 64px}
-.products-intro p{margin-top:16px;color:var(--mist);font-size:17px}
-@media(max-width:480px){.products-intro{margin-bottom:40px}.products-intro p{font-size:15px}}
-
-.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-@media(max-width:900px){.products-grid{grid-template-columns:1fr;gap:16px}}
-
-.pcard{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px;position:relative;transition:all .3s ease;display:flex;flex-direction:column}
-.pcard:hover{background:rgba(255,255,255,.06);border-color:rgba(0,179,126,.3);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.4),var(--glow)}
-.pcard.featured{border-color:var(--green);background:rgba(0,179,126,.06)}
-.pcard.combo{border-color:var(--gold);background:rgba(201,168,76,.05)}
-.pcard-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold),#F0D060);color:var(--dark);font-family:var(--ff-mono);font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:5px 16px;border-radius:100px;white-space:nowrap}
-.pcard-icon{font-size:36px;margin-bottom:16px}
-.pcard-title{font-family:var(--ff-head);font-weight:700;font-size:20px;margin-bottom:8px}
-.pcard-desc{font-size:14px;color:var(--mist);opacity:.75;margin-bottom:20px;flex:1;line-height:1.6}
-@media(max-width:480px){
-  .pcard{padding:24px 20px;border-radius:16px}
-  .pcard-icon{font-size:28px;margin-bottom:12px}
-  .pcard-title{font-size:18px}
-  .pcard-desc{font-size:13px;margin-bottom:16px}
-}
-
-.price-block{margin-bottom:24px}
-.price-real{font-family:var(--ff-mono);font-size:11px;color:var(--mist);opacity:.5;text-decoration:line-through;margin-bottom:4px}
-.price-normal{display:flex;align-items:center;gap:8px;margin-bottom:2px}
-.price-normal-num{font-size:15px;color:var(--mist);text-decoration:line-through;opacity:.6}
-.price-badge{background:rgba(0,179,126,.15);color:var(--green);font-family:var(--ff-mono);font-size:10px;font-weight:500;padding:2px 8px;border-radius:100px}
-.price-launch{display:flex;align-items:baseline;gap:6px}
-.price-amount{font-family:var(--ff-head);font-weight:800;font-size:42px;color:var(--white);line-height:1}
-.price-currency{font-family:var(--ff-head);font-size:18px;color:var(--mist);margin-top:8px}
-.price-period{font-size:13px;color:var(--mist);opacity:.6}
-.price-launch.gold .price-amount{color:var(--gold)}
-@media(max-width:480px){
-  .price-amount{font-size:36px}
-  .price-period{font-size:12px}
-  .price-block{margin-bottom:18px}
-}
-
-.pcard-features{list-style:none;margin-bottom:28px;display:flex;flex-direction:column;gap:8px}
-.pcard-features li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--mist)}
-.pcard-features li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px}
-.pcard-features li.gold-feat::before{color:var(--gold)}
-
-.pcard-link{display:block;text-align:center;font-family:var(--ff-mono);font-size:11px;color:var(--mist);opacity:.5;margin-top:10px;transition:opacity .2s}
-.pcard-link:hover{opacity:1;color:var(--green)}
-
-/* ══ FUNNEL / COMBO BUILDER ══════════════════════════════════ */
-.funnel-wrap{background:linear-gradient(135deg,rgba(10,31,68,.8),rgba(4,12,24,.9));border:1px solid rgba(201,168,76,.2);border-radius:24px;padding:48px;position:relative;overflow:hidden;margin-top:48px}
-.funnel-wrap::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(201,168,76,.12),transparent 70%);pointer-events:none}
-.funnel-header{text-align:center;margin-bottom:40px}
-.funnel-header .tag{margin-bottom:16px}
-.funnel-title{font-family:var(--ff-head);font-weight:800;font-size:clamp(22px,4vw,40px);margin-bottom:12px}
-.funnel-subtitle{color:var(--mist);font-size:16px}
-
-.funnel-options{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
-@media(max-width:768px){.funnel-options{grid-template-columns:1fr;gap:10px}}
-
-.fo{border:2px solid rgba(255,255,255,.08);border-radius:14px;padding:20px;cursor:pointer;transition:all .2s;position:relative;background:rgba(255,255,255,.02)}
-.fo:hover{border-color:rgba(0,179,126,.4);background:rgba(0,179,126,.05)}
-.fo.active{border-color:var(--green);background:rgba(0,179,126,.08)}
-.fo.active-gold{border-color:var(--gold);background:rgba(201,168,76,.06)}
-.fo-check{width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;margin-bottom:12px;transition:all .2s;flex-shrink:0}
-.fo.active .fo-check{background:var(--green);border-color:var(--green)}
-.fo.active-gold .fo-check{background:var(--gold);border-color:var(--gold)}
-.fo-check svg{width:10px;height:10px;stroke:#fff;stroke-width:3;fill:none;display:none}
-.fo.active .fo-check svg,.fo.active-gold .fo-check svg{display:block}
-.fo-title{font-family:var(--ff-head);font-weight:700;font-size:15px;margin-bottom:6px}
-.fo-price{font-family:var(--ff-mono);font-size:13px;color:var(--green);font-weight:500}
-.fo-price.gold{color:var(--gold)}
-.fo-save{font-family:var(--ff-mono);font-size:10px;color:var(--mist);opacity:.6;margin-top:2px}
-@media(max-width:768px){
-  .fo{display:flex;align-items:center;gap:14px;padding:14px 16px}
-  .fo-check{margin-bottom:0;flex-shrink:0}
-  .fo-body{flex:1;min-width:0}
-  .fo-title{font-size:14px;margin-bottom:2px}
-}
-@media(max-width:480px){
-  .funnel-wrap{padding:24px 16px;border-radius:16px;margin-top:32px}
-  .funnel-header{margin-bottom:24px}
-  .funnel-subtitle{font-size:14px}
-  .fs-label{font-size:13px}
-  .fs-val{font-size:13px}
-  .fs-total-val{font-size:22px}
-  .fs-savings{font-size:10px}
-}
-
-.fo{border:2px solid rgba(255,255,255,.08);border-radius:14px;padding:20px;cursor:pointer;transition:all .2s;position:relative;background:rgba(255,255,255,.02)}
-.fo:hover{border-color:rgba(0,179,126,.4);background:rgba(0,179,126,.05)}
-.fo.active{border-color:var(--green);background:rgba(0,179,126,.08)}
-.fo.active-gold{border-color:var(--gold);background:rgba(201,168,76,.06)}
-.fo-check{width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;margin-bottom:12px;transition:all .2s;flex-shrink:0}
-.fo.active .fo-check{background:var(--green);border-color:var(--green)}
-.fo.active-gold .fo-check{background:var(--gold);border-color:var(--gold)}
-.fo-check svg{width:10px;height:10px;stroke:#fff;stroke-width:3;fill:none;display:none}
-.fo.active .fo-check svg,.fo.active-gold .fo-check svg{display:block}
-.fo-title{font-family:var(--ff-head);font-weight:700;font-size:15px;margin-bottom:6px}
-.fo-price{font-family:var(--ff-mono);font-size:13px;color:var(--green);font-weight:500}
-.fo-price.gold{color:var(--gold)}
-.fo-save{font-family:var(--ff-mono);font-size:10px;color:var(--mist);opacity:.6;margin-top:2px}
-
-.funnel-summary{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:24px;margin-bottom:24px;transition:all .3s}
-.fs-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05)}
-.fs-row:last-child{border-bottom:none}
-.fs-label{font-size:14px;color:var(--mist)}
-.fs-val{font-family:var(--ff-mono);font-size:14px;color:var(--white)}
-.fs-total-row{display:flex;justify-content:space-between;align-items:center;padding-top:16px;margin-top:8px;border-top:1px solid rgba(201,168,76,.3)}
-.fs-total-label{font-family:var(--ff-head);font-weight:700;font-size:16px}
-.fs-total-val{font-family:var(--ff-head);font-weight:800;font-size:28px;color:var(--gold)}
-.fs-savings{text-align:center;font-family:var(--ff-mono);font-size:11px;color:var(--green);letter-spacing:.06em;margin-top:8px}
-
-.funnel-cta-area{display:flex;flex-direction:column;gap:12px}
-.funnel-disclaimer{text-align:center;font-size:12px;color:var(--mist);opacity:.5;display:flex;align-items:center;justify-content:center;gap:6px}
-
-/* ══ TESTIMONIALS ════════════════════════════════════════════ */
-.testimonials-sec{background:linear-gradient(180deg,var(--dark) 0%,rgba(10,31,68,.3) 50%,var(--dark) 100%)}
-.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
-@media(max-width:900px){.tgrid{grid-template-columns:1fr}}
-@media(min-width:601px) and (max-width:900px){.tgrid{grid-template-columns:repeat(2,1fr)}}
-
-.tcard{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;transition:all .25s}
-.tcard:hover{border-color:rgba(0,179,126,.2);transform:translateY(-3px)}
-.tcard-quote{font-size:14px;color:var(--mist);line-height:1.7;margin-bottom:20px;font-style:italic}
-.tcard-quote span{color:var(--green);font-style:normal;font-weight:600}
-.tcard-author{display:flex;align-items:center;gap:12px}
-.tcard-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--green));display:flex;align-items:center;justify-content:center;font-family:var(--ff-head);font-weight:800;font-size:15px;color:#fff;flex-shrink:0}
-.tcard-name{font-weight:600;font-size:14px}
-.tcard-role{font-size:12px;color:var(--mist);opacity:.6}
-.tcard-result{margin-top:4px;font-family:var(--ff-mono);font-size:11px;color:var(--green)}
-
-/* ══ METHOD ══════════════════════════════════════════════════ */
-.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
-@media(max-width:900px){.method-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:500px){.method-grid{grid-template-columns:1fr}}
-
-.mcard{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:24px;position:relative;overflow:hidden;transition:all .25s}
-.mcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),var(--g2));transform:scaleX(0);transition:transform .3s;transform-origin:left}
-.mcard:hover::after{transform:scaleX(1)}
-.mcard:hover{border-color:rgba(0,179,126,.15);transform:translateY(-3px)}
-.mcard-num{font-family:var(--ff-mono);font-size:11px;color:var(--green);letter-spacing:.1em;margin-bottom:12px}
-.mcard-icon{font-size:28px;margin-bottom:12px}
-.mcard-title{font-family:var(--ff-head);font-weight:700;font-size:16px;margin-bottom:8px}
-.mcard-desc{font-size:13px;color:var(--mist);opacity:.7;line-height:1.6}
-
-/* ══ VOL 2 TEASER ════════════════════════════════════════════ */
-.vol2{background:linear-gradient(135deg,rgba(10,31,68,.9),rgba(4,12,24,.95));border:1px solid rgba(201,168,76,.2);border-radius:24px;padding:60px 48px;position:relative;overflow:hidden}
-.vol2::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 80% 50%,rgba(201,168,76,.08),transparent);pointer-events:none}
-.vol2-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.vol2-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);border-radius:100px;padding:5px 14px;font-family:var(--ff-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.vol2-title{font-family:var(--ff-head);font-weight:800;font-size:clamp(22px,4vw,48px);margin-bottom:16px;line-height:1.05}
-.vol2-desc{font-size:16px;color:var(--mist);margin-bottom:32px;line-height:1.7}
-.vol2-chapters{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
-.vol2-ch{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px 16px}
-.vol2-ch-icon{font-size:18px;flex-shrink:0}
-.vol2-ch-text{font-size:13px;color:var(--mist);line-height:1.5}
-.vol2-ch-text strong{color:var(--white);display:block;margin-bottom:2px;font-family:var(--ff-head);font-weight:600}
-.vol2-book{position:relative;display:flex;justify-content:center}
-.vol2-book-card{width:240px;background:linear-gradient(145deg,var(--navy),var(--dark));border:1px solid rgba(201,168,76,.4);border-radius:16px;padding:32px 24px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(201,168,76,.1);text-align:center}
-.vol2-book-card::before{content:'';position:absolute;inset:1px;border-radius:15px;background:linear-gradient(145deg,rgba(201,168,76,.06),transparent);pointer-events:none}
-@media(max-width:900px){
-  .vol2{padding:40px 28px;border-radius:18px}
-  .vol2-layout{grid-template-columns:1fr;gap:0}
-  .vol2-book{display:none}
-  .vol2-desc{font-size:15px;margin-bottom:22px}
-  .vol2-layout>div:first-child>.btn,.vol2-layout>div:first-child>div>.btn{width:100%;justify-content:center}
-}
-@media(max-width:600px){
-  .vol2{padding:24px 16px;border-radius:14px}
-  .vol2-badge{font-size:10px;padding:3px 11px;margin-bottom:12px}
-  .vol2-title{font-size:22px!important;margin-bottom:10px}
-  .vol2-desc{font-size:13px;margin-bottom:16px;line-height:1.6}
-  .vol2-chapters{gap:7px;margin-bottom:18px}
-  .vol2-ch{padding:10px 11px;gap:9px;border-radius:8px}
-  .vol2-ch-icon{font-size:16px;margin-top:1px}
-  .vol2-ch-text{font-size:12px;line-height:1.5}
-  .vol2-ch-text strong{font-size:13px}
-}
-.vbc-tag{font-family:var(--ff-mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.7;margin-bottom:12px}
-.vbc-title{font-family:var(--ff-head);font-weight:800;font-size:22px;color:var(--white);margin-bottom:4px}
-.vbc-subtitle{font-family:var(--ff-head);font-size:13px;color:var(--mist);margin-bottom:20px}
-.vbc-atom{margin:20px 0}
-.vbc-vol{font-family:var(--ff-mono);font-size:11px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
-.vbc-author{font-size:12px;color:var(--mist);opacity:.6}
-.vol2-progress{margin-top:20px;text-align:center}
-.progress-label{font-family:var(--ff-mono);font-size:11px;color:var(--gold);letter-spacing:.08em;margin-bottom:8px}
-.progress-bar{height:4px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}
-.progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),#F0D060);border-radius:2px;animation:progress-grow 2s ease-out forwards}
-@keyframes progress-grow{from{width:0}to{width:72%}}
-.progress-pct{font-family:var(--ff-mono);font-size:10px;color:var(--mist);opacity:.5;margin-top:6px;text-align:right}
-
-/* ══ SUBMARCA ════════════════════════════════════════════════ */
-.submarca-bar{background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);padding:32px 0}
-.submarca-inner{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
-.submarca-arrow{color:var(--mist);opacity:.3;font-size:20px}
-.submarca-logo{display:flex;align-items:center;gap:10px}
-.submarca-ti{font-family:var(--ff-head);font-weight:700;font-size:15px;color:var(--mist);opacity:.6}
-.submarca-ia{font-family:var(--ff-head);font-weight:800;font-size:15px;color:var(--green)}
-.submarca-dot{width:4px;height:4px;background:var(--mist);border-radius:50%;opacity:.3}
-
-/* ══ FAQ ═════════════════════════════════════════════════════ */
-.faq-list{max-width:720px;margin:48px auto 0;display:flex;flex-direction:column;gap:8px}
-.faq-item{border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;transition:border-color .2s}
-.faq-item.open{border-color:rgba(0,179,126,.25)}
-.faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;cursor:pointer;font-weight:500;font-size:15px;transition:color .2s;user-select:none}
-.faq-q:hover{color:var(--green)}
-.faq-arrow{width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;font-size:12px}
-.faq-item.open .faq-arrow{background:var(--green);border-color:var(--green);transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
-.faq-item.open .faq-a{max-height:300px}
-.faq-a-inner{padding:0 22px 18px;font-size:14px;color:var(--mist);line-height:1.7}
-
-/* ══ STICKY BAR ══════════════════════════════════════════════ */
-.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:99;background:linear-gradient(180deg,rgba(4,12,24,.0) 0%,rgba(4,12,24,.97) 30%);backdrop-filter:blur(24px);border-top:1px solid rgba(0,179,126,.25);padding:14px 20px 18px;display:none;transition:transform .3s ease}
-.sticky-bar.visible{display:block}
-.sb-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:900px;margin:0 auto}
-.sb-text{flex:1;min-width:0}
-.sb-title{font-family:var(--ff-head);font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sb-price{font-family:var(--ff-mono);font-size:11px;color:var(--green);margin-top:2px;letter-spacing:.04em}
-.sb-btns{display:flex;gap:12px;flex-shrink:0}
-.sb-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;font-family:var(--ff-body);font-weight:700;font-size:13px;padding:11px 20px;border-radius:10px;border:none;cursor:pointer;transition:all .2s ease;white-space:nowrap;text-decoration:none!important;letter-spacing:.01em}
-.sb-btn-gold{background:linear-gradient(135deg,var(--gold),#F0D060);color:var(--dark);box-shadow:0 4px 20px rgba(201,168,76,.4)}
-.sb-btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.55)}
-.sb-btn-green{background:linear-gradient(135deg,var(--green),var(--g2));color:#fff;box-shadow:0 4px 20px rgba(0,179,126,.3)}
-.sb-btn-green:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,179,126,.5)}
-@media(max-width:600px){
-  .sb-text{display:none}
-  .sb-btns{width:100%;gap:10px}
-  .sb-btn{flex:1;font-size:13px;padding:13px 10px;border-radius:11px}
-}
-@media(max-width:360px){
-  .sb-btn{font-size:12px;padding:12px 8px}
-}
-
-/* ══ FOOTER ══════════════════════════════════════════════════ */
-footer{padding:48px 0 32px;border-top:1px solid rgba(255,255,255,.05)}
-.footer-inner{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap}
-.footer-brand .nav-logo-text{font-size:22px}
-.footer-brand p{margin-top:12px;font-size:13px;color:var(--mist);opacity:.55;max-width:280px;line-height:1.6}
-.footer-links{display:flex;flex-direction:column;gap:8px}
-.footer-links a{font-size:13px;color:var(--mist);opacity:.55;transition:all .2s}
-.footer-links a:hover{opacity:1;color:var(--green)}
-.footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.footer-copy{font-size:12px;color:var(--mist);opacity:.35}
-.footer-legal{display:flex;gap:16px}
-.footer-legal a{font-size:12px;color:var(--mist);opacity:.35;transition:opacity .2s}
-.footer-legal a:hover{opacity:.7}
-
-/* ══ REVEAL ANIMATIONS ═══════════════════════════════════════ */
-.reveal{opacity:0;transform:translateY(24px);transition:all .6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
-/* ══ ATOM ANIMATION ══════════════════════════════════════════ */
-.orbit1{animation:orbit1 8s linear infinite;transform-origin:center}
-.orbit2{animation:orbit2 12s linear infinite;transform-origin:center}
-.orbit3{animation:orbit3 6s linear infinite;transform-origin:center}
-@keyframes orbit1{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-@keyframes orbit2{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
-@keyframes orbit3{from{transform:rotate(60deg)}to{transform:rotate(420deg)}}
-
-/* ══ RESPONSIVE UTILS ════════════════════════════════════════ */
-@media(max-width:480px){
-  .hero-ctas{flex-direction:column}
-  .hero-ctas .btn{width:100%;justify-content:center}
-  .hero-stats{gap:16px}
-}
-
-/* ══ SCROLL INDICATOR ════════════════════════════════════════ */
-.scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.4;animation:float2 2.5s ease-in-out infinite}
-.scroll-hint span{font-family:var(--ff-mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase}
-.scroll-arrow{width:1px;height:36px;background:linear-gradient(to bottom,rgba(0,179,126,0),var(--green));position:relative;overflow:hidden}
-.scroll-arrow::after{content:'';position:absolute;width:100%;height:50%;background:var(--dark);animation:scroll-drop 2s ease-in-out infinite}
-@keyframes scroll-drop{0%{top:-50%}100%{top:100%}}
-@keyframes float2{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
-</style>
-</head>
-<body>
-
-<!-- ══ NAV ═══════════════════════════════════════════════════ -->
-<nav id="nav">
-  <div class="wrap">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <!-- TI clock logo -->
-        <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="nav-cg" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#1565FF"/><stop offset="100%" stop-color="#0D3B8E"/>
-            </linearGradient>
-            <filter id="nav-gf"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          </defs>
-          <circle cx="50" cy="50" r="46" fill="url(#nav-cg)" stroke="#1565FF" stroke-width="1"/>
-          <circle cx="50" cy="6"  r="2.5" fill="#00D4FF" filter="url(#nav-gf)"/>
-          <circle cx="50" cy="94" r="2.5" fill="#00D4FF" filter="url(#nav-gf)"/>
-          <circle cx="6"  cy="50" r="2.5" fill="#00D4FF" filter="url(#nav-gf)"/>
-          <circle cx="94" cy="50" r="2.5" fill="#00D4FF" filter="url(#nav-gf)"/>
-          <path d="M50,50 L50,20 A30,30 0 0,1 80,50 Z" fill="#39E75F"/>
-          <circle cx="50" cy="50" r="6" fill="white"/>
-          <line x1="50" y1="50" x2="50" y2="24" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="50" y1="50" x2="68" y2="50" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="50" cy="50" r="3" fill="white"/>
-        </svg>
-        <div>
-          <div class="nav-logo-text">IA Sin<br>Complicaciones</div>
-          <div class="nav-logo-sub">by Tiempo Inteligente</div>
-        </div>
-      </a>
-      <div class="nav-links">
-        <a href="#productos" class="btn btn-ghost nav-cta"><span class="nav-link-text">Ver productos</span></a>
-        <a href="#combo" class="btn btn-gold nav-cta" style="font-size:13px;padding:9px 18px;border-radius:8px">🔥 <span class="nav-link-text">Mejor oferta</span></a>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<!-- ══ HERO ════════════════════════════════════════════════════ -->
-<section class="hero">
+<!-- HERO -->
+<section id="hero">
   <div class="hero-bg"></div>
-  <div class="grid-lines"></div>
+  <div class="hero-glow-l"></div>
+  <div class="hero-glow-r"></div>
+  <div class="wrap" style="position:relative;z-index:1">
 
-  <!-- BIG ATOM -->
-  <div class="atom-wrap">
-    <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Outer glow -->
-      <circle cx="250" cy="250" r="200" fill="rgba(0,179,126,0.03)"/>
-      <!-- Orbits -->
-      <g class="orbit1">
-        <ellipse cx="250" cy="250" rx="220" ry="80" stroke="#00B37E" stroke-width="1" fill="none" stroke-dasharray="6 4" opacity=".5"/>
-        <circle cx="470" cy="250" r="10" fill="#00B37E" opacity=".9"/>
-      </g>
-      <g class="orbit2">
-        <ellipse cx="250" cy="250" rx="220" ry="80" stroke="#2ECC71" stroke-width="1" fill="none" stroke-dasharray="4 6" opacity=".35" transform="rotate(60 250 250)"/>
-        <circle cx="360" cy="440" r="8" fill="#2ECC71" opacity=".8"/>
-      </g>
-      <g class="orbit3">
-        <ellipse cx="250" cy="250" rx="220" ry="80" stroke="#C9A84C" stroke-width="1" fill="none" stroke-dasharray="2 8" opacity=".3" transform="rotate(-60 250 250)"/>
-        <circle cx="140" cy="440" r="6" fill="#C9A84C" opacity=".7"/>
-      </g>
-      <!-- Nucleus -->
-      <circle cx="250" cy="250" r="36" fill="rgba(0,179,126,0.15)" stroke="#00B37E" stroke-width="1.5"/>
-      <circle cx="250" cy="250" r="20" fill="rgba(0,179,126,0.3)"/>
-      <circle cx="250" cy="250" r="10" fill="#00B37E"/>
-      <!-- IA text in nucleus -->
-      <text x="250" y="255" text-anchor="middle" font-family="Syne,sans-serif" font-weight="800" font-size="11" fill="#fff" opacity=".9">IA</text>
-    </svg>
-  </div>
+    <div class="hero-super reveal">Arsenal Completo de Lanzamiento</div>
 
-  <div class="wrap">
-    <div class="hero-content">
-      <div class="hero-submarca reveal">Una publicación de Tiempo Inteligente</div>
-      <h1 class="hl hl-xl hero-title reveal" style="transition-delay:.1s">
-        Usa la IA.<br>
-        <span class="line2">Sin perder tiempo</span><br>
-        aprendiendo.
-      </h1>
-      <p class="hero-desc reveal" style="transition-delay:.2s">
-        Guías prácticas y prompts listos para usar que transforman cómo trabajas, ahorras y generas ingresos — desde hoy.
-      </p>
-      <div class="hero-ctas reveal" style="transition-delay:.3s">
-        <a href="#combo" class="btn btn-gold btn-lg">🔥 Ver la mejor oferta</a>
-        <a href="#productos" class="btn btn-ghost btn-lg">Explorar productos</a>
+    <h1 class="hero-title reveal" style="transition-delay:.06s">
+      <span class="l1">Domina la IA.</span><br>
+      <span class="l2">Construye tu Arsenal.</span>
+    </h1>
+
+    <p class="hero-sub reveal" style="transition-delay:.12s">
+      Tres armas, un sistema. La combinación completa que convierte a cualquier persona en un Guerrero Élite de la IA — con hasta <strong style="color:var(--gold)">87% de descuento</strong> en lanzamiento.
+    </p>
+
+    <!-- Weapons showcase -->
+    <div class="weapons-row reveal" style="transition-delay:.18s">
+      <!-- Shield -->
+      <div class="w-item">
+        <div class="w-float-g" style="filter:drop-shadow(0 0 18px rgba(0,179,126,.7)) drop-shadow(0 0 48px rgba(0,179,126,.3))">
+          <svg width="70" height="84" viewBox="0 0 200 240" fill="none">
+            <defs>
+              <linearGradient id="hw-sh" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0A2A18"/><stop offset="100%" stop-color="#051510"/></linearGradient>
+              <linearGradient id="hw-sb" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00B37E"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient>
+              <filter id="hf"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <path d="M100 18 L172 50 L172 118 Q172 174 100 220 Q28 174 28 118 L28 50 Z" fill="url(#hw-sh)" stroke="url(#hw-sb)" stroke-width="2.5"/>
+            <path d="M100 30 L158 56 L158 116 Q158 162 100 202 Q42 162 42 116 L42 56 Z" fill="none" stroke="rgba(0,179,126,.2)" stroke-width="1"/>
+            <circle cx="100" cy="110" r="34" fill="rgba(0,179,126,.08)" stroke="rgba(0,179,126,.35)" stroke-width="1.5"/>
+            <text x="100" y="122" text-anchor="middle" font-family="Syne,sans-serif" font-weight="800" font-size="24" fill="#00B37E">IA</text>
+            <circle cx="100" cy="40" r="4" fill="#2ECC71" filter="url(#hf)"/>
+          </svg>
+        </div>
+        <span class="w-lbl" style="color:var(--green)">🛡️ Vol. 1</span>
+        <span class="w-name" style="color:var(--green)">Escudo del<br>Fundador IA</span>
+        <span class="w-price">$8.99</span>
       </div>
-      <div class="hero-stats reveal" style="transition-delay:.4s">
-        <div class="stat"><span class="stat-num">+1,340</span><span class="stat-label">USD ahorrados por lector</span></div>
-        <div class="stat"><span class="stat-num">6.5h</span><span class="stat-label">recuperadas por semana</span></div>
-        <div class="stat"><span class="stat-num">25</span><span class="stat-label">prompts listos para usar</span></div>
+
+      <!-- Warrior center -->
+      <div class="warrior-center">
+        <div class="warrior-halo"></div>
+        <svg width="160" height="210" viewBox="0 0 180 235" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="58" y="180" width="18" height="46" rx="4" fill="#0A1628" stroke="rgba(245,200,66,.3)" stroke-width="1"/>
+          <rect x="84" y="180" width="18" height="46" rx="4" fill="#0A1628" stroke="rgba(245,200,66,.3)" stroke-width="1"/>
+          <rect x="52" y="212" width="26" height="15" rx="4" fill="#1C1400"/>
+          <rect x="80" y="212" width="26" height="15" rx="4" fill="#1C1400"/>
+          <rect x="44" y="112" width="72" height="72" rx="8" fill="#0D3B8E" stroke="rgba(245,200,66,.45)" stroke-width="2"/>
+          <path d="M80 128 L90 116 L100 128 L90 142 Z" fill="none" stroke="rgba(245,200,66,.7)" stroke-width="1.5"/>
+          <circle cx="90" cy="128" r="6" fill="rgba(245,200,66,.25)" stroke="#f5c842" stroke-width="1"/>
+          <rect x="28" y="112" width="20" height="20" rx="6" fill="#2A1E00" stroke="rgba(245,200,66,.5)" stroke-width="1.5"/>
+          <rect x="112" y="112" width="20" height="20" rx="6" fill="#2A1E00" stroke="rgba(245,200,66,.5)" stroke-width="1.5"/>
+          <rect x="30" y="128" width="16" height="48" rx="4" fill="#0D3B8E" stroke="rgba(245,200,66,.3)" stroke-width="1"/>
+          <rect x="114" y="128" width="16" height="48" rx="4" fill="#0D3B8E" stroke="rgba(245,200,66,.3)" stroke-width="1"/>
+          <circle cx="38" cy="180" r="8" fill="#0A1628" stroke="rgba(245,200,66,.3)" stroke-width="1"/>
+          <circle cx="122" cy="180" r="8" fill="#0A1628" stroke="rgba(245,200,66,.3)" stroke-width="1"/>
+          <rect x="76" y="98" width="28" height="18" rx="4" fill="#0A1628"/>
+          <rect x="58" y="52" width="64" height="54" rx="14" fill="#0D3B8E" stroke="rgba(245,200,66,.6)" stroke-width="2"/>
+          <path d="M70 52 L74 40 L82 50 L90 36 L98 50 L106 40 L110 52" fill="none" stroke="rgba(245,200,66,.7)" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="90" cy="34" r="5" fill="#f5c842"/>
+          <rect x="64" y="68" width="52" height="16" rx="4" fill="#060810" stroke="rgba(245,200,66,.65)" stroke-width="1.5"/>
+          <rect x="66" y="70" width="48" height="12" rx="3" fill="rgba(245,200,66,.08)"/>
+          <circle cx="78" cy="76" r="4" fill="#f5c842"/><circle cx="78" cy="76" r="2" fill="white"/>
+          <circle cx="102" cy="76" r="4" fill="#f5c842"/><circle cx="102" cy="76" r="2" fill="white"/>
+        </svg>
+        <div style="font-family:var(--fh);font-size:13px;font-weight:800;color:var(--gold);text-align:center;margin-top:-6px">Guerrero Élite IA</div>
+      </div>
+
+      <!-- Ring -->
+      <div class="w-item">
+        <div class="w-float-gold" style="filter:drop-shadow(0 0 18px rgba(245,200,66,.7)) drop-shadow(0 0 48px rgba(245,200,66,.3))">
+          <svg width="64" height="64" viewBox="0 0 160 160" fill="none">
+            <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C9A84C"/><stop offset="50%" stop-color="#F0D060"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs>
+            <circle cx="80" cy="80" r="68" stroke="url(#rg)" stroke-width="2" fill="none" opacity=".3"/>
+            <circle cx="80" cy="80" r="52" stroke="url(#rg)" stroke-width="8" fill="none"/>
+            <circle cx="80" cy="80" r="36" stroke="url(#rg)" stroke-width="1.5" fill="rgba(201,168,76,.06)"/>
+            <path d="M80 28 L86 50 L110 50 L92 64 L98 86 L80 72 L62 86 L68 64 L50 50 L74 50 Z" fill="url(#rg)" opacity=".85"/>
+          </svg>
+        </div>
+        <span class="w-lbl" style="color:var(--gold)">💍 Pack</span>
+        <span class="w-name" style="color:var(--gold)">Anillo del<br>Prompt Master</span>
+        <span class="w-price">$6.99</span>
+      </div>
+
+      <!-- Sword -->
+      <div class="w-item">
+        <div class="w-float-c" style="filter:drop-shadow(0 0 18px rgba(0,212,255,.7)) drop-shadow(0 0 48px rgba(0,212,255,.3))">
+          <svg width="46" height="116" viewBox="0 0 180 420" fill="none">
+            <defs>
+              <linearGradient id="swl" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#001828"/><stop offset="50%" stop-color="#e8f8ff"/><stop offset="100%" stop-color="#001828"/></linearGradient>
+              <linearGradient id="sgll" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#6a4a06"/><stop offset="50%" stop-color="#fff0a0"/><stop offset="100%" stop-color="#6a4a06"/></linearGradient>
+              <linearGradient id="shl2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f5c842"/><stop offset="100%" stop-color="#b8821e"/></linearGradient>
+              <filter id="sbf2"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <path d="M90 6 L103 295 L90 320 L77 295 Z" fill="url(#swl)" filter="url(#sbf2)"/>
+            <line x1="90" y1="16" x2="90" y2="313" stroke="rgba(255,255,255,.42)" stroke-width=".8"/>
+            <path d="M22 312 L158 312 L155 330 L25 330 Z" fill="url(#sgll)"/>
+            <circle cx="90" cy="321" r="8" fill="#fff0a0"/>
+            <rect x="79" y="330" width="22" height="62" rx="3" fill="url(#shl2)"/>
+          </svg>
+        </div>
+        <span class="w-lbl" style="color:var(--cyan)">⚔ Vol. 2</span>
+        <span class="w-name" style="color:var(--cyan)">Espada del<br>Arquitecto IA</span>
+        <span class="w-price">$16.99</span>
       </div>
     </div>
-  </div>
 
-  <div class="scroll-hint">
-    <div class="scroll-arrow"></div>
-    <span>Scroll</span>
+    <div class="hero-btns reveal" style="transition-delay:.24s">
+      <a href="#bundles" class="btn-hero-main">🔥 Ver Bundles de Lanzamiento</a>
+      <a href="#products" class="btn-hero-sec">Ver productos individuales</a>
+    </div>
+
   </div>
 </section>
 
-<!-- ══ MARQUEE STRIP ══════════════════════════════════════════ -->
-<div class="strip">
-  <div class="strip-inner" id="marquee">
-    <span class="strip-item"><span class="strip-dot"></span>Ahorra tiempo con IA</span>
-    <span class="strip-item"><span class="strip-dot"></span>Genera ingresos extra</span>
-    <span class="strip-item"><span class="strip-dot"></span>Optimiza tus compras</span>
-    <span class="strip-item"><span class="strip-dot"></span>Prompts listos para copiar</span>
-    <span class="strip-item"><span class="strip-dot"></span>Sin cursos. Sin teoría.</span>
-    <span class="strip-item"><span class="strip-dot"></span>Resultados en minutos</span>
-    <span class="strip-item"><span class="strip-dot"></span>Ahorra tiempo con IA</span>
-    <span class="strip-item"><span class="strip-dot"></span>Genera ingresos extra</span>
-    <span class="strip-item"><span class="strip-dot"></span>Optimiza tus compras</span>
-    <span class="strip-item"><span class="strip-dot"></span>Prompts listos para copiar</span>
-    <span class="strip-item"><span class="strip-dot"></span>Sin cursos. Sin teoría.</span>
-    <span class="strip-item"><span class="strip-dot"></span>Resultados en minutos</span>
-  </div>
-</div>
-
-<!-- ══ METHOD ═════════════════════════════════════════════════ -->
-<section class="sec">
+<!-- PRODUCTS -->
+<section id="products">
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:8px" class="reveal">
-      <span class="tag"><span class="dot"></span>El método</span>
+    <div class="sec-hdr reveal">
+      <div class="sec-eye">Productos Individuales</div>
+      <h2 class="sec-title">Cada arma, <em style="color:var(--cyan);font-style:normal">por separado</em></h2>
+      <p class="sec-sub">Empieza por donde quieras. Cada producto acumula XP hacia el Guerrero Élite.</p>
     </div>
-    <h2 class="hl hl-lg reveal" style="text-align:center;transition-delay:.1s">
-      IA que funciona en <span class="green">4 áreas clave</span>
-    </h2>
-    <div class="method-grid">
-      <div class="mcard reveal" style="transition-delay:.1s">
-        <div class="mcard-num">01 / TIEMPO</div>
-        <div class="mcard-icon">⏰</div>
-        <div class="mcard-title">Recupera 6.5h por semana</div>
-        <div class="mcard-desc">Automatiza correos, presentaciones, investigaciones y todo lo que te quita horas sin agregar valor.</div>
+    <div class="prod-grid">
+      <!-- Vol 1 -->
+      <div class="prod-card reveal" style="border-color:rgba(0,179,126,.22)">
+        <div class="prod-icon-row"><span class="prod-icon">🛡️</span><div><div class="prod-vol" style="color:var(--green)">Volumen I</div><div class="prod-ttl">Cómo Ahorrar Tiempo y Dinero</div></div></div>
+        <p class="prod-desc">9 capítulos para dominar los fundamentos de la IA sin ser experto. El punto de partida perfecto.</p>
+        <span class="prod-price" style="color:var(--green)">$8.99</span>
+        <div class="prod-real">Valor real: $67.00 · Normal: $27.00</div>
+        <div class="prod-badges"><span class="pbadge pbg">87% desc. vs real</span><span class="pbadge pbc">67% vs normal</span></div>
+        <div class="reward-row" style="background:rgba(0,179,126,.05);border:1px solid rgba(0,179,126,.15)">
+          <span style="font-size:18px">🛡️</span>
+          <div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;color:var(--green);text-transform:uppercase">Recompensa</div><div style="font-size:13px;font-weight:600;color:var(--green)">Escudo del Fundador IA</div></div>
+        </div>
+        <a onclick="return false;" href="https://pay.hotmart.com/F104691921G?checkoutMode=2&off=kisl142w" class="hotmart-fb hotmart__button-checkout btn-prod" style="background:linear-gradient(135deg,var(--green),var(--g2));color:#040C18">🛡️ Obtener Vol. 1 — $8.99</a>
+        <a href="https://tiempo-inteligente-latam.vercel.app/" class="link-prod" style="color:var(--green)" target="_blank">Ver página completa →</a>
       </div>
-      <div class="mcard reveal" style="transition-delay:.2s">
-        <div class="mcard-num">02 / DINERO</div>
-        <div class="mcard-icon">💰</div>
-        <div class="mcard-title">Toma mejores decisiones</div>
-        <div class="mcard-desc">Compara antes de comprar, audita tus suscripciones y crea presupuestos que realmente funcionen.</div>
+      <!-- Vol 2 -->
+      <div class="prod-card reveal" style="border-color:rgba(0,212,255,.25);background:rgba(0,212,255,.025);transition-delay:.1s;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent)"></div>
+        <div class="prod-icon-row"><span class="prod-icon">⚔</span><div><div class="prod-vol" style="color:var(--cyan)">Volumen II</div><div class="prod-ttl">Del Conocimiento a la Acción</div></div></div>
+        <p class="prod-desc">8 capítulos para automatizar, crear contenido y hacer que la IA trabaje sola. C.R.A.C. + Zapier + 48h.</p>
+        <span class="prod-price" style="color:var(--cyan)">$16.99</span>
+        <div class="prod-real">Valor real: $97.00 · Normal: $47.00</div>
+        <div class="prod-badges"><span class="pbadge pbg">82% desc. vs real</span><span class="pbadge pbc">64% vs normal</span></div>
+        <div class="reward-row" style="background:rgba(0,212,255,.05);border:1px solid rgba(0,212,255,.2)">
+          <span style="font-size:18px">⚔</span>
+          <div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;color:var(--cyan);text-transform:uppercase">Recompensa</div><div style="font-size:13px;font-weight:600;color:var(--cyan)">Espada del Arquitecto IA</div></div>
+        </div>
+        <a onclick="return false;" href="https://pay.hotmart.com/K104841064N?checkoutMode=2&off=dlsw5hzw" class="hotmart-fb hotmart__button-checkout btn-prod" style="background:linear-gradient(135deg,var(--cyan),#0090c0);color:#060810">⚔ Obtener Vol. 2 — $16.99</a>
+        <a href="https://ia-sin-complicaciones-vol2.vercel.app/" class="link-prod" style="color:var(--cyan)">Ver página completa →</a>
       </div>
-      <div class="mcard reveal" style="transition-delay:.3s">
-        <div class="mcard-num">03 / INGRESOS</div>
-        <div class="mcard-icon">🚀</div>
-        <div class="mcard-title">Lanza tu servicio en 24h</div>
-        <div class="mcard-desc">Descubre qué puedes vender, crea tu oferta y consigue tus primeros clientes con IA como asistente.</div>
-      </div>
-      <div class="mcard reveal" style="transition-delay:.4s">
-        <div class="mcard-num">04 / SISTEMA</div>
-        <div class="mcard-icon">⚡</div>
-        <div class="mcard-title">Plan de 7 días concreto</div>
-        <div class="mcard-desc">Un roadmap día a día para pasar de cero a resultados reales sin teoría, sin cursos, sin excusas.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ PRODUCTS ═══════════════════════════════════════════════ -->
-<section class="sec" id="productos" style="padding-top:0">
-  <div class="wrap">
-    <div class="products-intro reveal">
-      <span class="tag" style="margin-bottom:16px"><span class="dot"></span>Biblioteca IA Sin Complicaciones</span>
-      <h2 class="hl hl-lg">Elige tu punto<br>de <span class="green">entrada</span></h2>
-      <p>Cada producto está diseñado para generar resultados desde el primer uso. Sin relleno, sin teoría innecesaria.</p>
-    </div>
-
-    <div class="products-grid">
-
-      <!-- ── VOL 1 ── -->
-      <div class="pcard featured reveal" style="transition-delay:.1s">
-        <div class="pcard-icon">📘</div>
-        <div class="pcard-title">Guía Estratégica<br>Vol. 1 Enriquecido</div>
-        <div class="pcard-desc">El manual definitivo para dominar la IA sin complicaciones. 9 escudos desbloqueables + casos reales + herramientas.</div>
-        <div class="price-block">
-          <div class="price-real">Valor real: $57.00 USD</div>
-          <div class="price-normal">
-            <span class="price-normal-num">$19.99</span>
-            <span class="price-badge">50% OFF</span>
-          </div>
-          <div class="price-launch">
-            <span class="price-currency">$</span>
-            <span class="price-amount">9.99</span>
-            <span class="price-period">USD — Lanzamiento</span>
-          </div>
+      <!-- Pack -->
+      <div class="prod-card reveal" style="border-color:rgba(245,200,66,.2);transition-delay:.2s">
+        <div class="prod-icon-row"><span class="prod-icon">💍</span><div><div class="prod-vol" style="color:var(--gold)">Pack Prompts</div><div class="prod-ttl">25 Prompts Listos para Usar</div></div></div>
+        <p class="prod-desc">El arma secreta. 25 prompts profesionales por área. Solo llena los corchetes y ejecuta. Compatible con Vol. 1 y 2.</p>
+        <span class="prod-price" style="color:var(--gold)">$6.99</span>
+        <div class="prod-real">Valor real: $47.00 · Normal: $17.00</div>
+        <div class="prod-badges"><span class="pbadge pbg">85% desc. vs real</span><span class="pbadge pbgold">59% vs normal</span></div>
+        <div class="reward-row" style="background:rgba(245,200,66,.05);border:1px solid rgba(245,200,66,.18)">
+          <span style="font-size:18px">💍</span>
+          <div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase">Recompensa</div><div style="font-size:13px;font-weight:600;color:var(--gold)">Anillo del Prompt Master</div></div>
         </div>
-        <ul class="pcard-features">
-          <li>9 escudos desbloqueables paso a paso</li>
-          <li>Casos reales con resultados medibles</li>
-          <li>Método paso a paso con ejemplos reales</li>
-          <li>Plan de 7 días implementable</li>
-          <li>Acceso inmediato via Hotmart</li>
-        </ul>
-        <div class="hm-green">
-          <a href="https://pay.hotmart.com/F104691921G?checkoutMode=2&off=kisl142w" class="hotmart-fb hotmart__button-checkout" target="_blank">📘 Obtener la Guía Vol. 1 — $9.99</a>
-        </div>
-        <a href="https://tiempo-inteligente-latam.vercel.app/" class="pcard-link" target="_blank">→ Ver página completa del producto</a>
-      </div>
-
-      <!-- ── PACK PROMPTS ── -->
-      <div class="pcard reveal" style="transition-delay:.2s">
-        <div class="pcard-icon">⚡</div>
-        <div class="pcard-title">Pack 25 Prompts<br>Listos para Usar</div>
-        <div class="pcard-desc">25 prompts de alta potencia organizados por situación. Copias, pegas y obtienes resultados en minutos. Incluye directorio de 30+ herramientas con <strong style="color:var(--green)">enlaces directos a cada modelo de IA</strong> — sin búsquedas, sin páginas incorrectas.</div>
-        <div class="price-block">
-          <div class="price-real">Valor real: $57.00 USD</div>
-          <div class="price-normal">
-            <span class="price-normal-num">$25.00</span>
-            <span class="price-badge">48% OFF</span>
-          </div>
-          <div class="price-launch">
-            <span class="price-currency">$</span>
-            <span class="price-amount">12.99</span>
-            <span class="price-period">USD — Lanzamiento</span>
-          </div>
-        </div>
-        <ul class="pcard-features">
-          <li>25 prompts listos para copiar y pegar</li>
-          <li>4 bloques: tiempo, dinero, ingresos, plan</li>
-          <li>Casos reales con resultados ampliados</li>
-          <li>Directorio de 30+ herramientas de IA enlazadas directamente</li>
-          <li>Guía rápida de referencia incluida</li>
-          <li>Compatible con ChatGPT, Claude y Gemini — todos gratuitos</li>
-        </ul>
-        <div class="hm-navy">
-          <a href="https://pay.hotmart.com/L104788404U?checkoutMode=2&off=kiopt2fa" class="hotmart-fb hotmart__button-checkout" target="_blank">⚡ Obtener el Pack de Prompts — $12.99</a>
-        </div>
-        <a href="https://ia-sin-complicaciones-prompt-packs.vercel.app/" class="pcard-link" target="_blank">→ Ver página completa del producto</a>
-      </div>
-
-      <!-- ── COMBO ── -->
-      <div class="pcard combo reveal" style="transition-delay:.3s">
-        <div class="pcard-badge">⭐ Mejor valor</div>
-        <div class="pcard-icon">🎯</div>
-        <div class="pcard-title">Pack Total<br>Guía + 25 Prompts</div>
-        <div class="pcard-desc">Todo lo que necesitas para transformar cómo usas la IA. La combinación perfecta para resultados desde el día 1.</div>
-        <div class="price-block">
-          <div class="price-real">Valor real: $114.00 USD</div>
-          <div class="price-normal">
-            <span class="price-normal-num">$44.00</span>
-            <span class="price-badge" style="background:rgba(201,168,76,.15);color:var(--gold)">55% OFF</span>
-          </div>
-          <div class="price-launch gold">
-            <span class="price-currency" style="color:var(--gold)">$</span>
-            <span class="price-amount">20.00</span>
-            <span class="price-period">USD — Lanzamiento</span>
-          </div>
-        </div>
-        <ul class="pcard-features">
-          <li class="gold-feat">Todo de la Guía Vol. 1</li>
-          <li class="gold-feat">Todo del Pack 25 Prompts</li>
-          <li class="gold-feat">Ahorras $2.98 vs compra separada</li>
-          <li class="gold-feat">Acceso inmediato a ambos productos</li>
-          <li class="gold-feat">Precio especial de lanzamiento — temporal</li>
-        </ul>
-        <div class="hm-gold">
-          <a href="https://pay.hotmart.com/A104789123J?checkoutMode=2&off=uzygs8w1" class="hotmart-fb hotmart__button-checkout" target="_blank">🎯 Obtener Pack Total — $20.00</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ══ INTERACTIVE FUNNEL ══ -->
-    <div class="funnel-wrap reveal" id="combo" style="transition-delay:.2s">
-      <div class="funnel-header">
-        <span class="tag" style="background:rgba(201,168,76,.1);border-color:rgba(201,168,76,.3);color:var(--gold)"><span class="dot" style="background:var(--gold)"></span>Constructor de oferta</span>
-        <h3 class="funnel-title">Elige tu combinación <span class="gold">ideal</span></h3>
-        <p class="funnel-subtitle">Selecciona lo que quieres llevar y ve el ahorro en tiempo real</p>
-      </div>
-
-      <div class="funnel-options">
-        <div class="fo" id="fo-guia" onclick="toggleFO('guia')">
-          <div class="fo-check">
-            <svg viewBox="0 0 12 12"><polyline points="1,6 4,9 11,2"/></svg>
-          </div>
-          <div class="fo-body">
-            <div class="fo-title">📘 Guía Vol. 1</div>
-            <div class="fo-price">$9.99 USD</div>
-            <div class="fo-save">Normal: $19.99 · Ahorra 50%</div>
-          </div>
-        </div>
-        <div class="fo" id="fo-pack" onclick="toggleFO('pack')">
-          <div class="fo-check">
-            <svg viewBox="0 0 12 12"><polyline points="1,6 4,9 11,2"/></svg>
-          </div>
-          <div class="fo-body">
-            <div class="fo-title">⚡ Pack 25 Prompts</div>
-            <div class="fo-price">$12.99 USD</div>
-            <div class="fo-save">Normal: $25.00 · Ahorra 48%</div>
-          </div>
-        </div>
-        <div class="fo active-gold" id="fo-combo" onclick="selectCombo()">
-          <div class="fo-check">
-            <svg viewBox="0 0 12 12"><polyline points="1,6 4,9 11,2"/></svg>
-          </div>
-          <div class="fo-body">
-            <div class="fo-title">🎯 Pack Total <span style="font-family:var(--ff-mono);font-size:9px;color:var(--gold);letter-spacing:.06em;text-transform:uppercase;margin-left:4px">⭐ Mejor valor</span></div>
-            <div class="fo-price gold">$20.00 USD</div>
-            <div class="fo-save">Ahorras $94 vs precio real</div>
-          </div>
-        </div>
-      </div>
-      <div class="funnel-summary" id="funnel-summary">
-        <div class="fs-row">
-          <span class="fs-label" id="fs-items">Pack Total (Guía + Prompts)</span>
-          <span class="fs-val" id="fs-normal-price">Normal: $44.00</span>
-        </div>
-        <div class="fs-row">
-          <span class="fs-label">Descuento de lanzamiento</span>
-          <span class="fs-val" style="color:var(--green)" id="fs-discount">— $24.00 (55% OFF)</span>
-        </div>
-        <div class="fs-total-row">
-          <span class="fs-total-label">Tu precio hoy</span>
-          <span class="fs-total-val" id="fs-total">$20.00 USD</span>
-        </div>
-        <div class="fs-savings" id="fs-savings-msg">🔥 Ahorras $94.00 vs el precio real de mercado</div>
-      </div>
-
-      <div class="funnel-cta-area">
-        <div id="funnel-btn-area">
-          <div class="hm-gold">
-            <a href="https://pay.hotmart.com/A104789123J?checkoutMode=2&off=uzygs8w1" class="hotmart-fb hotmart__button-checkout" target="_blank" id="funnel-main-btn">🎯 Obtener Pack Total — $20.00</a>
-          </div>
-        </div>
-        <div class="funnel-disclaimer">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Pago seguro via Hotmart · Acceso inmediato · Garantía de satisfacción
-        </div>
+        <a onclick="return false;" href="https://pay.hotmart.com/L104788404U?checkoutMode=2&off=kiopt2fa" class="hotmart-fb hotmart__button-checkout btn-prod" style="background:rgba(245,200,66,.15);border:1px solid rgba(245,200,66,.35);color:var(--gold)">💍 Obtener Pack — $6.99</a>
+        <a href="https://ia-sin-complicaciones-prompt-packs.vercel.app/" class="link-prod" style="color:var(--gold)" target="_blank">Ver página completa →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ TESTIMONIALS ════════════════════════════════════════════ -->
-<section class="sec testimonials-sec">
+<!-- BUNDLES -->
+<section id="bundles">
   <div class="wrap">
-    <div style="text-align:center" class="reveal">
-      <span class="tag"><span class="dot"></span>Resultados reales</span>
-      <h2 class="hl hl-lg" style="margin-top:16px">Lo que dicen quienes<br>ya lo <span class="green">aplicaron</span></h2>
+    <div class="sec-hdr reveal">
+      <div class="sec-eye">Bundles de Lanzamiento</div>
+      <h2 class="sec-title">Ofertas <em style="color:var(--gold);font-style:normal">irresistibles</em></h2>
+      <p class="sec-sub">Combina productos, multiplica el impacto, ahorra hasta el 87% del valor real.</p>
     </div>
-    <div class="tgrid">
-      <div class="tcard reveal" style="transition-delay:.1s">
-        <p class="tcard-quote">"Pasé de 4 publicaciones al mes a 22. LinkedIn dejó de ser una obligación y se convirtió en mi mejor canal. <span>Leads +340% en 3 meses.</span>"</p>
-        <div class="tcard-author">
-          <div class="tcard-avatar">C</div>
-          <div>
-            <div class="tcard-name">Carlos M.</div>
-            <div class="tcard-role">Asesor Financiero Independiente</div>
-            <div class="tcard-result">Prompt #3 — Calendario de contenido</div>
-          </div>
-        </div>
-      </div>
-      <div class="tcard reveal" style="transition-delay:.2s">
-        <p class="tcard-quote">"Iba a gastar $400 en un smartwatch. Usé IA para analizar opciones y encontré uno con el 90% de las funciones por $180. <span>Lo he repetido 7 veces. Ahorro total: $1,340.</span>"</p>
-        <div class="tcard-author">
-          <div class="tcard-avatar">A</div>
-          <div>
-            <div class="tcard-name">Andrea V.</div>
-            <div class="tcard-role">Compradora inteligente</div>
-            <div class="tcard-result">Prompt #9 — Comparador de compras</div>
-          </div>
-        </div>
-      </div>
-      <div class="tcard reveal" style="transition-delay:.3s">
-        <p class="tcard-quote">"Escribía 2 artículos por semana. Ahora escribo 6 en el mismo tiempo. <span>Mi ingreso mensual pasó de $400 a $1,200.</span> Sin trabajar más horas."</p>
-        <div class="tcard-author">
-          <div class="tcard-avatar">L</div>
-          <div>
-            <div class="tcard-name">Luis F.</div>
-            <div class="tcard-role">Redactor Freelance</div>
-            <div class="tcard-result">Prompts #17 y #6 — SEO + Investigación</div>
-          </div>
-        </div>
-      </div>
-      <div class="tcard reveal" style="transition-delay:.1s">
-        <p class="tcard-quote">"Me congelaba frente a la cámara. Con los guiones del pack, pasé de 800 a <span>12,000 seguidores en 3 meses</span> y empecé a recibir 8 consultas nuevas por mes."</p>
-        <div class="tcard-author">
-          <div class="tcard-avatar">N</div>
-          <div>
-            <div class="tcard-name">Natalia R.</div>
-            <div class="tcard-role">Nutricionista</div>
-            <div class="tcard-result">Prompt #18 — Guiones para reels</div>
-          </div>
-        </div>
-      </div>
-      <div class="tcard reveal" style="transition-delay:.2s">
-        <p class="tcard-quote">"Creía que solo pagaba Netflix y Spotify. Al auditar descubrí $273/mes en suscripciones. Cancelé 5. <span>Ahorro: $1,872 al año.</span>"</p>
-        <div class="tcard-author">
-          <div class="tcard-avatar">D</div>
-          <div>
-            <div class="tcard-name">Daniel A.</div>
-            <div class="tcard-role">Profesional de IT</div>
-            <div class="tcard-result">Prompt #10 — Auditor de suscripciones</div>
-          </div>
-        </div>
-      </div>
-      <div class="tcard reveal" style="transition-delay:.3s">
-        <p class="tcard-quote">"Nunca había seguido un presupuesto porque se sentía restrictivo. Con el prompt de presupuesto, <span>ahorré $450 en 3 meses</span> — algo que no logré en 5 años."</p>
-        <div class="tcard-author">
-          <div class="tcard-avatar">S</div>
-          <div>
-            <div class="tcard-name">Sofía M.</div>
-            <div class="tcard-role">Profesora de secundaria</div>
-            <div class="tcard-result">Prompt #11 — Presupuesto 50/30/20</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="big-bundles">
 
-<!-- ══ VOL 2 TEASER ════════════════════════════════════════════ -->
-<section class="sec">
-  <div class="wrap">
-    <div class="vol2 reveal">
-      <div class="vol2-layout">
-        <div>
-          <div class="vol2-badge">🔮 Próximamente</div>
-          <h2 class="vol2-title hl">IA Sin Complicaciones<br><span class="gold">Vol. 2</span></h2>
-          <p class="vol2-desc">El siguiente nivel. Más avanzado. Más específico. Diseñado para quienes ya aplicaron el Vol. 1 y quieren resultados exponenciales.</p>
-          <div class="vol2-chapters">
-            <div class="vol2-ch">
-              <div class="vol2-ch-icon">🎯</div>
-              <div class="vol2-ch-text"><strong>Fórmula C.R.A.C.</strong>La arquitectura de prompts avanzados que multiplica la calidad de cada respuesta.</div>
-            </div>
-            <div class="vol2-ch">
-              <div class="vol2-ch-icon">🤖</div>
-              <div class="vol2-ch-text"><strong>IA según tu perfil</strong>Estrategias específicas si eres empleado, freelancer o emprendedor.</div>
-            </div>
-            <div class="vol2-ch">
-              <div class="vol2-ch-icon">⚙️</div>
-              <div class="vol2-ch-text"><strong>Automatizaciones sin código</strong>Conecta apps con Zapier y trabaja mientras duermes.</div>
-            </div>
-            <div class="vol2-ch">
-              <div class="vol2-ch-icon">⚡</div>
-              <div class="vol2-ch-text"><strong>Flujo de 48 horas</strong>De cero a resultados reales en menos de dos días.</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="#combo" class="btn btn-gold">Asegura tu precio de lanzamiento →</a>
-          </div>
-          <p style="margin-top:12px;font-size:12px;color:var(--mist);opacity:.5">Lectores del Vol. 1 tendrán acceso prioritario</p>
-        </div>
-        <div class="vol2-book">
+      <!-- KIT FUNDADOR -->
+      <div class="bb fundador reveal" style="padding-top:2px">
+        <div class="bb-top">
           <div>
-            <div class="vol2-book-card">
-              <div class="vbc-tag">Tiempo Inteligente</div>
-              <div class="vbc-title">IA Sin</div>
-              <div class="vbc-subtitle">Complicaciones</div>
-              <!-- mini atom for book cover -->
-              <div class="vbc-atom">
-                <svg viewBox="0 0 120 120" width="80" height="80" style="margin:0 auto;display:block">
-                  <g style="animation:orbit1 8s linear infinite;transform-origin:60px 60px">
-                    <ellipse cx="60" cy="60" rx="52" ry="20" stroke="#C9A84C" stroke-width="1.2" fill="none" opacity=".6"/>
-                    <circle cx="112" cy="60" r="5" fill="#C9A84C"/>
-                  </g>
-                  <g style="animation:orbit2 10s linear infinite;transform-origin:60px 60px">
-                    <ellipse cx="60" cy="60" rx="52" ry="20" stroke="#F0D060" stroke-width="1.2" fill="none" opacity=".4" transform="rotate(60 60 60)"/>
-                    <circle cx="86" cy="105" r="4" fill="#F0D060"/>
-                  </g>
-                  <g style="animation:orbit3 12s linear infinite;transform-origin:60px 60px">
-                    <ellipse cx="60" cy="60" rx="52" ry="20" stroke="#C9A84C" stroke-width="1.2" fill="none" opacity=".3" transform="rotate(-60 60 60)"/>
-                  </g>
-                  <circle cx="60" cy="60" r="14" fill="rgba(201,168,76,0.2)" stroke="#C9A84C" stroke-width="1"/>
-                  <circle cx="60" cy="60" r="7" fill="#C9A84C"/>
-                  <text x="60" y="63" text-anchor="middle" font-family="Syne,sans-serif" font-weight="800" font-size="6" fill="#040C18">IA</text>
-                </svg>
-              </div>
-              <div class="vbc-vol">Volumen II</div>
-              <div class="vbc-author">Anthony Briones C.</div>
+            <div class="bb-badge" style="background:rgba(0,179,126,.12);border:1px solid rgba(0,179,126,.3);color:var(--green)">🔥 Kit Fundador IA · Todo incluido</div>
+            <h3 class="bb-name">El Sistema Completo. Un Solo Precio.</h3>
+            <p class="bb-phrase">"Todo el sistema. Un solo precio. El día que lo compres será el día que todo cambie."</p>
+          </div>
+          <div class="bb-price-block">
+            <span class="bb-price" style="color:var(--green)">$26.99</span>
+            <div class="bb-real">Valor real: $211.00</div>
+            <span class="bb-save" style="background:rgba(0,179,126,.14);color:var(--g2);border:1px solid rgba(0,179,126,.28)">Ahorras $184.01 · 87%</span>
+            <div class="bb-weapons">
+              <div class="bb-w"><span class="bb-w-icon">🛡️</span><div class="bb-w-name" style="color:var(--green)">Escudo</div></div>
+              <div class="bb-w"><span class="bb-w-icon">⚔</span><div class="bb-w-name" style="color:var(--cyan)">Espada</div></div>
+              <div class="bb-w"><span class="bb-w-icon">💍</span><div class="bb-w-name" style="color:var(--gold)">Anillo</div></div>
             </div>
-            <div class="vol2-progress">
-              <div class="progress-label">EN PRODUCCIÓN</div>
-              <div class="progress-bar"><div class="progress-fill"></div></div>
-              <div class="progress-pct">72% completado</div>
+          </div>
+        </div>
+        <div class="bb-body">
+          <div class="bb-includes">
+            <div class="bb-inc-item" style="border-color:rgba(0,179,126,.14)"><span class="bb-inc-icon">🛡️</span><div><div class="bb-inc-name">Vol. 1 — Fundamentos IA</div><div class="bb-inc-detail">9 capítulos · valor real $67</div></div></div>
+            <div class="bb-inc-item" style="border-color:rgba(0,212,255,.14)"><span class="bb-inc-icon">⚔</span><div><div class="bb-inc-name">Vol. 2 — Del Conocimiento a la Acción</div><div class="bb-inc-detail">8 capítulos · valor real $97</div></div></div>
+            <div class="bb-inc-item" style="border-color:rgba(245,200,66,.14)"><span class="bb-inc-icon">💍</span><div><div class="bb-inc-name">Pack de 25 Prompts Listos</div><div class="bb-inc-detail">25 prompts · valor real $47</div></div></div>
+          </div>
+          <div class="bb-cta">
+            <a onclick="return false;" href="https://pay.hotmart.com/A104789123J?checkoutMode=2&off=uzygs8w1" class="hotmart-fb hotmart__button-checkout bb-btn" style="background:linear-gradient(135deg,var(--green),var(--g2));color:#040C18">🔥 Obtener Kit Fundador — $26.99</a>
+            <div class="bb-guarantee">🔒 Pago seguro · Garantía 7 días · Hotmart</div>
+            <div style="text-align:center;padding:12px;background:rgba(0,179,126,.05);border:1px solid rgba(0,179,126,.15);border-radius:6px">
+              <div style="font-family:var(--fh);font-size:13px;font-weight:700;color:var(--green)">3 armas desbloqueadas</div>
+              <div style="font-size:12px;color:var(--silver);margin-top:2px">🛡️ Escudo · ⚔ Espada · 💍 Anillo</div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- KIT ARQUITECTO -->
+      <div class="bb arquitecto reveal" style="transition-delay:.1s">
+        <div class="bb-top">
+          <div>
+            <div class="bb-badge" style="background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);color:var(--cyan)">⚡ Kit Arquitecto IA · Nivel Avanzado</div>
+            <h3 class="bb-name">Construye el Sistema que Trabaja Solo.</h3>
+            <p class="bb-phrase">"Ya tienes la base. Ahora deja de improvisar y construye el sistema que trabaja cuando tú no puedes."</p>
+          </div>
+          <div class="bb-price-block">
+            <span class="bb-price" style="color:var(--cyan)">$21.99</span>
+            <div class="bb-real">Valor real: $144.00</div>
+            <span class="bb-save" style="background:rgba(0,212,255,.1);color:var(--cyan);border:1px solid rgba(0,212,255,.25)">Ahorras $122.01 · 85%</span>
+            <div class="bb-weapons">
+              <div class="bb-w"><span class="bb-w-icon">⚔</span><div class="bb-w-name" style="color:var(--cyan)">Espada</div></div>
+              <div class="bb-w"><span class="bb-w-icon">💍</span><div class="bb-w-name" style="color:var(--gold)">Anillo</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="bb-body">
+          <div class="bb-includes">
+            <div class="bb-inc-item" style="border-color:rgba(0,212,255,.12)"><span class="bb-inc-icon">⚔</span><div><div class="bb-inc-name">Vol. 2 — Del Conocimiento a la Acción</div><div class="bb-inc-detail">8 capítulos · valor real $97</div></div></div>
+            <div class="bb-inc-item" style="border-color:rgba(245,200,66,.12)"><span class="bb-inc-icon">💍</span><div><div class="bb-inc-name">Pack de 25 Prompts Listos</div><div class="bb-inc-detail">25 prompts · valor real $47</div></div></div>
+          </div>
+          <div class="bb-cta">
+            <a onclick="return false;" href="https://pay.hotmart.com/W104844836A?checkoutMode=2&off=g7pacuav" class="hotmart-fb hotmart__button-checkout bb-btn" style="background:linear-gradient(135deg,var(--cyan),#0090c0);color:#060810">⚡ Obtener Kit Arquitecto — $21.99</a>
+            <div class="bb-guarantee">🔒 Pago seguro · Garantía 7 días · Hotmart</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KIT ESENCIAL -->
+      <div class="bb esencial reveal" style="transition-delay:.2s">
+        <div class="bb-top">
+          <div>
+            <div class="bb-badge" style="background:rgba(245,200,66,.08);border:1px solid rgba(245,200,66,.2);color:var(--gold)">📚 Kit Esencial IA · Base + Acción</div>
+            <h3 class="bb-name">Dos Libros. Una Decisión.</h3>
+            <p class="bb-phrase">"Dos libros. Nueve capítulos. Una sola decisión que te separa de quien eras ayer."</p>
+          </div>
+          <div class="bb-price-block">
+            <span class="bb-price" style="color:var(--gold)">$22.99</span>
+            <div class="bb-real">Valor real: $164.00</div>
+            <span class="bb-save" style="background:rgba(245,200,66,.1);color:var(--gold);border:1px solid rgba(245,200,66,.25)">Ahorras $141.01 · 86%</span>
+            <div class="bb-weapons">
+              <div class="bb-w"><span class="bb-w-icon">🛡️</span><div class="bb-w-name" style="color:var(--green)">Escudo</div></div>
+              <div class="bb-w"><span class="bb-w-icon">⚔</span><div class="bb-w-name" style="color:var(--cyan)">Espada</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="bb-body">
+          <div class="bb-includes">
+            <div class="bb-inc-item" style="border-color:rgba(0,179,126,.12)"><span class="bb-inc-icon">🛡️</span><div><div class="bb-inc-name">Vol. 1 — Fundamentos IA</div><div class="bb-inc-detail">9 capítulos · valor real $67</div></div></div>
+            <div class="bb-inc-item" style="border-color:rgba(0,212,255,.12)"><span class="bb-inc-icon">⚔</span><div><div class="bb-inc-name">Vol. 2 — Del Conocimiento a la Acción</div><div class="bb-inc-detail">8 capítulos · valor real $97</div></div></div>
+          </div>
+          <div class="bb-cta">
+            <a onclick="return false;" href="https://pay.hotmart.com/I104845510H?checkoutMode=2&off=tw1ewfpb" class="hotmart-fb hotmart__button-checkout bb-btn" style="background:rgba(245,200,66,.15);border:2px solid rgba(245,200,66,.38);color:var(--gold)">📚 Obtener Kit Esencial — $22.99</a>
+            <div class="bb-guarantee">🔒 Pago seguro · Garantía 7 días · Hotmart</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ══ SUBMARCA ════════════════════════════════════════════════ -->
-<div class="submarca-bar">
-  <div class="submarca-inner">
-    <div class="submarca-logo">
-      <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="sb-cg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#1565FF"/><stop offset="100%" stop-color="#0D3B8E"/>
-          </linearGradient>
-          <filter id="sb-gf"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        </defs>
-        <circle cx="50" cy="50" r="46" fill="url(#sb-cg)" opacity=".6"/>
-        <circle cx="50" cy="6"  r="2" fill="#00D4FF" filter="url(#sb-gf)"/>
-        <circle cx="50" cy="94" r="2" fill="#00D4FF" filter="url(#sb-gf)"/>
-        <circle cx="6"  cy="50" r="2" fill="#00D4FF" filter="url(#sb-gf)"/>
-        <circle cx="94" cy="50" r="2" fill="#00D4FF" filter="url(#sb-gf)"/>
-        <path d="M50,50 L50,20 A30,30 0 0,1 80,50 Z" fill="#39E75F" opacity=".7"/>
-        <circle cx="50" cy="50" r="6" fill="white" opacity=".8"/>
-        <line x1="50" y1="50" x2="50" y2="24" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity=".8"/>
-        <line x1="50" y1="50" x2="68" y2="50" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".8"/>
-        <circle cx="50" cy="50" r="3" fill="white" opacity=".8"/>
-      </svg>
-      <span class="submarca-ti">Tiempo Inteligente</span>
-    </div>
-    <span class="submarca-arrow">→</span>
-    <div class="submarca-logo">
-      <svg width="22" height="22" viewBox="0 0 60 60" fill="none">
-        <ellipse cx="30" cy="30" rx="26" ry="9" stroke="#00B37E" stroke-width="1.5" fill="none" opacity=".6"/>
-        <ellipse cx="30" cy="30" rx="26" ry="9" stroke="#00B37E" stroke-width="1.5" fill="none" opacity=".6" transform="rotate(60 30 30)"/>
-        <ellipse cx="30" cy="30" rx="26" ry="9" stroke="#00B37E" stroke-width="1.5" fill="none" opacity=".6" transform="rotate(-60 30 30)"/>
-        <circle cx="30" cy="30" r="6" fill="#00B37E"/>
-      </svg>
-      <span class="submarca-ia">IA Sin Complicaciones</span>
-    </div>
-    <span class="submarca-dot"></span>
-    <span style="font-family:var(--ff-mono);font-size:10px;color:var(--mist);opacity:.35;letter-spacing:.08em">SUBMARCA EDITORIAL</span>
-  </div>
-</div>
-
-<!-- ══ FAQ ════════════════════════════════════════════════════ -->
-<section class="sec">
+<!-- COMPARE -->
+<section id="compare">
   <div class="wrap">
-    <div style="text-align:center" class="reveal">
-      <h2 class="hl hl-lg">Preguntas <span class="green">frecuentes</span></h2>
+    <div class="sec-hdr reveal">
+      <div class="sec-eye">Comparación Rápida</div>
+      <h2 class="sec-title">¿Qué <em style="color:var(--cyan);font-style:normal">bundle</em> es para ti?</h2>
     </div>
-    <div class="faq-list">
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-q">¿Necesito saber sobre inteligencia artificial para usar esto? <div class="faq-arrow">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">No. Eso es exactamente el punto. Todo está diseñado para que empieces sin conocimiento previo. Copias el prompt, lo pegas en ChatGPT o Claude (ambos gratuitos), y sigues las instrucciones. Nada más.</div></div>
-      </div>
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-q">¿Con qué herramientas de IA funcionan los prompts? <div class="faq-arrow">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">Con cualquiera. Están probados en ChatGPT (gratis y Plus), Claude (gratis y Pro) y Google Gemini (gratis). No necesitas pagar por ninguna herramienta para obtener resultados.</div></div>
-      </div>
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-q">¿Cuándo recibo acceso después de comprar? <div class="faq-arrow">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">Inmediatamente. Hotmart entrega el acceso en segundos después de completar el pago. Recibirás un correo con el enlace de descarga.</div></div>
-      </div>
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-q">¿Qué diferencia hay entre el Vol. 1 y el Pack de Prompts? <div class="faq-arrow">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">El Vol. 1 es la guía completa: estrategia, método, casos, herramientas y un plan de 7 días. El Pack de Prompts es el complemento práctico: 25 prompts listos para copiar y pegar, organizados por situación. Funcionan por separado, pero juntos son el sistema completo.</div></div>
-      </div>
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-q">¿El precio de lanzamiento es permanente? <div class="faq-arrow">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">No. El precio de lanzamiento es temporal. Una vez que suba el precio normal, no habrá excepciones. Si estás viendo este precio ahora, es el momento de aprovecharlo.</div></div>
-      </div>
+    <div class="compare-wrap reveal">
+      <table class="ct">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="cf">🔥 Kit Fundador<br><span style="font-size:16px;font-weight:800;color:var(--green)">$26.99</span></th>
+            <th class="ca">⚡ Kit Arquitecto<br><span style="font-size:16px;font-weight:800;color:var(--cyan)">$21.99</span></th>
+            <th class="ce">📚 Kit Esencial<br><span style="font-size:16px;font-weight:800;color:var(--gold)">$22.99</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>🛡️ Vol. 1 — Fundamentos IA</td><td class="cf"><span class="cy">✓</span></td><td><span class="cn">—</span></td><td><span class="cy">✓</span></td></tr>
+          <tr><td>⚔ Vol. 2 — Del Conocimiento a la Acción</td><td class="cf"><span class="cy">✓</span></td><td><span class="cy">✓</span></td><td><span class="cy">✓</span></td></tr>
+          <tr><td>💍 Pack de 25 Prompts</td><td class="cf"><span class="cy">✓</span></td><td><span class="cy">✓</span></td><td><span class="cn">—</span></td></tr>
+          <tr><td>Armas desbloqueadas</td><td class="cf" style="color:var(--green);font-weight:600;font-size:12px">🛡️ ⚔ 💍 · 3 armas</td><td style="color:var(--cyan);font-weight:600;font-size:12px">⚔ 💍 · 2</td><td style="color:var(--gold);font-weight:600;font-size:12px">🛡️ ⚔ · 2</td></tr>
+          <tr><td>XP Total</td><td class="cf" style="color:var(--green)">2,700 XP</td><td style="color:var(--cyan)">1,800 XP</td><td style="color:var(--gold)">1,700 XP</td></tr>
+          <tr><td>Ahorro total</td><td class="cf" style="color:var(--green);font-weight:600">$184.01 (87%)</td><td style="color:var(--cyan)">$122.01 (85%)</td><td style="color:var(--gold)">$141.01 (86%)</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td class="cf"><a onclick="return false;" href="https://pay.hotmart.com/A104789123J?checkoutMode=2&off=uzygs8w1" class="hotmart-fb hotmart__button-checkout ct-btn" style="background:linear-gradient(135deg,var(--green),var(--g2));color:#040C18">$26.99 →</a></td>
+            <td><a onclick="return false;" href="https://pay.hotmart.com/W104844836A?checkoutMode=2&off=g7pacuav" class="hotmart-fb hotmart__button-checkout ct-btn" style="background:linear-gradient(135deg,var(--cyan),#0090c0);color:#060810">$21.99 →</a></td>
+            <td><a onclick="return false;" href="https://pay.hotmart.com/I104845510H?checkoutMode=2&off=tw1ewfpb" class="hotmart-fb hotmart__button-checkout ct-btn" style="background:rgba(245,200,66,.18);border:1px solid rgba(245,200,66,.38);color:var(--gold)">$22.99 →</a></td>
+          </tr>
+        </tfoot>
+      </table>
     </div>
   </div>
 </section>
 
-<!-- ══ CTA FINAL ══════════════════════════════════════════════ -->
-<section class="sec" style="padding-bottom:120px">
+<!-- ARSENAL TRACKER -->
+<section id="arsenal">
   <div class="wrap">
-    <div style="text-align:center;max-width:640px;margin:0 auto" class="reveal">
-      <div class="tag" style="margin-bottom:20px"><span class="dot"></span>Tu momento es ahora</div>
-      <h2 class="hl hl-lg" style="margin-bottom:20px">El tiempo que no usas con IA,<br><span class="green">alguien más ya lo usa</span><br>contra ti.</h2>
-      <p style="font-size:17px;color:var(--mist);margin-bottom:40px;line-height:1.7">Cada semana sin el sistema correcto es tiempo y dinero que no recuperas. Empieza hoy.</p>
-      <div style="display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto">
-        <div class="hm-gold">
-          <a href="https://pay.hotmart.com/A104789123J?checkoutMode=2&off=uzygs8w1" class="hotmart-fb hotmart__button-checkout" target="_blank">🎯 Pack Total — $20.00 (Mejor valor)</a>
-        </div>
-        <div class="hm-green">
-          <a href="https://pay.hotmart.com/F104691921G?checkoutMode=2&off=kisl142w" class="hotmart-fb hotmart__button-checkout" target="_blank">📘 Solo Guía Vol. 1 — $9.99</a>
-        </div>
-        <div class="hm-navy">
-          <a href="https://pay.hotmart.com/L104788404U?checkoutMode=2&off=kiopt2fa" class="hotmart-fb hotmart__button-checkout" target="_blank">⚡ Solo Pack Prompts — $12.99</a>
-        </div>
+    <div class="sec-hdr reveal">
+      <div class="sec-eye">Tu Arsenal</div>
+      <h2 class="sec-title">Construye tu <em style="color:var(--gold);font-style:normal">colección</em></h2>
+      <p class="sec-sub">Cada arma que desbloqueas te acerca al título de Guerrero Élite de la IA.</p>
+    </div>
+    <div class="arm-grid">
+      <div class="arm-card reveal" style="border-color:rgba(0,179,126,.2)">
+        <span class="arm-icon">🛡️</span>
+        <div class="arm-name" style="color:var(--green)">Escudo del Fundador IA</div>
+        <div class="arm-req">Completa Vol. 1 · 900 XP</div>
+        <div class="arm-bar"><div class="arm-bar-fill" id="bar1" style="width:0%;background:linear-gradient(90deg,var(--green),var(--g2))"></div></div>
+        <div class="arm-pct" id="pct1">0 / 900 XP</div>
+        <a href="https://tiempo-inteligente-latam.vercel.app/" class="arm-link" style="color:var(--green);border-color:rgba(0,179,126,.25)" target="_blank">Ver Vol. 1 →</a>
       </div>
-      <p style="margin-top:20px;font-size:12px;color:var(--mist);opacity:.4">🔒 Pago seguro · Acceso inmediato · Hotmart</p>
+      <div class="arm-card reveal" style="border-color:rgba(0,212,255,.2);transition-delay:.1s">
+        <span class="arm-icon">⚔</span>
+        <div class="arm-name" style="color:var(--cyan)">Espada del Arquitecto IA</div>
+        <div class="arm-req">Completa Vol. 2 · 800 XP</div>
+        <div class="arm-bar"><div class="arm-bar-fill" id="bar2" style="width:0%;background:linear-gradient(90deg,var(--cyan),#0090c0)"></div></div>
+        <div class="arm-pct" id="pct2">0 / 800 XP</div>
+        <a href="https://ia-sin-complicaciones-vol2.vercel.app/" class="arm-link" style="color:var(--cyan);border-color:rgba(0,212,255,.25)">Ver Vol. 2 →</a>
+      </div>
+      <div class="arm-card reveal" style="border-color:rgba(245,200,66,.18);transition-delay:.2s">
+        <span class="arm-icon">💍</span>
+        <div class="arm-name" style="color:var(--gold)">Anillo del Prompt Master</div>
+        <div class="arm-req">Pack de 25 Prompts · 500 XP</div>
+        <div class="arm-bar"><div class="arm-bar-fill" id="bar3" style="width:0%;background:linear-gradient(90deg,var(--gold),#c8972a)"></div></div>
+        <div class="arm-pct" id="pct3">0 / 500 XP</div>
+        <a href="https://ia-sin-complicaciones-prompt-packs.vercel.app/" target="_blank" class="arm-link" style="color:var(--gold);border-color:rgba(245,200,66,.22)">Ver Pack →</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══ FOOTER ═════════════════════════════════════════════════ -->
+<!-- VOL 3 -->
+<section id="vol3">
+  <div class="vol3-bg"></div>
+  <div class="wrap" style="position:relative;z-index:1;text-align:center">
+    <div class="reveal">
+      <span style="display:inline-block;font-family:var(--fm);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--purple);background:rgba(120,80,255,.1);border:1px solid rgba(120,80,255,.2);padding:5px 16px;border-radius:3px;margin-bottom:20px">🔮 Próximamente</span>
+      <h2 style="font-family:var(--fh);font-size:clamp(26px,5vw,48px);font-weight:800;margin-bottom:14px;color:rgba(255,255,255,.42)">El Arsenal aún<br><span style="color:rgba(120,80,255,.55)">no está completo</span></h2>
+      <div class="mi-row">
+        <span class="mi">🛡️</span>
+        <span class="mi">⚔</span>
+        <span class="mi">💍</span>
+        <span class="mi">🔮</span>
+      </div>
+      <p style="font-size:15px;color:rgba(255,255,255,.28);max-width:460px;margin:0 auto 28px;line-height:1.7">Vol. 3 viene con una nueva arma. Los que completen el Vol. 2 recibirán acceso anticipado y precio exclusivo.</p>
+      <button class="vol3-btn" onclick="alert('¡Anotado! Completa el Vol. 2 para recibir acceso anticipado al Vol. 3.')">🔔 Notificarme del Vol. 3</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="nav-logo">
-          <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="ft-cg" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#1565FF"/><stop offset="100%" stop-color="#0D3B8E"/>
-              </linearGradient>
-              <filter id="ft-gf"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-            </defs>
-            <circle cx="50" cy="50" r="46" fill="url(#ft-cg)" stroke="#1565FF" stroke-width="1"/>
-            <circle cx="50" cy="6"  r="2.5" fill="#00D4FF" filter="url(#ft-gf)"/>
-            <circle cx="50" cy="94" r="2.5" fill="#00D4FF" filter="url(#ft-gf)"/>
-            <circle cx="6"  cy="50" r="2.5" fill="#00D4FF" filter="url(#ft-gf)"/>
-            <circle cx="94" cy="50" r="2.5" fill="#00D4FF" filter="url(#ft-gf)"/>
-            <path d="M50,50 L50,20 A30,30 0 0,1 80,50 Z" fill="#39E75F"/>
-            <circle cx="50" cy="50" r="6" fill="white"/>
-            <line x1="50" y1="50" x2="50" y2="24" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="50" y1="50" x2="68" y2="50" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="50" cy="50" r="3" fill="white"/>
-          </svg>
-          <div>
-            <div class="nav-logo-text" style="font-size:16px">IA Sin Complicaciones</div>
-            <div class="nav-logo-sub">by Tiempo Inteligente</div>
-          </div>
-        </div>
-        <p>Guías prácticas y prompts de IA para transformar cómo trabajas, ahorras y generas ingresos — sin complicaciones.</p>
-      </div>
+    <div class="foot-grid">
       <div>
-        <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);opacity:.4;margin-bottom:12px">Productos</div>
-        <div class="footer-links">
-          <a href="https://tiempo-inteligente-latam.vercel.app/" target="_blank">📘 Guía Estratégica Vol. 1</a>
-          <a href="https://ia-sin-complicaciones-prompt-packs.vercel.app/" target="_blank">⚡ Pack 25 Prompts</a>
-          <a href="#combo">🎯 Pack Total</a>
-        </div>
+        <svg viewBox="0 0 180 42" width="150" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="ftg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#39E75F"/></linearGradient></defs>
+          <circle cx="20" cy="21" r="17" fill="#1565FF"/>
+          <path d="M20,21 L20,8 A12,12 0 0,1 32,21 Z" fill="#39E75F"/>
+          <line x1="20" y1="21" x2="20" y2="10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="20" y1="21" x2="30" y2="21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="20" cy="21" r="3" fill="white"/>
+          <text x="42" y="25" font-family="'Exo 2',sans-serif" font-weight="900" font-size="14" fill="white">Tiempo Inteligente</text>
+          <text x="42" y="38" font-family="'JetBrains Mono',monospace" font-size="8" fill="url(#ftg)" letter-spacing=".1em">IA SIN COMPLICACIONES</text>
+        </svg>
+        <p class="foot-desc">Educación práctica en IA. Ahorra tiempo, automatiza y conviértete en un Guerrero Élite.</p>
       </div>
-      <div>
-        <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);opacity:.4;margin-bottom:12px">Próximamente</div>
-        <div class="footer-links">
-          <a href="#">🔮 Guía Vol. 2 — En producción</a>
-        </div>
+      <div class="foot-links">
+        <div class="foot-h">Productos</div>
+        <a href="https://tiempo-inteligente-latam.vercel.app/" target="_blank">🛡️ Vol. 1 — $8.99</a>
+        <a href="https://ia-sin-complicaciones-vol2.vercel.app/">⚔ Vol. 2 — $16.99</a>
+        <a href="https://ia-sin-complicaciones-prompt-packs.vercel.app/" target="_blank">💍 Pack 25 Prompts — $6.99</a>
+        <a href="https://ia-sin-complicaciones.vercel.app/" target="_blank">🌐 Página principal</a>
+      </div>
+      <div class="foot-links">
+        <div class="foot-h">Bundles</div>
+        <a href="#bundles">🔥 Kit Fundador IA — $26.99</a>
+        <a href="#bundles">⚡ Kit Arquitecto IA — $21.99</a>
+        <a href="#bundles">📚 Kit Esencial IA — $22.99</a>
+        <a href="#vol3">🔮 Vol. 3 — Próximamente</a>
+      </div>
+      <div class="foot-links">
+        <div class="foot-h">Arsenal</div>
+        <a href="https://tiempo-inteligente-latam.vercel.app/" target="_blank">🛡️ Escudo del Fundador</a>
+        <a href="https://ia-sin-complicaciones-vol2.vercel.app/">⚔ Espada del Arquitecto</a>
+        <a href="https://ia-sin-complicaciones-prompt-packs.vercel.app/" target="_blank">💍 Anillo del Prompt Master</a>
+        <a href="#vol3">🔮 Vol. 3 — Próximamente</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Anthony Briones C. — Tiempo Inteligente. Todos los derechos reservados.</div>
-      <div class="footer-legal">
-        <a href="#">Privacidad</a>
-        <a href="#">Términos</a>
-        <a href="https://hotmart.com" target="_blank">Hotmart</a>
-      </div>
+    <div class="foot-bottom">
+      <span class="foot-copy">© 2026 Tiempo Inteligente · Anthony Briones C. · Todos los derechos reservados</span>
+      <span class="foot-copy">Powered by Hotmart</span>
     </div>
   </div>
 </footer>
 
-<!-- ══ STICKY BAR ═════════════════════════════════════════════ -->
-<div class="sticky-bar" id="sticky-bar">
-  <div class="sb-inner">
-    <div class="sb-text">
-      <div class="sb-title">🔥 Pack Total — Precio de lanzamiento</div>
-      <div class="sb-price">Valor real $114 → hoy solo $20.00</div>
-    </div>
-    <div class="sb-btns">
-      <a href="https://pay.hotmart.com/A104789123J?checkoutMode=2&off=uzygs8w1" class="sb-btn sb-btn-gold" target="_blank">🎯 Pack Total — $20</a>
-      <a href="https://pay.hotmart.com/F104691921G?checkoutMode=2&off=kisl142w" class="sb-btn sb-btn-green" target="_blank">📘 Solo Guía — $9.99</a>
-    </div>
-  </div>
-</div>
-
-<!-- ══ JS ═════════════════════════════════════════════════════ -->
 <script>
-// ── Reveal on scroll ──
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
-},{threshold:.12});
-reveals.forEach(r=>observer.observe(r));
+// Arsenal bars from localStorage
+const p1=JSON.parse(localStorage.getItem('iasc-vol1')||'{}');
+const p2=JSON.parse(localStorage.getItem('iasc-vol2')||'{}');
+const xp1=Object.keys(p1).filter(k=>k!=='unlocked'&&p1[k]).length*100;
+const xp2=Object.keys(p2).filter(k=>k!=='unlocked'&&p2[k]).length*100;
+document.getElementById('bar1').style.width=Math.min(100,xp1/900*100)+'%';
+document.getElementById('pct1').textContent=xp1+' / 900 XP';
+document.getElementById('bar2').style.width=Math.min(100,xp2/800*100)+'%';
+document.getElementById('pct2').textContent=xp2+' / 800 XP';
 
-// ── Nav scroll ──
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
-  document.getElementById('sticky-bar').classList.toggle('visible',window.scrollY>500);
-});
-
-// ── FAQ ──
-function toggleFAQ(item){
-  item.classList.toggle('open');
-}
-
-// ── Funnel builder ──
-const state={guia:false,pack:false,combo:true};
-const prices={guia:9.99,pack:12.99,combo:20};
-const normal={guia:19.99,pack:25,combo:44};
-const real={guia:57,pack:57,combo:114};
-
-function toggleFO(id){
-  if(id==='guia'||id==='pack'){
-    state.combo=false;
-    state[id]=!state[id];
-    document.getElementById('fo-combo').classList.remove('active-gold');
-    document.getElementById('fo-guia').className='fo'+(state.guia?' active':'');
-    document.getElementById('fo-pack').className='fo'+(state.pack?' active':'');
-  }
-  updateFunnel();
-}
-
-function selectCombo(){
-  state.guia=false;state.pack=false;state.combo=true;
-  document.getElementById('fo-guia').className='fo';
-  document.getElementById('fo-pack').className='fo';
-  document.getElementById('fo-combo').className='fo active-gold';
-  updateFunnel();
-}
-
-function updateFunnel(){
-  const area=document.getElementById('funnel-btn-area');
-  const items=document.getElementById('fs-items');
-  const norm=document.getElementById('fs-normal-price');
-  const disc=document.getElementById('fs-discount');
-  const total=document.getElementById('fs-total');
-  const savings=document.getElementById('fs-savings-msg');
-
-  if(state.combo){
-    items.textContent='Pack Total (Guía + Prompts)';
-    norm.textContent='Normal: $44.00';
-    disc.textContent='— $24.00 (55% OFF)';
-    total.textContent='$20.00 USD';
-    savings.textContent='🔥 Ahorras $94.00 vs el precio real de mercado';
-    area.innerHTML='<div class="hm-gold"><a href="https://pay.hotmart.com/A104789123J?checkoutMode=2&off=uzygs8w1" class="hotmart-fb hotmart__button-checkout" target="_blank">🎯 Obtener Pack Total — $20.00</a></div>';
-  } else if(state.guia&&state.pack){
-    items.textContent='Guía Vol.1 + Pack 25 Prompts';
-    norm.textContent='Normal: $44.99';
-    const t=22.98;const s=91.02;
-    disc.textContent=`— $${(44.99-t).toFixed(2)} OFF`;
-    total.textContent=`$${t.toFixed(2)} USD`;
-    savings.textContent=`💡 ¿Sabías que el Pack Total es más barato? Solo $20.00`;
-    area.innerHTML='<div class="hm-green"><a href="https://pay.hotmart.com/A104789123J?checkoutMode=2&off=uzygs8w1" class="hotmart-fb hotmart__button-checkout" target="_blank">💡 Cambiar a Pack Total por $20 (Mejor valor)</a></div>';
-  } else if(state.guia){
-    items.textContent='Guía Estratégica Vol. 1';
-    norm.textContent='Normal: $19.99';
-    disc.textContent='— $10.00 (50% OFF)';
-    total.textContent='$9.99 USD';
-    savings.textContent='💚 Ahorras $47.01 vs el precio real de $57';
-    area.innerHTML='<div class="hm-green"><a href="https://pay.hotmart.com/F104691921G?checkoutMode=2&off=kisl142w" class="hotmart-fb hotmart__button-checkout" target="_blank">📘 Obtener Guía Vol. 1 — $9.99</a></div>';
-  } else if(state.pack){
-    items.textContent='Pack 25 Prompts';
-    norm.textContent='Normal: $25.00';
-    disc.textContent='— $12.01 (48% OFF)';
-    total.textContent='$12.99 USD';
-    savings.textContent='💚 Ahorras $44.01 vs el precio real de $57';
-    area.innerHTML='<div class="hm-navy"><a href="https://pay.hotmart.com/L104788404U?checkoutMode=2&off=kiopt2fa" class="hotmart-fb hotmart__button-checkout" target="_blank">⚡ Obtener Pack Prompts — $12.99</a></div>';
-  } else {
-    items.textContent='Selecciona un producto arriba';
-    norm.textContent='—';
-    disc.textContent='—';
-    total.textContent='$0.00';
-    savings.textContent='';
-    area.innerHTML='<button class="btn btn-ghost btn-full" disabled>Selecciona un producto</button>';
-  }
-  // Re-init Hotmart on dynamic buttons
-  if(typeof window.HotmartFB!=='undefined') try{window.HotmartFB.init()}catch(e){}
-}
+// Scroll reveal
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
