@@ -33,12 +33,17 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,8,16,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:52px;max-width:1100px;margin:0 auto;gap:8px}
-.nav-logo{display:flex;align-items:center;gap:6px;flex-shrink:1;min-width:0;overflow:hidden}
-.nav-brand{display:flex;align-items:center;gap:5px;flex-shrink:1;min-width:0}
-.nav-brand-name{font-family:'Exo 2',sans-serif;font-weight:900;font-size:clamp(9px,2.5vw,13px);color:white;white-space:nowrap;letter-spacing:-.01em;line-height:1}
-.nav-divider{width:1px;height:16px;background:rgba(255,255,255,.14);flex-shrink:0}
-.nav-sub-name{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(8px,2vw,11px);color:rgba(255,255,255,.85);white-space:nowrap;line-height:1}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:52px;max-width:1100px;margin:0 auto;gap:10px}
+.nav-logo{display:flex;flex-direction:column;justify-content:center;gap:3px;flex-shrink:1;min-width:0}
+.nav-brand{display:flex;align-items:center;gap:5px;min-width:0}
+.nav-brand-name{font-family:'Exo 2',sans-serif;font-weight:900;font-size:clamp(10px,2.8vw,13px);color:white;white-space:nowrap;letter-spacing:-.01em;line-height:1}
+.nav-divider{display:none}
+.nav-sub-name{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(9px,2.2vw,11px);color:rgba(255,255,255,.65);white-space:nowrap;line-height:1}
+@media(min-width:640px){
+  .nav-logo{flex-direction:row;align-items:center;gap:8px}
+  .nav-divider{display:block;width:1px;height:16px;background:rgba(255,255,255,.14);flex-shrink:0}
+  .nav-sub-name{color:rgba(255,255,255,.85)}
+}
 .nav-cta-btn{background:linear-gradient(135deg,var(--gold),#c8972a);color:#060810;font-family:var(--fh);font-weight:700;font-size:clamp(11px,2.5vw,13px);padding:8px 14px;border-radius:5px;border:none;white-space:nowrap;flex-shrink:0;cursor:pointer}
 .nav-links{display:none}
 @media(min-width:900px){
