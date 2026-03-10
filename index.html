@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%0A%20%20%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%226%22%20fill%3D%22%23060810%22/%3E%0A%20%20%3Cellipse%20cx%3D%2216%22%20cy%3D%2216%22%20rx%3D%2213%22%20ry%3D%224.5%22%20stroke%3D%22%2300B37E%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%20opacity%3D%22.9%22/%3E%0A%20%20%3Cellipse%20cx%3D%2216%22%20cy%3D%2216%22%20rx%3D%2213%22%20ry%3D%224.5%22%20stroke%3D%22%232ECC71%22%20stroke-width%3D%221.2%22%20fill%3D%22none%22%20opacity%3D%22.55%22%20transform%3D%22rotate%2860%2016%2016%29%22/%3E%0A%20%20%3Cellipse%20cx%3D%2216%22%20cy%3D%2216%22%20rx%3D%2213%22%20ry%3D%224.5%22%20stroke%3D%22%2300B37E%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20opacity%3D%22.3%22%20transform%3D%22rotate%28120%2016%2016%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%224%22%20fill%3D%22%2300B37E%22/%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%222%22%20fill%3D%22white%22/%3E%0A%3C/svg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IA Sin Complicaciones — Arsenal Completo · Bundles de Lanzamiento</title>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700;900&family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -32,14 +33,18 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,8,16,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1100px;margin:0 auto;gap:12px}
-.nav-logo{display:flex;align-items:center;gap:8px;flex-shrink:0}
-.nav-cta-btn{background:linear-gradient(135deg,var(--gold),#c8972a);color:#060810;font-family:var(--fh);font-weight:700;font-size:13px;padding:9px 18px;border-radius:5px;border:none;white-space:nowrap;flex-shrink:0}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:52px;max-width:1100px;margin:0 auto;gap:8px}
+.nav-logo{display:flex;align-items:center;gap:6px;flex-shrink:1;min-width:0;overflow:hidden}
+.nav-brand{display:flex;align-items:center;gap:5px;flex-shrink:1;min-width:0}
+.nav-brand-name{font-family:'Exo 2',sans-serif;font-weight:900;font-size:clamp(9px,2.5vw,13px);color:white;white-space:nowrap;letter-spacing:-.01em;line-height:1}
+.nav-divider{width:1px;height:16px;background:rgba(255,255,255,.14);flex-shrink:0}
+.nav-sub-name{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(8px,2vw,11px);color:rgba(255,255,255,.85);white-space:nowrap;line-height:1}
+.nav-cta-btn{background:linear-gradient(135deg,var(--gold),#c8972a);color:#060810;font-family:var(--fh);font-weight:700;font-size:clamp(11px,2.5vw,13px);padding:8px 14px;border-radius:5px;border:none;white-space:nowrap;flex-shrink:0;cursor:pointer}
 .nav-links{display:none}
 @media(min-width:900px){
-  .nav-links{display:flex;align-items:center;gap:20px}
-  .nav-links a{font-family:var(--fm);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--silver);transition:color .2s}
-  .nav-links a:hover{color:var(--cyan)}
+  .nav-links{display:flex;align-items:center;gap:22px}
+  .nav-links a{font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--silver);transition:color .2s}
+  .nav-links a:hover{color:var(--green)}
 }
 
 /* HERO */
@@ -201,23 +206,15 @@ footer{padding:48px 0 30px;border-top:1px solid rgba(255,255,255,.06)}
 <nav>
   <div class="nav-in">
     <div class="nav-logo">
-      <svg viewBox="0 0 110 26" width="100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="13" r="10" fill="#1565FF"/>
-        <path d="M12,13 L12,5 A7,7 0 0,1 19,13 Z" fill="#39E75F"/>
-        <line x1="12" y1="13" x2="12" y2="6" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-        <line x1="12" y1="13" x2="18" y2="13" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
-        <circle cx="12" cy="13" r="2" fill="white"/>
-        <text x="26" y="17" font-family="'Exo 2',sans-serif" font-weight="900" font-size="10" fill="white">Tiempo Inteligente</text>
-      </svg>
-      <div style="width:1px;height:18px;background:rgba(255,255,255,.1)"></div>
-      <svg viewBox="0 0 80 20" width="72" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="ni" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00B37E"/><stop offset="100%" stop-color="#2ECC71"/></linearGradient></defs>
-        <ellipse cx="9" cy="10" rx="8" ry="3" stroke="#00B37E" stroke-width=".9" fill="none" opacity=".7"/>
-        <ellipse cx="9" cy="10" rx="8" ry="3" stroke="#2ECC71" stroke-width=".7" fill="none" opacity=".3" transform="rotate(60 9 10)"/>
-        <circle cx="9" cy="10" r="3.5" fill="rgba(0,179,126,.15)" stroke="#00B37E" stroke-width=".8"/>
-        <circle cx="9" cy="10" r="2" fill="#00B37E"/>
-        <text x="20" y="13" font-family="Syne,sans-serif" font-weight="800" font-size="7.5" fill="white">IA Sin Complicaciones</text>
-      </svg>
+      <div class="nav-brand">
+        <svg viewBox="0 0 22 22" width="22" height="22" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="11" cy="11" r="10" fill="#1565FF"/><path d="M11,11 L11,4 A6.5,6.5 0 0,1 17.5,11 Z" fill="#39E75F"/><line x1="11" y1="11" x2="11" y2="5" stroke="white" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="11" x2="16" y2="11" stroke="white" stroke-width="1.5" stroke-linecap="round"/><circle cx="11" cy="11" r="1.8" fill="white"/></svg>
+        <span class="nav-brand-name">Tiempo Inteligente</span>
+      </div>
+      <div class="nav-divider"></div>
+      <div class="nav-brand">
+        <svg viewBox="0 0 18 18" width="18" height="18" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><ellipse cx="9" cy="9" rx="8" ry="2.8" stroke="#00B37E" stroke-width=".9" fill="none" opacity=".7"/><ellipse cx="9" cy="9" rx="8" ry="2.8" stroke="#2ECC71" stroke-width=".7" fill="none" opacity=".4" transform="rotate(60 9 9)"/><ellipse cx="9" cy="9" rx="8" ry="2.8" stroke="#00B37E" stroke-width=".6" fill="none" opacity=".25" transform="rotate(120 9 9)"/><circle cx="9" cy="9" r="2.2" fill="#00B37E"/><circle cx="9" cy="9" r="1" fill="white"/></svg>
+        <span class="nav-sub-name">IA Sin Complicaciones</span>
+      </div>
     </div>
     <div class="nav-links">
       <a href="#products">Productos</a>
@@ -225,7 +222,7 @@ footer{padding:48px 0 30px;border-top:1px solid rgba(255,255,255,.06)}
       <a href="#compare">Comparar</a>
       <a href="#arsenal">Arsenal</a>
     </div>
-    <a href="#bundles" class="nav-cta-btn">🔥 Ver Bundles</a>
+    <a href="#bundles" class="nav-cta-btn">🔥 Bundles</a>
   </div>
 </nav>
 
